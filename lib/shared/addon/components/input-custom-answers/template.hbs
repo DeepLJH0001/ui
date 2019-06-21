@@ -1,0 +1,60 @@
+<div class="btn-group  pull-right">
+  {{#if pasteOrUpload}}
+    <button
+      class="btn btn-sm"
+      {{action "cancel"}}
+    >
+      {{t "inputAnswers.editAsForm"}}
+    </button>
+    <button
+      class="btn btn-sm bg-primary"
+      {{action "upload"}}
+    >
+      {{t "uploadFile.label"}}
+      <i class="icon icon-upload"></i>
+    </button>
+  {{else if (not isMultiClusterApp)}}
+    <button
+      class="btn btn-sm bg-primary"
+      {{action "showPaste"}}
+    >
+      {{t "inputAnswers.yaml"}}
+      <i class="icon icon-copy"></i>
+    </button>
+  {{/if}}
+</div>
+<div class="mt-25">
+  {{#if pasteOrUpload}}
+    <div class="clearfix">
+      <label class="acc-label">
+        {{t "inputAnswers.yamlConfig"}}
+      </label>
+    </div>
+    <div class="p-20">
+      {{input-yaml
+        showUpload=false
+        showDownload=false
+        canChangeName=false
+        value=pastedAnswers
+        autoResize=true
+        minHeight=500
+      }}
+    </div>
+    {{top-errors errors=yamlErrors}}
+  {{else}}
+    {{form-key-value
+      initialMap=intialAnswerMap
+      changed="updateAnswers"
+      allowEmptyValue=true
+      addInitialEmptyRow=true
+      editing=true
+      header=(t "newCatalog.answers.label")
+      addActionLabel="newCatalog.answers.addAction"
+      keyLabel="newContainer.environment.keyLabel"
+      keyPlaceholder="newContainer.environment.keyPlaceholder"
+      valueLabel="newContainer.environment.valueLabel"
+      valuePlaceholder="newContainer.environment.valuePlaceholder"
+    }}
+  {{/if}}
+</div>
+<input type="file" accept="{{actualAccept}}" class="hide">

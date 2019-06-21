@@ -1,0 +1,36 @@
+<td class="row-check" valign="middle" style="padding-top: 2px;">
+  {{check-box nodeId=model.id}}
+</td>
+<td data-title="{{dt.state}}">
+  {{badge-state model=model}}
+</td>
+<td class="force-wrap" data-title="{{dt.name}}">
+  {{model.displayName}}
+</td>
+<td data-title="{{dt.description}}">
+  {{#if model.description}}
+    {{model.description}}
+  {{else}}
+    <span class="text-muted">{{t 'generic.none'}}</span>
+  {{/if}}
+</td>
+<td class="force-wrap" data-title="{{dt.scope}}">
+  {{#if model.clusterId}}
+    Cluster
+  {{else}}
+    N/A
+  {{/if}}
+</td>
+<td data-title="{{dt.expires}}">
+  {{#if model.expiresAt}}
+    {{date-calendar model.expiresAt}}
+  {{else}}
+    <span class="text-muted">{{t 'generic.never'}}</span>
+  {{/if}}
+</td>
+<td data-title="{{dt.created}}" class="text-right pr-20">
+  {{date-from-now model.created}}
+</td>
+<td data-title="{{dt.actions}}" class="actions">
+  {{action-menu model=model}}
+</td>

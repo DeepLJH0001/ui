@@ -1,0 +1,26 @@
+{{#each verbs as |verb|}}
+  <td class="text-center"  data-title="{{verb.key}}" >
+    {{#if readOnly}}
+      {{#if verb.value}}
+        <i class="icon icon-check"/>
+      {{else}}
+        <span class="text-muted">&ndash;</span>
+      {{/if}}
+    {{else}}
+      {{input type="checkbox" checked=verb.value disabled=readOnly}}
+    {{/if}}
+  </td>
+{{/each}}
+<td>
+  {{#if (and readOnly rule.nonResourceURLs)}}
+    <span class="text-muted">Non-Resource URL: {{join-array rule.nonResourceURLs}}</span>
+  {{else}}
+    {{searchable-select allowCustom=true content=rules value=resource readOnly=readOnly}}
+  {{/if}}
+</td>
+<td>&nbsp;</td>
+{{#unless readOnly}}
+  <div class="input-group-btn">
+    <button class="btn bg-primary btn-sm" {{action "remove"}}><i class="icon icon-minus"/></button>
+  </div>
+{{/unless}}

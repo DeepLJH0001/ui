@@ -1,0 +1,21 @@
+{
+  "name": "logging",
+  "keywords": [
+    "ember-addon",
+    "ember-engine"
+  ],
+  "dependencies": {
+    "ember-auto-import": "*",
+    "ember-basic-dropdown": "*",
+    "ember-math-helpers": "*",
+    "ember-intl": "*",
+    "ember-cli-htmlbars": "*",
+    "ember-cli-babel": "*",
+    "ember-href-to": "*"
+  },
+  "ember-addon": {
+    "paths": [
+      "../shared"
+    ]
+  }
+}

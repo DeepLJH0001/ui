@@ -1,0 +1,51 @@
+<div class="over-hr mt-40">
+  <span>
+    {{#if testing}}
+      <button
+        class="btn bg-info btn-disabled"
+        {{action test}}
+      >
+        <i class="icon icon-spinner icon-spin"></i>
+        <span class="text-white">
+          {{#if isCustom}}
+            {{t "loggingPage.testAction.running"}}
+          {{else}}
+            {{t "loggingPage.testAction.testing"}}
+          {{/if}}
+        </span>
+      </button>
+    {{else}}
+      {{#if tested}}
+        <button
+          {{action test}}
+          class="btn  btn-disabled {{if testOk "bg-success" "bg-error"}}"
+        >
+          <span class="text-white">
+            {{#if testOk}}
+              {{#if isCustom}}
+                {{t "loggingPage.testAction.runOk"}}
+              {{else}}
+                {{t "loggingPage.testAction.testOk"}}
+              {{/if}}
+            {{else}}
+              {{t "loggingPage.testAction.testFailed"}}
+            {{/if}}
+          </span>
+        </button>
+      {{else}}
+        <button
+          {{action test}}
+          class="btn bg-info"
+        >
+          <span class="text-white">
+            {{#if isCustom}}
+              {{t "loggingPage.testAction.dryRun"}}
+            {{else}}
+              {{t "loggingPage.testAction.test"}}
+            {{/if}}
+          </span>
+        </button>
+      {{/if}}
+    {{/if}}
+  </span>
+</div>

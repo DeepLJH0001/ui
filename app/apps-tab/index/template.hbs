@@ -1,0 +1,22 @@
+<section class="header clearfix">
+  <div class="pull-left"><h1>{{t 'nav.apps.apps'}}</h1></div>
+
+  <div class="right-buttons">
+    {{#link-to "authenticated.project.project-catalogs" classNames="btn btn-sm bg-primary mr-10"}}<i class="icon icon-gear icon-fw"/>{{t 'nav.apps.manage'}}{{/link-to}}
+    {{#link-to "catalog-tab" classNames="btn btn-sm bg-primary mr-10" disabled=(rbac-prevents resource="app" scope="project" permission="create")}}{{t 'nav.apps.launch'}}{{/link-to}}
+  </div>
+</section>
+
+<section class="pl-0 pr-0">
+  {{#each filteredApps as |group|}}
+    <div class="row flex">
+      {{#each group as |ns|}}
+        <div class="col span-6 mt-0">
+          {{namespace-app model=ns}}
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    {{empty-table disabled=(rbac-prevents resource="app" scope="project" permission="create") resource="container" newRoute="catalog-tab" newTranslationKey="nav.apps.launch"}}
+  {{/each}}
+</section>

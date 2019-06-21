@@ -1,0 +1,49 @@
+<section class="header clearfix">
+  <div class="pull-left"><h1>{{if isCreate (t 'alertPage.new.addHeader') (t 'alertPage.new.editHeader')}}</h1></div>
+</section>
+<div class="row">
+  <div class="col span-12 pt-0 mt-0">
+    {{form-name-description
+      name=alertGroup.name
+      nameDisabled=false
+      description=alertGroup.description
+      bothColClass="col span-6 mt-0"
+      colClass="col span-12 mt-0"
+    }}
+  </div>
+</div>
+
+<div>
+  {{alert/form-alert-rules
+      pageScope=pageScope
+      isCreate=isCreate
+      alertRules=alertRules
+      metrics=metrics
+      monitoringEnabled=monitoringEnabled
+      alertGroup=alertGroup
+      mode=mode
+      level=level
+  }}
+  <hr/>
+  {{alert/form-recipients
+      pageScope=pageScope
+      isCreate=isCreate
+      model=alertGroup
+  }}
+</div>
+
+{{alert/form-advanced
+    model=alertGroup
+}}
+
+<div class="mt-20">
+  {{top-errors errors=errors}}
+</div>
+
+<div class="mv-20">
+  {{save-cancel
+      createLabel=(if isCreate 'alertPage.create' 'alertPage.save')
+      save="save"
+      cancel="cancel"
+  }}
+</div>

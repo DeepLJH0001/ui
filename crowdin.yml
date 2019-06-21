@@ -1,0 +1,14 @@
+api_key_env: CROWDIN_API_KEY
+project_identifier: rancher-ui
+base_path: /translations
+preserve_hierarchy: false
+
+files:
+  - source: en-us.yaml
+    dest: /ui.yaml
+    translation: '%locale%.yaml'
+    type: yaml
+    update_option: update_as_unapproved
+    languages_mapping:
+      locale:
+        zh-CN: zh-hans

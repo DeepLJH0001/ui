@@ -1,0 +1,16 @@
+<td class="pr-10">
+  {{resource-quota-select editing=false quota=quota}}
+</td>
+<td class="pr-10">
+  {{progress-bar-multi
+      values=quota.currentProjectUse
+      tooltipValues=quota.totalLimits
+      tooltipArrayOrString="array"
+      tooltipTemplate="-ns-quota-progressbar"
+      max=quota.max
+      minPercent=0
+  }}
+</td>
+<td>
+  {{input-resource-quota editing=editing quota=quota key='value'}}
+</td>

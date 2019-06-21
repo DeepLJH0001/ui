@@ -1,0 +1,32 @@
+<section class="header clearfix">
+  <div class="inline-block">
+    <h2>{{t (if editing 'newPipelineStage.header.edit' 'newPipelineStage.header.create')}}</h2>
+  </div>
+  {{#if editing}}
+    <div class="right-buttons pb-0 pt-0">
+      <button class="btn bg-error" {{action 'remove'}}>
+        {{t 'generic.remove'}}
+      </button>
+    </div>
+  {{/if}}
+</section>
+
+<div class="row">
+  <div class="col span-12">
+    {{form-name-description
+      model=model
+      rowClass=''
+      colClass=''
+      nameRequired=true
+      namePlaceholder="newPipelineStage.name.placeholder"
+    }}
+  </div>
+</div>
+
+{{#advanced-section}}
+  {{pipeline-condition type="stage" config=model.when}}
+{{/advanced-section}}
+
+{{top-errors errors=errors}}
+
+{{save-cancel editing=editing createLabel="generic.add" save="save" cancel="cancel"}}

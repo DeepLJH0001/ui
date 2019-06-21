@@ -1,0 +1,301 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+
+///Sets base color and darkens bg on hover
+@mixin bg-color($bg) {
+  background: $bg;
+  &.btn:hover{
+    background: darken($bg,10%);
+    transition: all 0.3s ease;
+  }
+  &.btn:active {
+    background: darken($bg,25%);
+  }
+}
+
+///Sets the specified background color and calculates a dark or light contrasted text color.
+@mixin contrasted($background-color, $dark: $contrasted-dark-default, $light: $contrasted-light-default, $threshold: null) {
+  @if $threshold {
+    // Deprecated in Compass 0.13
+    @warn "The $threshold argment to contrasted is no longer needed and will be removed in the next release.";
+  }
+  color: contrast-color($background-color, $dark, $light);
+
+  &:hover {
+    color: contrast-color($background-color, $dark, $light);
+  }
+}
+
+///Sets base color and darkens bg on hover
+@mixin bg-lighten($bg) {
+  background: $bg;
+  * {
+    background:lighten($bg,20%);
+  }
+}
+
+///from rancher (may not need all)
+@mixin diagonal-gradient-3($one, $two, $three) {
+  background: $one; /* Old browsers */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$one), color-stop(50%,$two), color-stop(100%,$three)); /* Chrome,Safari4+ */
+  background:    -moz-linear-gradient(-45deg,  $one 0%, $two 50%, $three 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient(-45deg,  $one 0%, $two 50%, $three 100%); /* Chrome10+,Safari5.1+ */
+  background:      -o-linear-gradient(-45deg,  $one 0%, $two 50%, $three 100%); /* Opera 11.10+ */
+  background:     -ms-linear-gradient(-45deg,  $one 0%, $two 50%, $three 100%); /* IE10+ */
+  background:         linear-gradient(135deg,  $one 0%, $two 50%, $three 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$one', endColorstr='$three',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@mixin link-color($color) {
+  color: $color;
+
+  &:visited,
+  &:focus,
+  &:hover,
+  &:active {
+    color: $color;
+  }
+}
+
+// Rotated
+@mixin icon-rotate($degrees, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: rotate($degrees);
+      -ms-transform: rotate($degrees);
+          transform: rotate($degrees);
+}
+
+@mixin icon-flip($horiz, $vert, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: scale($horiz, $vert);
+      -ms-transform: scale($horiz, $vert);
+          transform: scale($horiz, $vert);
+}
+
+// Add a new one? Change an existing one? make sure you update the list in app/models/nodedriver.js
+@mixin amazonec2 {
+  background-image: url('images/providers/amazonec2.svg');
+}
+
+@mixin azure {
+  background-image: url('images/providers/azure.svg');
+}
+
+@mixin digitalocean {
+  background-image: url('images/providers/digitalocean.svg');
+}
+
+@mixin exoscale {
+  background-image: url('images/providers/exoscale.svg');
+}
+
+@mixin openstack {
+  background-image: url('images/providers/openstack.svg');
+}
+
+@mixin packet {
+  background-image: url('images/providers/packet.svg');
+}
+
+@mixin rackspace {
+  background-image: url('images/providers/rackspace.svg');
+}
+
+@mixin rancherdo {
+    background-image: url('images/providers/rancherdigitalocean.svg');
+}
+
+@mixin vmwarevsphere {
+  background-image: url('images/providers/vsphere.svg');
+}
+
+@mixin other {
+  background-image: url('images/providers/machine.svg');
+}
+
+@mixin custom {
+  background-image: url('images/providers/custom-registry.svg');
+}
+
+@mixin import {
+  background-image: url('images/providers/custom-import.svg');
+}
+
+@mixin generic {
+  background-image: url('images/providers/generic-driver.svg');
+}
+
+@mixin aliyunecs {
+  background-image: url('images/providers/aliyunecs.svg');
+}
+
+@mixin newtemplate {
+  background-image: url('images/resources/container.svg');
+}
+
+@mixin amazoneks {
+  background-image: url('images/providers/amazoneks.svg');
+}
+
+@mixin azureaks {
+  background-image: url('images/providers/azureaks.svg');
+}
+
+@mixin googlegke {
+  background-image: url('images/providers/googlegke.svg');
+}
+
+@mixin tencenttke {
+  background-image: url('images/providers/tencenttke.svg');
+}
+
+@mixin aliyunkcs {
+  background-image: url('images/providers/aliyunkcs.svg');
+}
+
+@mixin huaweicce {
+  background-image: url('images/providers/huaweicce.svg');
+}
+
+@mixin otc {
+  background-image: url('images/providers/open-telekom-cloud.svg');
+}
+
+@mixin route53 {
+  background-image: url('images/providers/route53.svg');
+  // background-size: contain;
+}
+
+@mixin cloudflare {
+  background-image: url('images/providers/cloudflare.svg');
+}
+
+@mixin alidns {
+  background-image: url('images/providers/aliyunkcs.svg');
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+///Place holder
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+@mixin catalog-img($background: rgba(255,255,255,.9)) {
+  margin: 0 auto;
+  padding: 0;
+  background: $background;
+  height: 110px;
+  line-height: 108px;
+  max-width: 295px;
+
+  img {
+    width: auto;
+    height: auto;
+    max-height: 80px;
+    max-width: 180px;
+    vertical-align: middle;
+  }
+}
+
+
+@mixin tooltip-triangle {
+  content    : '';
+  background : transparent;
+  width      : 0;
+  height     : 0;
+  position   : absolute;
+}
+
+//table mixins
+@mixin bordered {
+  border-bottom: $table-border-color solid 2px;
+  border-collapse: collapse;
+
+  > TBODY {
+    background: transparent;
+
+    > TR {
+      background-color: $body-bg;
+      border-top: $table-border-color solid 2px;
+
+      &:first-child {
+        border-top: none;
+      }
+
+      &.main-row,
+      &.sub-row {
+        background-color: $body-bg;
+        border-bottom: 0;
+      }
+
+      > TD {
+        border: none;
+        a {
+          line-height: initial;
+          vertical-align: middle;
+        }
+      }
+
+      &.row-selected {
+        background-color: $table-bg-selected;
+      }
+
+      &.no-bottom {
+        border-bottom: none;
+      }
+
+      &.sub-row {
+        border-top: none;
+        border-bottom: none;
+
+        table {
+          padding-bottom: $table-body-separation;
+          border-bottom: none;
+        }
+      }
+
+      &.separator-row {
+        border: none;
+      }
+    }
+  }
+}
+
+@mixin solid {
+  > TBODY {
+    background: $table-bg;
+    > TR {
+      background-color: darken($table-bg, 5%);
+    }
+  }
+}
+
+@mixin striped {
+  > TBODY > TR {
+    > TD {
+      border: none;
+    }
+    &:nth-child(odd) {
+      background-color: $table-bg;
+    }
+    &:nth-child(even) {
+      background-color: $table-bg-accent;
+    }
+    &.row-selected {
+      background-color: $table-bg-selected;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+<tr class="main-row">
+  <td class="row-check" valign="middle" style="padding-top: 2px;">
+    {{check-box nodeId=model.id}}
+  </td>
+  <td>
+    {{#if canExpand}}<i role="button" {{action "toggle"}} class="icon icon-play eased text-small text-muted {{if expanded 'icon-rotate-90'}}"><span class="visually-hidden">Open accordion</span></i>{{/if}}
+  </td>
+  <td data-title="{{dt.state}}" class="state">
+    {{badge-state model=model}}
+  </td>
+  <td data-title="{{dt.name}}" class="clip">
+    <a href="{{href-to "workload" model.id}}">{{model.displayName}} <i class="{{model.activeIcon}}"></i></a>
+    {{#if model.showTransitioningMessage}}
+      <div class="clip text-small {{model.stateColor}}">{{uc-first model.transitioningMessage}}</div>
+    {{else if model.displayEndpoints}}
+      <div class="clip text-small">
+        {{model.displayEndpoints}}
+      </div>
+    {{/if}}
+  </td>
+  {{#if showImage}}
+    <td data-title="{{dt.image}}" class="clip top-half">
+      {{#tooltip-element
+          type="tooltip-basic"
+          tooltipTemplate='tooltip-multi-lines'
+          model=model.displayImages
+          inlineBlock=true
+      }}
+        <span class="text-small">{{model.displayImage}}</span>
+      {{/tooltip-element}}
+      <p data-title="{{t 'generic.details'}}" class="text-small text-muted m-0 clip">
+        {{#if subMatches}}
+          {{#if (eq (get subMatches model.id) 0)}}
+            {{t 'pagination.podNoSubset' count=model.pods.length htmlSafe=true}}
+          {{else if (lt (get subMatches model.id) model.pods.length)}}
+            {{t 'pagination.podHighlightSubset' subset=(get subMatches model.id) count=model.pods.length htmlSafe=true}}
+          {{else}}
+            <b>{{t 'pagination.pod' pages=1 count=model.pods.length}}</b>
+          {{/if}}
+        {{else}}
+          {{t 'pagination.pod' pages=1 count=(concat model.pods.length "")}}
+        {{/if}} /
+        {{t 'generic.createdDate' date=(date-from-now model.created) htmlSafe=true}}
+      </p>
+    </td>
+  {{/if}}
+
+  <td data-title="{{dt.scale}}" class="text-center">
+    {{progress-bar-multi
+        classNames="mt-5"
+        labelKey="state"
+        valueKey="count"
+        values=model.podStates.byColor
+        tooltipValues=model.podStates.byName
+    }}
+    <small class="text-muted">
+      {{model.displayScale}}
+    </small>
+  </td>
+
+  <td data-title="{{dt.actions}}" class="actions">
+    {{action-menu model=model}}
+  </td>
+</tr>
+
+{{#if canExpand}}
+  <tr class="sub-row {{unless expanded 'hide'}}">
+    <td colspan="2">{{! checkbox and expand}}</td>
+    <td colspan="{{sub fullColspan 4}}">
+      {{#if expanded}}
+        {{pod-dots
+          pods=model.pods
+          searchText=searchText
+          groupByPod=model.hasSidekicks
+        }}
+      {{/if}}
+    </td>
+    <td class="text-center">
+      {{#if (and expanded model.canScale)}}
+        <div class="btn-group-xs bg-default scale-arrow">
+        <button class="btn btn-xs bg-primary" {{action "scaleDown" target=model}} disabled={{not model.canScaleDown}}><i class="icon icon-minus icon-fw"/></button>
+        <button class="btn btn-xs bg-primary" {{action "scaleUp" target=model}} disabled={{not model.canScaleUp}}><i class="icon icon-plus icon-fw"/></button>
+        </div>
+      {{/if}}
+    </td>
+    <td>{{! actions}}</td>
+  </tr>
+
+  {{#if expanded}}
+    <tr class="separator-row">
+      <td colspan="{{fullColspan}}"></td>
+    </tr>
+  {{/if}}
+{{/if}}

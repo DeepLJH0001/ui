@@ -1,0 +1,58 @@
+<section class="header has-tabs clearfix p-0">
+  <ul class="tab-nav">
+    <li>
+      {{#link-to "custom-drivers.cluster-drivers"}}{{t 'customDrivers.clusters'}}{{/link-to}}
+    </li>
+    <li>
+      {{#link-to "custom-drivers.node-drivers"}}{{t 'customDrivers.nodes'}}{{/link-to}}
+    </li>
+  </ul>
+  <div class="right-buttons">
+    <button disabled={{rbac-prevents resource="nodedriver" scope="global" permission="create"}} class="btn btn-sm bg-primary right-divider-btn" {{action 'addNewDriver'}}>{{t 'machinePage.add'}}</button>
+  </div>
+</section>
+
+{{#sortable-table
+    classNames="grid sortable-table"
+    body=rows
+    searchText=searchText
+    sortBy=sortBy
+    descending=descending
+    bulkActions=true
+    pagingLabel="pagination.driver"
+    headers=headers as |sortable kind driver dt|}}
+  {{#if (eq kind "row")}}
+    <tr class="main-row">
+      <td valign="middle" class="row-check" style="padding-top: 2px;">
+        {{check-box nodeId=driver.id}}
+      </td>
+
+      <td data-title="{{dt.state}}" class="state">
+        {{badge-state model=driver}}
+      </td>
+
+      <td data-title="{{dt.name}}" class="clip">
+        {{driver.displayName}}
+        <div class="clip text-small">
+          {{#if driver.builtin}}
+            <span class="text-muted">{{t 'machinePage.builtin'}}</span>
+          {{else}}
+            {{driver.url}}
+          {{/if}}
+        </div>
+      </td>
+
+      <td data-title="{{dt.actions}}" class="actions">
+        {{action-menu model=driver}}
+      </td>
+    </tr>
+
+    {{#if model.showTransitioningMessage}}
+      {{error-sub-row fullColspan=sortable.fullColspan model=driver}}
+    {{/if}}
+  {{else if (eq kind "nomatch")}}
+    <tr><td colspan="{{sortable.fullColspan}}" class="text-center text-muted pt-20 pb-20">{{t 'nodesPage.table.noMatch'}}</td></tr>
+  {{else if (eq kind "norows")}}
+    <tr><td colspan="{{sortable.fullColspan}}" class="text-center text-muted pt-20 pb-20">{{t 'nodesPage.table.noData'}}</td></tr>
+  {{/if}}
+{{/sortable-table}}

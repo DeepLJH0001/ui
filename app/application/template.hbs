@@ -1,0 +1,27 @@
+<div id="underlay" class="underlay hide"></div>
+<div id="loading-underlay" class="underlay"></div>
+<div id="loading-overlay" class="loading-overlay">
+  {{#if settings.isRancher}}
+    <div class="square">
+      <div class="lid">
+      </div>
+    </div>
+  {{else}}
+    <div class="whiteboxloader">
+      <div class="loader-inner ball-clip-rotate-pulse">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  {{/if}}
+</div>
+
+{{outlet "overlay"}}
+{{outlet "error"}}
+
+<div id="application" class="container no-inline-space">
+  {{outlet}}
+</div>
+
+{{component tooltip tooltipTemplate=tooltipTemplate class="container-tooltip" id="tooltip-base" role="tooltip" aria-hidden="false"}}
+{{modal-root}}

@@ -1,0 +1,15 @@
+<td>
+  {{searchable-select
+    content=choices
+    value=model.policyId
+    optionLabelPath="name"
+    optionValuePath="id"
+    readOnly=readOnly
+  }}
+</td>
+<td>&nbsp;</td>
+{{#unless readOnly}}
+  <div class="input-group-btn">
+    <button class="btn bg-primary btn-sm" {{action "remove"}}><i class="icon icon-minus"/></button>
+  </div>
+{{/unless}}
