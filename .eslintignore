@@ -1,0 +1,9 @@
+blueprints/*
+config/*
+**/config/*
+dist/*
+server/*
+tmp/*
+vendor/*
+bower.js
+ember-cli-build.js

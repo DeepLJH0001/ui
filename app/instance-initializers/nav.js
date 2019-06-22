@@ -287,14 +287,57 @@ const rootNav = [
     resource:       ['multiclusterapp'],
     resourceScope:  'global',
   },
-  {
-    scope:          'global',
-    id:             'global-accounts',
-    localizedLabel: 'nav.admin.accounts',
-    route:          'global-admin.accounts',
-    resource:       ['user'],
+  
+  // mark
+
+  // {
+  //   scope:          'global',
+  //   id:             'global-accounts',
+  //   localizedLabel: 'nav.admin.accounts',
+  //   route:          'global-admin.accounts',
+  //   resource:       ['user'],
+  //   resourceScope:  'global',
+  // },
+    {
+    id:             'global',
+    localizedLabel: 'nav.tools.monitoring',
+    route:          'authenticated.project.monitoring.project-setting',
     resourceScope:  'global',
+    resource:       [],
+    ctx:            [getProjectId],
   },
+  // {
+  //   scope:          'global',
+  //   id:             'global-security',
+  //   localizedLabel: 'nav.admin.security.tab',
+  //   route:          'global-admin.security',
+  //   submenu:        [
+  //     {
+  //       id:             'global-security-roles',
+  //       localizedLabel: 'nav.admin.security.roles',
+  //       route:          'global-admin.security.roles',
+  //       resource:       ['roletemplate'],
+  //       resourceScope:  'global',
+  //     },
+  //     {
+  //       id:             'global-security-roles',
+  //       localizedLabel: 'nav.admin.security.podSecurityPolicies',
+  //       route:          'global-admin.security.policies',
+  //       resource:       ['podsecuritypolicytemplate'],
+  //       resourceScope:  'global',
+  //     },
+  //     {
+  //       id:             'global-security-authentication',
+  //       localizedLabel: 'nav.admin.security.authentication',
+  //       route:          'global-admin.security.authentication',
+  //       condition() {
+  //         const authConfigs = this.get('globalStore').all('authConfig');
+
+  //         return authConfigs.get('length') > 0;
+  //       }
+  //     },
+  //   ],
+  // },
   {
     scope:          'global',
     id:             'global-settings',
@@ -302,75 +345,43 @@ const rootNav = [
     route:          'global-admin.settings.advanced',
     resourceScope:  'global',
   },
-  {
-    scope:          'global',
-    id:             'global-security',
-    localizedLabel: 'nav.admin.security.tab',
-    route:          'global-admin.security',
-    submenu:        [
-      {
-        id:             'global-security-roles',
-        localizedLabel: 'nav.admin.security.roles',
-        route:          'global-admin.security.roles',
-        resource:       ['roletemplate'],
-        resourceScope:  'global',
-      },
-      {
-        id:             'global-security-roles',
-        localizedLabel: 'nav.admin.security.podSecurityPolicies',
-        route:          'global-admin.security.policies',
-        resource:       ['podsecuritypolicytemplate'],
-        resourceScope:  'global',
-      },
-      {
-        id:             'global-security-authentication',
-        localizedLabel: 'nav.admin.security.authentication',
-        route:          'global-admin.security.authentication',
-        condition() {
-          const authConfigs = this.get('globalStore').all('authConfig');
-
-          return authConfigs.get('length') > 0;
-        }
-      },
-    ],
-  },
-  {
-    scope:          'global',
-    id:             'global-tools',
-    localizedLabel: 'nav.tools.tab',
-    submenu:        [
-      {
-        scope:          'global',
-        id:             'global-catalogs',
-        localizedLabel: 'nav.admin.catalogs',
-        route:          'global-admin.catalog',
-        resource:       ['catalog'],
-        resourceScope:  'global',
-      },
-      {
-        scope:          'global',
-        id:             'nodes-node-drivers',
-        localizedLabel: 'nav.admin.drivers',
-        route:          'nodes.custom-drivers',
-        resource:       ['nodedriver', 'kontainerdriver'],
-        resourceScope:  'global',
-      },
-      {
-        id:             'global-dns-entries',
-        localizedLabel: 'nav.admin.globalDnsEntries',
-        route:          'global-admin.global-dns.entries',
-        resource:       ['globaldns'],
-        resourceScope:  'global',
-      },
-      {
-        id:             'global-dns-providers',
-        localizedLabel: 'nav.admin.globalDnsProviders',
-        route:          'global-admin.global-dns.providers',
-        resource:       ['globaldnsprovider'],
-        resourceScope:  'global',
-      },
-    ],
-  },
+  // {
+  //   scope:          'global',
+  //   id:             'global-tools',
+  //   localizedLabel: 'nav.tools.tab',
+  //   submenu:        [
+  //     {
+  //       scope:          'global',
+  //       id:             'global-catalogs',
+  //       localizedLabel: 'nav.admin.catalogs',
+  //       route:          'global-admin.catalog',
+  //       resource:       ['catalog'],
+  //       resourceScope:  'global',
+  //     },
+  //     {
+  //       scope:          'global',
+  //       id:             'nodes-node-drivers',
+  //       localizedLabel: 'nav.admin.drivers',
+  //       route:          'nodes.custom-drivers',
+  //       resource:       ['nodedriver', 'kontainerdriver'],
+  //       resourceScope:  'global',
+  //     },
+  //     {
+  //       id:             'global-dns-entries',
+  //       localizedLabel: 'nav.admin.globalDnsEntries',
+  //       route:          'global-admin.global-dns.entries',
+  //       resource:       ['globaldns'],
+  //       resourceScope:  'global',
+  //     },
+  //     {
+  //       id:             'global-dns-providers',
+  //       localizedLabel: 'nav.admin.globalDnsProviders',
+  //       route:          'global-admin.global-dns.providers',
+  //       resource:       ['globaldnsprovider'],
+  //       resourceScope:  'global',
+  //     },
+  //   ],
+  // },
 //  {
 //    scope: 'global',
 //    id: 'global-advanced',

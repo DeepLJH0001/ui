@@ -4,7 +4,7 @@ base_path: /translations
 preserve_hierarchy: false
 
 files:
-  - source: en-us.yaml
+  - source: zh-hans.yaml
     dest: /ui.yaml
     translation: '%locale%.yaml'
     type: yaml

@@ -1,9 +1,11 @@
 <nav class="clearfix responsive-nav" role="navigation" id="js-responsive-nav">
-  <a class="nav-logo logo-oss btn bg-transparent">
+  {{!-- Rancher的logo --}}
+  {{!-- <a class="nav-logo logo-oss btn bg-transparent">
     <span class="sr-only">{{settings.appName}}</span>
-  </a>
+  </a> --}}
 
   <ul class="nav-main nav-list no-inline-space">
+    {{!-- 下面这行删除 --}}
     {{page-header-project pageScope=pageScope}}
 
     {{#each navTree as |item|}}
