@@ -21,12 +21,21 @@ const rootNav = [
       'authenticated.project.pipeline.repositories',
     ],
   },
-
   {
     scope:          'project',
     id:             'project-apps',
-    localizedLabel: 'nav.apps.tab',
-    route:          'apps-tab',
+    route:          'authenticated.project',
+    localizedLabel:  'nav.vm.tab',
+    ctx:            [getProjectId],
+    resource:       [],
+    resourceScope:  'project',
+  },
+  {
+    scope:          'project',
+    id:             'project-apps',
+    localizedLabel: 'nav.apps.apps',
+    // route:          'apps-tab',
+    route:          'catalog-tab',
     ctx:            [getProjectId],
     resource:       ['app'],
     resourceScope:  'project',
@@ -107,7 +116,7 @@ const rootNav = [
   {
     scope:          'project',
     id:             'project-tools',
-    localizedLabel: 'nav.tools.tab',
+    localizedLabel: 'nav.tools.projecttab',
     ctx:            [getProjectId],
     resource:       [],
     resourceScope:  'global',
@@ -154,6 +163,16 @@ const rootNav = [
       },
     ]
   },
+  {
+    scope:          'project',
+    id:             'cluster-projects',
+    localizedLabel: 'nav.cluster.projectlist',
+    route:          'authenticated.cluster.projects.index',
+    ctx:            [getClusterId],
+    resource:       ['project'],
+    resourceScope:  'global',
+  },
+
   // Cluster
   {
     scope:          'cluster',
@@ -162,6 +181,15 @@ const rootNav = [
     route:          'authenticated.cluster.monitoring.index',
     ctx:            [getClusterId],
     resource:       ['node'],
+    resourceScope:  'global',
+  },
+  {
+    scope:          'cluster',
+    id:             'cluster-projects',
+    localizedLabel: 'nav.cluster.projects',
+    route:          'authenticated.cluster.projects.index',
+    ctx:            [getClusterId],
+    resource:       ['project'],
     resourceScope:  'global',
   },
   {
@@ -175,37 +203,9 @@ const rootNav = [
   },
   {
     scope:          'cluster',
-    id:             'cluster-storage',
-    localizedLabel: 'nav.cluster.storage.tab',
-    ctx:            [getClusterId],
-    resource:       ['clusterroletemplatebinding'],
-    resourceScope:  'global',
-    submenu:        [
-      {
-        scope:          'cluster',
-        id:             'cluster-storage-volumes',
-        localizedLabel: 'nav.cluster.storage.volumes',
-        route:          'authenticated.cluster.storage.persistent-volumes.index',
-        ctx:            [getClusterId],
-        resource:       ['project'],
-        resourceScope:  'global',
-      },
-      {
-        scope:          'cluster',
-        id:             'cluster-storage-classes',
-        localizedLabel: 'nav.cluster.storage.classes',
-        route:          'authenticated.cluster.storage.classes.index',
-        ctx:            [getClusterId],
-        resource:       ['project'],
-        resourceScope:  'global',
-      },
-    ]
-  },
-  {
-    scope:          'cluster',
-    id:             'cluster-projects',
-    localizedLabel: 'nav.cluster.projects',
-    route:          'authenticated.cluster.projects.index',
+    id:             'cluster-storage-classes',
+    localizedLabel: 'nav.cluster.storage.classes',
+    route:          'authenticated.cluster.storage.classes.index',
     ctx:            [getClusterId],
     resource:       ['project'],
     resourceScope:  'global',
@@ -218,6 +218,14 @@ const rootNav = [
     resource:       ['clusterroletemplatebinding'],
     resourceScope:  'global',
     ctx:            [getClusterId],
+  },
+  {
+    scope:          'cluster',
+    id:             'global-clusters',
+    localizedLabel: 'nav.admin.clusterlist',
+    route:          'global-admin.clusters',
+    resource:       ['cluster'],
+    resourceScope:  'global',
   },
   {
     scope:          'cluster',
@@ -300,27 +308,13 @@ const rootNav = [
     resource:       ['cluster'],
     resourceScope:  'global',
   },
-  {
-    scope:          'global',
-    id:             'multi-cluster-apps',
-    localizedLabel: 'nav.admin.multiClusterApps',
-    route:          'global-admin.multi-cluster-apps',
-    resource:       ['multiclusterapp'],
-    resourceScope:  'global',
-  },
+  // mark
   {
     scope:          'global',
     id:             'global-accounts',
     localizedLabel: 'nav.admin.accounts',
     route:          'global-admin.accounts',
     resource:       ['user'],
-    resourceScope:  'global',
-  },
-  {
-    scope:          'global',
-    id:             'global-settings',
-    localizedLabel: 'nav.settings.tab',
-    route:          'global-admin.settings.advanced',
     resourceScope:  'global',
   },
   {
@@ -343,6 +337,43 @@ const rootNav = [
         resourceScope:  'global',
       },
       {
+        scope:          'global',
+        id:             'global-setting-api-key',
+        localizedLabel: 'nav.api.link',
+        route:          'authenticated.apikeys',
+        resourceScope:  'global',
+      },
+      {
+        scope:          'global',
+        id:             'global-setting-cloudCredentials',
+        localizedLabel: 'nav.admin.security.cloudCredentials',
+        route:          'global-admin.security.cloud-credentials',
+        resourceScope:  'global',
+      },
+    ],
+  },
+  {
+    scope:          'global',
+    id:             'global-settings',
+    localizedLabel: 'nav.settings.globalset',
+    // route:          'global-admin.settings.advanced',
+    resourceScope:  'global',
+    submenu:        [
+      {
+        scope:          'global',
+        id:             'global-setting',
+        localizedLabel: 'nav.settings.tab',
+        route:          'global-admin.settings.advanced',
+        resourceScope:  'global',
+      },
+      {
+        scope:          'global',
+        id:             'global-setting-node-templates',
+        localizedLabel: 'nav.nodeTemplates.link',
+        route:          'nodes.node-templates',
+        resourceScope:  'global',
+      },
+      {
         id:             'global-security-authentication',
         localizedLabel: 'nav.admin.security.authentication',
         route:          'global-admin.security.authentication',
@@ -351,21 +382,6 @@ const rootNav = [
 
           return authConfigs.get('length') > 0;
         }
-      },
-    ],
-  },
-  {
-    scope:          'global',
-    id:             'global-tools',
-    localizedLabel: 'nav.tools.tab',
-    submenu:        [
-      {
-        scope:          'global',
-        id:             'global-catalogs',
-        localizedLabel: 'nav.admin.catalogs',
-        route:          'global-admin.catalog',
-        resource:       ['catalog'],
-        resourceScope:  'global',
       },
       {
         scope:          'global',
@@ -376,9 +392,17 @@ const rootNav = [
         resourceScope:  'global',
       },
       {
+        id:             'global-registry',
+        localizedLabel: 'nav.admin.globalRegistry',
+        route:          'global-admin.global-registry',
+        //There is no schema for global registry. But we can use global dns to check if it is a HA env.
+        resource:       ['globaldns'],
+        resourceScope:  'global',
+      },
+      {
         id:             'global-dns-entries',
         localizedLabel: 'nav.admin.globalDnsEntries',
-        route:          'global-admin.global-dns.entries',
+        route:          'global-dns.entries.new',
         resource:       ['globaldns'],
         resourceScope:  'global',
       },
@@ -389,23 +413,16 @@ const rootNav = [
         resource:       ['globaldnsprovider'],
         resourceScope:  'global',
       },
-      // {
-      //   id:             'global-registry',
-      //   localizedLabel: 'nav.admin.globalRegistry',
-      //   route:          'global-admin.global-registry',
-      //   // There is no schema for global registry. But we can use global dns to check if it is a HA env.
-      //   resource:       ['globaldns'],
-      //   resourceScope:  'global',
-      // },
-    ],
+    ]
   },
-//  {
-//    scope: 'global',
-//    id: 'global-advanced',
-//    localizedLabel: 'nav.admin.settings.advanced',
-//    route: 'global-admin.settings.advanced',
-//    disabled: true,
-//  },
+  {
+    scope:          'global',
+    id:             'multi-cluster-apps',
+    localizedLabel: 'nav.admin.multiClusterApps',
+    route:          'global-admin.multi-cluster-apps',
+    resource:       ['multiclusterapp'],
+    resourceScope:  'global',
+  },
 ]
 
 export function initialize(/* appInstance*/) {

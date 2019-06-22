@@ -179,7 +179,7 @@
 
   //dropdowns
   .ember-basic-dropdown-content {
-    width: calc(100% - 40px);
+    width: calc(100% - 40 0px);
   }
 
   //nav
@@ -191,7 +191,7 @@
 
       ul.nav-main {
         li {
-          display: block;
+          display: list-item;
         }
       }
     }
@@ -328,7 +328,7 @@
 
   .page-header .logo-oss {
     width: 75px;
-    background-image: url(images/logos/rancher-logo-cow-white.svg);
+    //background-image: url(images/logos/rancher-logo-cow-white.svg);
     background-size: 75%;
     margin-left: 10px;
   }

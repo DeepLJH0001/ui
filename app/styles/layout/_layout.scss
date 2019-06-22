@@ -16,9 +16,13 @@ BODY {
 }
 
 #application {
-  padding-top: 10px;
-  padding-bottom: 70px; // So the footer doesn't cover the end of the body
-  min-height: 150px; // header + footer + a bit
+  // padding-top: 10px;
+  // padding-bottom: 70px; // So the footer doesn't cover the end of the body
+  // min-height: 150px; // header + footer + a bit
+  padding-top: 50px;
+  padding-bottom: 70px;
+  min-height: 150px;
+  padding-left: 100px;
 }
 
 BODY.popup #application {
@@ -29,6 +33,7 @@ BODY.popup #application {
 
 MAIN {
   position: relative;
+  display: inline-block;
 }
 
 .footer-actions {
