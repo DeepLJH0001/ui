@@ -10,8 +10,8 @@
   {{#dd.trigger
      ariaLabel=(t "nav.projectDropdown.label")
   }}
-
-    <a class="{{if twoLine "two-line"}} text-white">
+  {{!-- 下列删除后全局消失 --}}
+    {{!-- <a class="{{if twoLine "two-line"}} text-white">
       {{#if (eq pageScope "project")}}
         <div class="clip">
           <span>{{project.cluster.displayName}}</span>
@@ -36,7 +36,7 @@
       <span class="sr-only">{{t "nav.srToggleDropdown"}}</span>
       <i class="icon icon-chevron-down chevron"></i>
 
-    </a>
+    </a> --}}
 
   {{/dd.trigger}}
 

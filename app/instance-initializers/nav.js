@@ -287,9 +287,7 @@ const rootNav = [
     resource:       ['multiclusterapp'],
     resourceScope:  'global',
   },
-  
   // mark
-
   // {
   //   scope:          'global',
   //   id:             'global-accounts',
@@ -298,7 +296,7 @@ const rootNav = [
   //   resource:       ['user'],
   //   resourceScope:  'global',
   // },
-    {
+  {
     id:             'global',
     localizedLabel: 'nav.tools.monitoring',
     route:          'authenticated.project.monitoring.project-setting',
