@@ -20,7 +20,7 @@ $project-nav-active: $dropdown-link-hover-bg !default;
     display: -webkit-box;
     display: flex;
     flex: 0 1 auto;
-    flex-direction: row;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     align-items: center;
 
@@ -35,18 +35,26 @@ $project-nav-active: $dropdown-link-hover-bg !default;
     }
 
     > ul {
+      float: left;
+      // width: 25%;
+      list-style-type: none;
+      font-size: 14px;
+      color: #FFFFFF;
+      position: relative;
+      line-height:25px;
       background-color: $header;
       border-radius: 3px 0 0 3px;
       padding: 0;
-      vertical-align: middle;
-
+      // vertical-align: middle;
+      // float: right;
       &.nav-main {
         flex-grow: 1;
       }
 
       > li {
         list-style-type: none;
-        display: inline-block;
+        // display: inline-block;
+        float: none;
 
         &.active {
           > .ember-basic-dropdown-trigger > a,

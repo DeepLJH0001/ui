@@ -9,10 +9,12 @@
     {{page-header-project pageScope=pageScope}}
 
     {{#each navTree as |item|}}
+      {{!-- <span class="test"> --}}
       {{#if item.submenu.length}}
         {{! Has a submenu }}
         {{#hover-dropdown
            tagName="li"
+           horizontalPosition="bottom"
            class="nav-item"
            as |dd|
         }}
@@ -102,6 +104,7 @@
         </li>
 
       {{/if}}
+      {{!-- </span> --}}
     {{/each}}
   </ul>
 
