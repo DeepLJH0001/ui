@@ -11,28 +11,25 @@ $project-nav-active: $dropdown-link-hover-bg !default;
 .page-header {
   @include no-select;
   margin-bottom: 10px;
+  width: 35%;
+  vertical-align: top;
+  display: inline-block;
+  left: 3%;
+  // top: 10%;
+  position: absolute;
 
   NAV {
     font-size: .9em;
-    width: 100%;
+    width: 50%;
+    height: 50%;
     box-sizing: border-box;
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
     flex: 0 1 auto;
-    flex-direction: row;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
-    align-items: center;
-
-    .ember-basic-dropdown-content {
-      font-size:  15px;
-    }
-
-    .ember-basic-dropdown-trigger {
-      a {
-        text-decoration: none;
-      }
-    }
+    align-items: left;
 
     .dropdown-menu {
       background: $dropdown-bg;
@@ -45,19 +42,24 @@ $project-nav-active: $dropdown-link-hover-bg !default;
     }
 
     > ul {
+      float: left;
+      width: 50%;
+      list-style-type: none;
+      font-size: 14px;
+      color: #FFFFFF;
+      position: relative;
+      line-height:25px;
       background-color: $header;
       border-radius: 3px 0 0 3px;
       padding: 0;
-      vertical-align: middle;
-      height: 50px;
-
       &.nav-main {
         flex-grow: 1;
       }
 
       > li {
         list-style-type: none;
-        display: inline-block;
+        // display: inline-block;
+        float: none;
 
         &.active {
           .ember-basic-dropdown-trigger  a,
@@ -65,6 +67,7 @@ $project-nav-active: $dropdown-link-hover-bg !default;
             color: $info;
             text-decoration: none;
             margin: 0;
+            // padding: 11px;
           }
         }
 
@@ -103,16 +106,7 @@ $project-nav-active: $dropdown-link-hover-bg !default;
 
   .nav-user {
     border-radius: 0 3px 3px 0;
-    margin: 0;
-
-    .nav-item {
-      a.nav-link {
-        padding: 0;
-        display: inline-block;
-        border: none;
-      }
-    }
-
+    margin: 15px;
     > li > a {
       display: block;
       padding: 4px 10px;
@@ -135,10 +129,11 @@ $project-nav-active: $dropdown-link-hover-bg !default;
 
   .nav-item {
     position: relative;
+    text-align: center;
   }
 
   .nav-cluster {
-    float: left;
+    float: right;
     background-color: $user-btn;
 
     a {
