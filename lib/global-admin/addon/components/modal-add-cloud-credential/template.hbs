@@ -1,0 +1,8 @@
+{{cru-cloud-credential
+  cancelAdd=(action "cancel")
+  doneSavingCloudCredential=(action "close")
+  mode=mode
+  originalModel=modalOpts.cloudCredential
+  parseAndCollectErrors=(action "errorHandler")
+}}
+{{top-errors errors=errors}}

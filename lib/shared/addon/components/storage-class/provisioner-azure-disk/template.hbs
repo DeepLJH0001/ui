@@ -1,0 +1,33 @@
+<div class="row mb-20">
+  <div class="col span-4">
+    <label class="acc-label">
+      {{t (concat "cruStorageClass." provisioner ".storageaccounttype.label")}}
+    </label>
+    {{#input-or-display editable=editing value=storageaccounttype}}
+      {{input
+        type="text"
+        value=storageaccounttype
+        classNames="form-control"
+        placeholder=(t (concat "cruStorageClass." provisioner ".storageaccounttype.placeholder"))
+      }}
+    {{/input-or-display}}
+  </div>
+  <div class="col span-4">
+    <label class="acc-label">
+      {{t (concat "cruStorageClass." provisioner ".kind.label")}}
+    </label>
+    {{#if editing}}
+      {{new-select
+        classNames="form-control"
+        content=kindOptions
+        value=kind
+        optionLabelPath="translationKey"
+        localizedLabel=true
+      }}
+    {{else}}
+      <div class="text-muted">
+        {{kind}}
+      </div>
+    {{/if}}
+  </div>
+</div>

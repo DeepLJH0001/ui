@@ -1,0 +1,210 @@
+<section class="header">
+  <h1>
+    {{#if isNew}}
+      {{t "globalDnsPage.entriesPage.header.new"}}
+    {{else if isEdit}}
+      {{t "globalDnsPage.entriesPage.header.edit"}}
+    {{/if}}
+  </h1>
+</section>
+
+<form class="horizontal-form container-fluid text-left" autocomplete="off">
+  {{#accordion-list as |al expandFn|}}
+    {{#accordion-list-item
+       title=(t "globalDnsPage.entriesPage.options.title")
+       detail=(t "globalDnsPage.entriesPage.options.detail")
+       expandAll=al.expandAll
+       expand=(action expandFn)
+       expandOnInit=true
+       everExpanded=true
+       showExpand=false
+    }}
+      <div class="row">
+        <div class="col span-12">
+          {{#banner-message icon="icon-info" color="bg-info mb-0 mt-10"}}
+            <p>
+              {{t "globalDnsPage.entriesPage.projectHelp" htmlSafe=true}}
+            </p>
+          {{/banner-message}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-6 mb-0">
+          <label
+            class="acc-label"
+            for="route53-root-domain"
+          >
+            {{t "globalDnsPage.entriesPage.config.fqdn.label"}}{{field-required}}
+          </label>
+          {{input
+            classNames="form-control"
+            id="route53-root-domain"
+            placeholder=(t "globalDnsPage.entriesPage.config.fqdn.placeholder")
+            type="text"
+            value=primaryResource.fqdn
+          }}
+        </div>
+        <div class="col span-6 mb-0">
+          <label
+            class="acc-label"
+            for="route53-secret-key"
+          >
+            {{t "globalDnsPage.entriesPage.config.provider.label"}}
+            {{field-required}}
+          </label>
+          {{#if providers.length}}
+            {{new-select
+              classNames="form-control"
+              content=providers
+              id="route53-secret-key"
+              localizedPrompt=true
+              optionLabelPath="displayName"
+              optionValuePath="id"
+              prompt="globalDnsPage.entriesPage.config.provider.placeholder"
+              value=primaryResource.providerId
+            }}
+          {{else}}
+            {{#if primaryResource.providerId}}
+              <div class="p-5">
+                {{#tooltip-element
+                   type="tooltip-basic"
+                   model=(t "globalDnsPage.entriesPage.access.noAccessProvider")
+                   tooltipTemplate="tooltip-static"
+                   aria-describedby="tooltip-base"
+                   tooltipFor="tooltipLink"
+                }}
+                  {{primaryResource.providerId}}
+                  <i class="icon icon-alert"></i>
+                {{/tooltip-element}}
+              </div>
+            {{else}}
+              {{t "globalDnsPage.noProviders"}}
+            {{/if}}
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col span-6">
+          <label class="acc-label">{{t "globalDnsPage.entriesPage.config.configType"}}</label>
+          <div class="mb-20">
+            <div class="radio">
+              <label>
+                {{radio-button
+                  selection=recordType
+                  value="multi"
+                }}&nbsp;
+                {{t "globalDnsPage.entriesPage.config.multi"}}
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                {{radio-button
+                  selection=recordType
+                  value="project"
+                }}&nbsp;
+                {{t "globalDnsPage.entriesPage.config.project"}}
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col span-6 mb-0">
+          {{#if (eq recordType "multi")}}
+            <label
+              class="acc-label"
+              for="route53-access-key"
+            >
+              {{t "globalDnsPage.entriesPage.config.multiCluster.label"}}
+            </label>
+            {{#if multiClusterApps.length }}
+              {{new-select
+                classNames="form-control"
+                content=multiClusterApps
+                id="route53-access-key"
+                localizedPrompt=true
+                optionLabelPath="displayName"
+                optionValuePath="id"
+                prompt="globalDnsPage.entriesPage.config.multiCluster.placeholder"
+                value=primaryResource.multiClusterAppId
+              }}
+            {{else}}
+              {{#if primaryResource.multiClusterAppId}}
+                <div class="p-5">
+                  {{#tooltip-element
+                     type="tooltip-basic"
+                     model=(t "globalDnsPage.entriesPage.access.noAccessMulti")
+                     tooltipTemplate="tooltip-static"
+                     aria-describedby="tooltip-base"
+                     tooltipFor="tooltipLink"
+                  }}
+                    {{primaryResource.multiClusterAppId}}
+                    <i class="icon icon-alert"></i>
+                  {{/tooltip-element}}
+                </div>
+              {{else}}
+                <div>
+                  {{t "globalDnsPage.noApps"}}
+                </div>
+              {{/if}}
+            {{/if}}
+          {{else}}
+            {{form-project-targets
+              addTarget=(action "addTarget")
+              removeTarget=(action "removeTarget")
+              targets=projectTargets
+              projects=model.allProjects
+              fullWidth=true
+            }}
+          {{/if}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-3">
+          <label
+            class="acc-label"
+            for="gdns-ttl"
+          >
+            {{t "globalDnsPage.entriesPage.config.ttl.label"}}
+          </label>
+          <div class="input-group">
+            {{input-integer
+              value=primaryResource.ttl
+              min="0"
+              step="1"
+              classNames="form-control"
+            }}
+            <span class="input-group-addon bg-default">{{t "generic.seconds"}}</span>
+          </div>
+        </div>
+      </div>
+    {{/accordion-list-item}}
+
+
+    {{#accordion-list-item
+       title=(t "globalDnsPage.providersPage.members.title")
+       detail=(t "globalDnsPage.providersPage.members.detail")
+       expandAll=al.expandAll
+       expand=(action expandFn)
+    }}
+      {{form-members-global-access
+        optionsForAccessType=memberAccessTypes
+        readOnly=false
+        resource=model.globaldns
+        addAuthorizedPrincipal=(action "addAuthorizedPrincipal")
+        removeMember=(action "removeAuthorizedPrincipal")
+      }}
+    {{/accordion-list-item}}
+
+  {{/accordion-list}}
+</form>
+
+<section>
+  {{top-errors errors=errors}}
+  {{save-cancel
+    editing=(eq mode "edit")
+    cancel=(action "cancel")
+    classNames="text-center mt-20"
+    save=(action "save")
+    saveDisabled=saveDisabled
+  }}
+</section>

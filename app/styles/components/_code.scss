@@ -1,0 +1,68 @@
+// Code
+$code-color                          : $success !default;
+$code-bg                             : $text-color !default;
+$pre-bg                              : $text-color !default;
+$pre-color                           : $dark-grey !default;
+$pre-border-color                    : $light-grey !default;
+$setting-bg                          : rgba($bg-default, .3) !default;
+
+code {
+    padding: 3px 6px;
+    font-size: 85%;
+    color: $code-color;
+    background-color: $code-bg;
+    border-radius: 2px;
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+}
+
+pre {
+  background-color: $pre-bg;
+  padding: 10px;
+  white-space: pre-wrap;
+
+  code {
+    color: $light-grey;
+    background-color: transparent;
+    padding: 0;
+  }
+  &.normal-wrap {
+
+  }
+}
+
+.bg-setting {
+  @include bg-color($setting-bg);
+  @include contrasted($setting-bg);
+}
+
+.bg-code {
+  @include bg-color($code-bg);
+  @include contrasted($code-bg);
+}
+
+.bg-code-dark {
+  background: $code-color;
+  color: white;
+
+  a {
+    color: white;
+  }
+}
+
+.CodeMirror {
+  height: auto;
+}
+
+.CodeMirror-scroll {
+  overflow: auto !important;
+}
+
+.bg-pre-light {
+  background: #fff;
+  code {
+    color: #000;
+  }
+}

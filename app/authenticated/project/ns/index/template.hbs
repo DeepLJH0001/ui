@@ -1,0 +1,71 @@
+<section class="header clearfix">
+  <h1 class="pull-left">{{t 'projectsListNamespacePage.header'}}</h1>
+  <div class="vertical-middle"></div>
+  <div class="right-buttons">
+    <a href="#" {{action "newNs"}} class="btn bg-primary btn-sm ml-10" disabled={{rbac-prevents resource="namespace" scope="cluster" permission="create"}}>{{t 'namespacesPage.addNamespace'}}</a>
+  </div>
+</section>
+
+<section class="mt-30">
+  {{#sortable-table
+       tableClassNames="bordered"
+       paging=true
+       pagingLabel="pagination.namespace"
+       groupByKey="projectId"
+       groupByRef="project"
+       headers=headers
+       bulkActions=true
+       body=allNamespace
+       descending=descending
+       sortBy=sortBy
+       extraSearchFields=extraSearchFields
+       as |sortable kind obj dt|
+  }}
+    {{#if (eq kind "row")}}
+      <tr class="main-row">
+        <td class="row-check" valign="middle" style="padding-top: 2px;">
+          {{check-box nodeId=obj.id}}
+        </td>
+        <td>
+          {{badge-state model=obj}}
+        </td>
+        <td>
+          {{obj.name}}
+          {{#if obj.autoInjectionEnabled}}
+            <div class="istio istio-autoinjection"></div>
+          {{/if}}
+          {{#if obj.description}}
+            <p class="text-small text-muted m-0">{{linkify obj.description}}</p>
+          {{/if}}
+        </td>
+        <td data-title="{{dt.created}}" class="text-right pr-20">
+          {{date-calendar obj.created}}
+        </td>
+        <td data-title="{{t 'generic.actions'}}:" class="actions">
+          {{action-menu model=obj}}
+        </td>
+      </tr>
+    {{else if (eq kind "group")}}
+      {{#if obj.ref.type}}
+        <tr class="group-row">
+          <td colspan="{{sortable.fullColspan}}" class="pl-10">
+            {{t 'projectsListNamespacePage.current'}}
+            {{#if obj.ref.description}}
+              <p class="text-small text-muted m-0">{{linkify obj.ref.description}}</p>
+            {{/if}}
+          </td>
+        </tr>
+      {{else}}
+        <tr class="group-row">
+          <td colspan="{{sortable.fullColspan}}" class="pl-10">
+            {{t 'projectsListNamespacePage.notIn'}}
+          </td>
+        </tr>
+      {{/if}}
+    {{else if (eq kind "nomatch")}}
+      <tr><td colspan="{{sortable.fullColspan}}" class="text-center text-muted lacsso pt-20 pb-20">{{t 'namespacesPage.noMatch'}}</td></tr>
+    {{else if (eq kind "norows")}}
+      <tr><td colspan="{{sortable.fullColspan}}" class="text-center text-muted lacsso pt-20 pb-20">{{t 'namespacesPage.noData'}}</td></tr>
+    {{/if}}
+  {{/sortable-table}}
+</section>

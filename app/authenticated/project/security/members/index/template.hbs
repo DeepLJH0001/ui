@@ -1,0 +1,52 @@
+<section class="header clearfix">
+  <div class="pull-left"><h1>{{t 'nav.infra.members'}}</h1></div>
+  <div class="right-buttons">
+    {{#link-to "authenticated.project.security.members.new" scope.currentProject.id classNames="btn btn-sm bg-primary right-divider-btn" disabled=(rbac-prevents resource="projectroletemplatebinding" scope="global" permission="create")}} {{t 'membersPage.index.localLink' 'Project'}}{{/link-to}}
+    <span id="header-search"/>
+  </div>
+</section>
+
+<section class="instances">
+  {{#sortable-table
+    classNames="grid sortable-table"
+    sortBy=sortBy
+    descending=descending
+    headers=headers
+    pagingLabel="pagination.member"
+    searchText=searchText
+    body=filtered
+    as |sortable kind row dt|
+  }}
+    {{#if (eq kind "row")}}
+      <tr class="main-row">
+        <td valign="middle" class="row-check" style="padding-top: 2px;">
+          {{check-box nodeId=row.id}}
+        </td>
+        <td data-title="{{t 'membersPage.index.table.userId'}}:" >
+          {{#if row.principalId}}
+            {{identity-block principalId=row.principalId}}
+          {{else if row.user}}
+            {{row.user.displayName}}
+          {{else if row.group}}
+            {{row.group.displayName}}
+          {{else}}
+            <span class="text-muted">Unknown</span>
+          {{/if}}
+        </td>
+        <td data-title="{{t 'membersPage.index.table.template'}}:" >
+          {{row.roleTemplate.displayName}}
+        </td>
+        <td data-title="{{t 'generic.created'}}:" class="text-right pr-20">
+          {{date-calendar row.created}}
+        </td>
+        <td data-title="{{t 'generic.actions'}}:" class="actions">
+          {{action-menu model=row}}
+        </td>
+      </tr>
+    {{else if (eq kind "nomatch")}}
+      <td colspan="5" class="text-center text-muted lacsso pt-20 pb-20">{{t 'membersPage.index.table.noMatch'}}</td>
+    {{else if (eq kind "norows")}}
+      <td colspan="5" class="text-center text-muted lacsso pt-20 pb-20">{{t 'membersPage.index.table.noData'}}</td>
+    {{/if}}
+  {{/sortable-table}}
+</section>

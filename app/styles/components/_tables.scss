@@ -1,0 +1,393 @@
+//
+// Important: Almost all selectors in here need to be ">"-ed together so they
+// apply only to the current table, not one nested inside another table.
+//
+
+TABLE {
+  position: relative;
+
+  TH {
+    text-align: left;
+
+    .btn {
+      padding: 5px 0;
+    }
+  }
+
+  TR:not(.fixed-header) {
+    TH {
+      color: $text-muted;
+      font-size: .85em;
+    }
+  }
+
+  // General padding
+  > THEAD > TR > TH,
+  > TBODY > TR > TD {
+    padding: 0;
+    transition: ease-in-out all 200ms;
+    word-wrap: break-word;
+
+    &:last-child {
+    height: 0;
+    }
+  }
+
+  > THEAD > TR > TH > .btn {
+    padding: 0;
+  }
+
+  > TBODY > TR > TD {
+    height: $group-row-height;
+
+    &.clip {
+      padding-right: 25px;
+    }
+  }
+
+  > TBODY > TR.auto-height > TD,
+  > TBODY > TR.auto-height > TH {
+    height: auto;
+  }
+
+  &.cell-padding {
+    border-spacing: 10px 0;
+    border-collapse: separate;
+  }
+
+  &.no-lines {
+    > THEAD > TR > TH {
+      border: none;
+    }
+    .main-row {
+      border: 0;
+    }
+  }
+
+  &.fixed {
+    table-layout: fixed;
+    width: 100%;
+
+      &.no-bottom {
+        tbody > tr:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+
+  .fixed-header-actions {
+    min-height: 40px;
+    width: 100%;
+    z-index: 1;
+    background: $body-bg;
+
+    input[type='search'] {
+      width: auto;
+      padding-right: 60px;
+    }
+
+  }
+
+  .fixed-header {
+    z-index: 2;
+    background: $table-header;
+    > TH {
+      text-align: left;
+
+      &.row-check {
+        text-align: center;
+      }
+
+      &.sortable.text-right A {
+        position: relative;
+        left: -15px;
+      }
+
+      a {
+        padding: 0;
+
+        I.faded {
+          opacity: .3;
+        }
+
+        I.icon-sort {
+          width: 15px;
+        }
+      }
+    }
+  }
+
+  .fixed-header-placeholder {
+    visibility: hidden;
+    border-bottom: 0;
+
+    TH {
+      padding: 0 !important;
+      height: 0 !important;
+    }
+  }
+
+  .row-check, .actions {
+    text-align: center;
+  }
+
+  > THEAD .bulk-actions {
+    margin: 0 3px;
+  }
+
+  &.has-sub-rows {
+
+    tr.row-selected TABLE > TBODY > TR > TD {
+      background: $body-bg;
+    }
+
+    tr.row-selected .btn-group.bg-default {
+      background: darken($bg-default, 7);
+    }
+
+    tr.row-selected .scale-arrow:before {
+      border-bottom-color: darken($bg-default, 7);
+    }
+
+    TABLE {
+      > TBODY {
+        @include striped;
+      }
+    }
+    TABLE > THEAD > .fixed-header-actions {
+      z-index: 3;
+      background-color: transparent;
+    }
+    TABLE > THEAD > .fixed-header {
+      z-index: 4;
+    }
+    TABLE .bulk-actions {
+      margin: 0 18px;
+    }
+  }
+
+  &.small {
+    > THEAD {
+      > TR > TH {
+        padding: 2px 5px;
+      }
+    }
+    > TBODY > TR > TD {
+      padding: 2px 5px;
+    }
+  }
+
+  > TBODY {
+    > TR.separator-row > TD {
+      background-color: $body-bg;
+    }
+
+    > TR.group-row > TD,
+    > TR.total > TD {
+      background: $table-bg-accent;
+      height: $group-row-height;
+    }
+
+    > TR.group-row-error {
+      border-top: 0 !important;
+
+      > TD {
+        padding: 0 10px;
+        height: auto;
+      }
+    }
+
+    > TR.no-bottom > TD {
+      padding-bottom: 0;
+    }
+
+    > TR.no-top > TD {
+      padding-top: 0;
+    }
+
+    > TR.suffix {
+      display: table-row;
+    }
+  }
+
+  > THEAD > TR {
+    width: 100%;
+    box-sizing: border-box;
+    border-width: 0 0 3px 0;
+    border-color: $table-border-color;
+    border-radius: 0;
+    outline: none;
+    transition: all ease-in-out .2s;
+    &.fixed-header {
+      background: $table-header;
+      border-bottom: 3px solid $link-color;
+      TH {
+        color: $link-color;
+
+        .btn {
+          color: $link-color;
+        }
+      }
+    }
+    > TH {
+      border-width: 0 0 3px 0;
+      border-color: $table-border-color;
+      border-radius: 0;
+      outline: none;
+      transition: all ease-in-out .3s;
+      text-align: left;
+      font-weight: normal;
+    }
+  }
+
+  &.double-rows > TBODY {
+    > TR.main-row > TD {
+      padding-bottom: 0;
+      line-height: 15px;
+
+      &.top-half {
+        border-bottom: 1px solid transparent;
+      }
+    }
+
+    > TR.sub-row > TD {
+      padding-top: 0;
+    }
+  }
+
+  &.has-sub-rows TABLE {
+    border-collapse: separate;
+    border-spacing: 2px;
+    // border: $border solid 2px;
+
+    > THEAD > TR.fixed-header {
+      background: $table-nested-header;
+      // color: $text-color;
+      border: 0;
+
+      > TH .btn {
+        color: $text-color;
+        padding: 0 10px;
+      }
+    }
+    > TBODY > TR > TD {
+      background: $table-bg;
+      padding: 0 5px;
+    }
+  }
+
+  > TBODY {
+    border: none;
+
+       &.group {
+            &:after {
+              content: "";
+              display: table-row;
+              height: $table-body-separation;
+              border-top: 2px solid $table-border-color;
+              position: absolute;
+              width: 99.7%;
+            }
+
+            &:before {
+                content: "";
+                display: block;
+                height: $group-row-height;
+            }
+
+            &:first-of-type:before {
+                height: 0;
+            }
+        }
+
+
+    > TR {
+      &.main-row {
+        border-top: solid 2px $table-border-color;
+      }
+
+      &.row-selected {
+        background-color: $table-bg-selected;
+      }
+    }
+  }
+
+  &.bordered {
+    @include bordered;
+
+    table {
+      @include solid;
+    }
+  }
+
+  &.striped {
+    @include striped;
+  }
+
+  &.solid {
+    @include solid;
+  }
+
+
+  &.tooltip-table {
+    @include contrasted($tooltip-bg);
+    > TBODY {
+      background: transparent;
+      > TR {
+        background-color: transparent;
+        &:last-of-type {
+          border-top: contrast-color($tooltip-bg, $contrasted-dark-default, $contrasted-light-default) solid 1px;
+
+        }
+        td {
+          height: 25px;
+          margin: 0;
+          max-height: 25px;
+          padding-left: 10px;
+          &:first-of-type {
+            text-align:left;
+          }
+          &:last-of-type {
+            text-align:right;
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.box > div > table.striped {
+  thead tr {
+    color: $link-color;
+    border-bottom: solid $link-color 3px;
+    text-align: left;
+  }
+  > TBODY > TR {
+    background-color: rgba($border, .3);
+  }
+
+  > TBODY > TR:nth-child(even) {
+    background-color: $border;
+  }
+}
+
+.box {
+  TABLE .fixed-header-actions, TABLE > THEAD > TR.fixed-header {
+    background: transparent;
+  }
+  TABLE.bordered > TBODY > TR {
+    background: rgba($body-bg, .5);
+  }
+}
+
+.sortable-table {
+  tbody {
+    .no-match,
+    .no-data {
+      @extend .text-center;
+      @extend .text-muted;
+      padding: 20px 0px;
+    }
+  }
+}

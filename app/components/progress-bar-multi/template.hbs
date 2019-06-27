@@ -1,0 +1,15 @@
+{{#tooltip-element
+     type="tooltip-basic"
+     model=tooltipContent
+     tooltipTemplate=tooltipTemplate
+     aria-describedby="tooltip-base"
+     tooltipFor="progress-bar"
+     inlineBlock=true
+     classNames="full-width"
+}}
+  <div class="progress">
+    {{~#each pieces as |obj|~}}
+      <div class="progress-bar {{obj.color}}" style={{obj.css}}></div>
+    {{~/each~}}
+  </div>
+{{/tooltip-element}}

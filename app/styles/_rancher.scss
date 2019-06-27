@@ -1,0 +1,88 @@
+@import "app/styles/abstracts/decimal";
+@import "app/styles/abstracts/functions";
+@import "app/styles/abstracts/mixins";
+@import "vendor/icons/variables";
+@import "app/styles/vendor/normalize";
+
+// Base
+// Includes boilerplate for the project. Inlcude things like typography, Normalize, etc.
+@import "app/styles/fonts/prompt";
+@import "app/styles/fonts/icons";
+@import "app/styles/fonts/zerowidthspace";
+@import "app/styles/fonts/dots";
+@import "app/styles/base/base";
+@import "app/styles/base/color";
+@import "app/styles/base/typography";
+@import "app/styles/base/helpers";
+@import "app/styles/base/icons";
+
+// Layout
+// Layout specific files. Headers, footers, grids...
+@import "app/styles/layout/layout";
+@import "app/styles/layout/loading";
+@import "app/styles/layout/header";
+@import "app/styles/layout/footer";
+@import "app/styles/layout/grid";
+
+// Components
+// Component-specific files.
+@import "app/styles/components/slider";
+@import "app/styles/components/badges";
+@import "app/styles/components/badge-state";
+@import "app/styles/components/tables";
+@import "app/styles/components/growl";
+@import "app/styles/components/login";
+@import "app/styles/components/pod";
+@import "app/styles/components/metrics";
+@import "app/styles/components/github-avatar";
+@import "app/styles/components/spark-line";
+@import "app/styles/components/tooltip";
+@import "app/styles/components/container-shell";
+@import "app/styles/components/modals";
+@import "app/styles/components/catalog-box";
+@import "app/styles/components/code";
+@import "app/styles/components/alerts";
+@import "app/styles/components/button";
+@import "app/styles/components/banners";
+@import "app/styles/components/tabs";
+@import "app/styles/components/forms";
+@import "app/styles/components/dropdown";
+@import "app/styles/components/pagination";
+@import "app/styles/components/theme-toggle";
+@import "app/styles/components/progress";
+@import "app/styles/components/percent-gauge";
+@import "app/styles/components/namespace-app";
+@import "app/styles/components/page-header";
+@import "app/styles/components/over-hr";
+@import "app/styles/components/accordion";
+@import "app/styles/components/jsondiffpatch";
+@import "app/styles/components/searchable-select";
+@import "app/styles/components/nav-boxes";
+@import "app/styles/components/pipeline";
+@import "app/styles/components/logging";
+@import "app/styles/components/identity-block";
+@import "app/styles/components/istio-graph";
+
+// Vendor
+// Pretty much what it says. Vendor specific changes/overrides or includes.
+@import "app/styles/vendor/copy-to-clipboard";
+@import "app/styles/vendor/prism-theme";
+@import "app/styles/ember-basic-dropdown"; //wut???? just importing ember-basic-dropdown doesnt work
+
+// Pages
+// Pages that have their own styles.
+@import "app/styles/pages/fail-whale";
+@import "app/styles/pages/host";
+@import "app/styles/pages/registry";
+@import "app/styles/pages/container";
+@import "app/styles/pages/about";
+@import "app/styles/pages/welcome";
+@import "app/styles/pages/settings";
+@import "app/styles/pages/catalog";
+@import "app/styles/pages/virtualmachine";
+@import "app/styles/pages/k8s";
+
+// Sizes
+@import "app/styles/layout/large";
+@import "app/styles/layout/medium";
+@import "app/styles/layout/small";

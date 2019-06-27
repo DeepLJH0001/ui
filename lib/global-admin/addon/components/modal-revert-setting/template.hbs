@@ -1,0 +1,33 @@
+<section class="header">
+  <h1>
+    {{t "modalRevertSettings.title" setting=setting.id}}
+  </h1>
+</section>
+<section>
+
+  <div class="modal-content row">
+    <div class="col span-12">
+      <label class="acc-label">
+        {{t "modalRevertSettings.current"}}
+      </label>
+      <div>
+        {{setting.value}}
+      </div>
+    </div>
+    <div class="col span-12">
+      <label class="acc-label">
+        {{t "modalRevertSettings.default"}}
+      </label>
+      <div>
+        {{setting.default}}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{top-errors errors=errors}}
+{{save-cancel
+  save=(action "save")
+  cancel=(action "done")
+  createLabel="generic.save"
+}}

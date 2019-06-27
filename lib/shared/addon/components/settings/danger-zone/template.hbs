@@ -1,0 +1,57 @@
+<p>{{t 'dangerZone.subtext' appName=settings.appName htmlSafe=true}}</p>
+
+{{#if loading}}
+  <div class="p-20 text-center"><i class="icon icon-spinner icon-spin"></i> {{t 'generic.loading'}}</div>
+{{else}}
+  <div>
+    {{#each current as |row|}}
+      <div class="accordion"> {{!-- container-section --}}
+        <div class="accordion-header"> {{!-- header-section --}}
+          <div class="title">
+            <label class="">
+              {{~#if (or (not row.obj) (eq row.obj.default row.obj.value))~}}
+                {{~row.key~}}
+              {{~else~}}
+                <b>{{~row.key~}}</b>
+              {{~/if~}}
+            </label>
+            <p class="help-block">{{t row.descriptionKey appName=settings.appName}}</p>
+          </div>
+          {{action-menu model=row.obj showPrimary=false classNames="pull-right mt-5" size="xs"}}
+        </div>
+        <div class="accordion-content row"> {{!-- content-section --}}
+          {{#if row.hide}}
+            <div class="row ml-10 mt-10">
+              <div class="btn bg-primary btn-sm" {{action "showNode" row}}>Show {{row.key}}</div>
+            </div>
+          {{else}}
+            <div class="">
+              {{#if (eq row.kind "json" )}}
+                <div class="container-json-setting">
+                  {{code-block
+                      class="setting-json"
+                      code=row.parsedJSON
+                      language="json"
+                  }}
+                </div>
+              {{else}}
+                <pre class="bg-setting m-0">
+                {{~#if row.obj.value~}}
+                  {{~row.obj.value~}}
+                {{~else~}}
+                  <span class="text-muted">&lt;none&gt;</span>
+                {{~/if~}}
+                </pre>
+              {{/if}}
+              <div class="row mt-5">
+                {{#if (or (eq row.kind 'multiline') (eq row.kind 'json'))}}
+                  <div class="btn bg-primary btn-sm" {{action "showNode" row}}>Hide {{row.key}}</div>
+                {{/if}}
+              </div>
+            </div>
+          {{/if}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{/if}}

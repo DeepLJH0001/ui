@@ -1,0 +1,138 @@
+<section>
+  {{form-name-description
+    model=config
+    nameDisabled=isEdit
+  }}
+</section>
+<form class="horizontal-form container-fluid text-left" autocomplete="off">
+  <div class="row">
+    <div class="col span-6 mb-0">
+      <label
+        class="acc-label"
+        for="route53-root-domain"
+      >
+        {{t "globalDnsPage.providersPage.config.root.label"}}
+      </label>
+      {{input
+        classNames="form-control"
+        id="route53-root-domain"
+        placeholder=(t "globalDnsPage.providersPage.config.root.placeholder")
+        type="text"
+        value=config.rootDomain
+      }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col span-6">
+      <label
+        class="acc-label"
+        for="route53-credential-path"
+      >
+        {{t "globalDnsPage.providersPage.config.credentialsPath.label"}}
+      </label>
+      {{input
+        classNames="form-control"
+        id="route53-credential-path"
+        placeholder=(t "globalDnsPage.providersPage.config.credentialsPath.placeholder")
+        type="text"
+        value=config.route53ProviderConfig.credentialsPath
+      }}
+    </div>
+    <div class="col span-6">
+      <label
+        class="acc-label"
+        for="route53-role-arn"
+      >
+        {{t "globalDnsPage.providersPage.config.roleArn.label"}}
+      </label>
+      {{input
+        classNames="form-control"
+        id="route53-role-arn"
+        placeholder=(t "globalDnsPage.providersPage.config.roleArn.placeholder")
+        type="text"
+        value=config.route53ProviderConfig.roleArn
+      }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col span-6">
+      <label
+        class="acc-label"
+        for="route53-region"
+      >
+        {{t "globalDnsPage.providersPage.config.region.label"}}
+      </label>
+      {{input
+        classNames="form-control"
+        id="route53-region"
+        placeholder=(t "globalDnsPage.providersPage.config.region.placeholder")
+        type="text"
+        value=config.route53ProviderConfig.region
+      }}
+    </div>
+    <div class="col span-6">
+      <label
+        class="acc-label"
+        for="route53-zone"
+      >
+        {{t "globalDnsPage.providersPage.config.zone.label"}}
+      </label>
+      {{input
+        classNames="form-control"
+        id="route53-zone"
+        placeholder=(t "globalDnsPage.providersPage.config.zone.placeholder")
+        type="text"
+        value=config.route53ProviderConfig.zoneType
+      }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col span-6 mb-0">
+      <label
+        class="acc-label"
+        for="route53-access-key"
+      >
+        {{t "globalDnsPage.providersPage.config.accessKey.label"}}{{field-required}}
+      </label>
+      {{input
+        classNames="form-control"
+        id="route53-access-key"
+        placeholder=(t "globalDnsPage.providersPage.config.accessKey.placeholder")
+        type="text"
+        value=config.route53ProviderConfig.accessKey
+      }}
+    </div>
+
+    <div class="col span-6 mb-0">
+      <label
+        class="acc-label"
+        for="route53-secret-key"
+      >
+        {{t "globalDnsPage.providersPage.config.secretKey.label"}}
+        {{#if (eq mode "edit")}}
+          {{#tooltip-element
+             type="tooltip-basic"
+             model=(t "globalDnsPage.providersPage.config.secretKey.info")
+             tooltipTemplate="tooltip-static"
+             aria-describedby="tooltip-base"
+             tooltipFor="tooltipSecretKey"
+          }}
+            <i class="icon icon-info"></i>
+          {{/tooltip-element}}
+        {{else}}
+          {{field-required}}
+        {{/if}}
+      </label>
+      {{input
+        classNames="form-control"
+        id="route53-secret-key"
+        placeholder=(t "globalDnsPage.providersPage.config.secretKey.placeholder")
+        type="password"
+        value=config.route53ProviderConfig.secretKey
+      }}
+    </div>
+  </div>
+</form>

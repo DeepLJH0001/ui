@@ -1,0 +1,843 @@
+---
+languageName: "فارسی"
+languageContribute: "در ترجمه رنچر کمک کنید!"
+generic:
+  actions: اکشن ها
+  activate: قعال سازی
+  add: افزودن
+  all: همه
+  any: هر
+  as: به عنوان
+  cancel: لغو
+  closeModal: بستن
+  collapseAll: بستن همه
+  comingSoon: به زودی
+  command: دستور
+  confirm: تایید
+  containers: کانتینرها
+  created: ساخته شد
+  createdDate: "ایجاد شد {date}"
+  customize: شخصی سازی
+  default: پیش فرض
+  description: توضیح
+  details: جزییات
+  disable: غیر فعال کردن
+  disabled: غیر فعال
+  displayName: نام نمایشی
+  dockerId: شناسه Docker
+  domainName: نام دامنه
+  done: انجام شد
+  edit: ویرایش
+  enable: فعال کردن
+  enabled: فعال
+  environment: محیط
+  expandAll: بازکردن همه
+  hardware: سخت‌افزار
+  healthy: سالم
+  help: راهنما
+  id: آیدی
+  image: تصویر
+  internal: داخلی
+  ipAddress: آدرس آی پی
+  limit: محدودیت
+  limits: محدودیت‌ها
+  loading: "در حال بارگزاری..."
+  mibibyte: 'MiB'
+  missing: "*%یافت نشده%*"
+  moreActions: اکشن های بیشتر
+  na: 'نامشخص'
+  name: نام
+  never: هرگز
+  no: "خیر"
+  noRating: بدون امتیاز
+  none: هیچ یک
+  ports: پورت ها
+  remove: حذف
+  role: نقش
+  save: ذخیره
+  saved: ذخیره شد
+  saving: در حال ذخیره سازی
+  search: جستجو
+  searching: 'در حال جستجو...'
+  seconds: ثانیه
+  select: انتخاب
+  service: سرویس
+  services: سرویس ها
+  state: وضعیت
+  tags: برچسب‌ها
+  test: تست
+  testing: در حال تست
+  to: به
+  total: مجموع
+  type: نوع
+  unknown: ناشناس
+  upload: بارگذاری
+  user: کاربر
+  uuid: شناسه منحصر به فرد عمومی
+  value: مقدار
+  version: نسخه
+  yes: "بله"
+realmNames:
+  all: همه
+  asia: آسیا
+accountsPage:
+  detail:
+    header: مشخصات کاربر
+    table:
+      headers:
+        permission: سطح دسترسی
+        role: نقش
+        projectName: پروژه
+        active: فعال
+      roles:
+        title: نقش ها
+  index:
+    localLink: افزودن کاربر
+    table:
+      id: آی دی
+      kind: نوع
+      identity: هویت
+      noName: هیچ یک
+  new:
+    header: افزودن کاربر
+    errors:
+      usernameReq: نام کاربری الزامی است.
+    form:
+      username:
+        placeholder: "مثال. jsmith"
+      password:
+        labelText: رمز عبور
+      name:
+        placeholder: "مثال. John Smith"
+      type:
+        labelText: نوع حساب
+      description:
+        labelText: توضیح
+        placeholder: "مثال. این حساب متعلق به آقای حسینی است"
+  modal:
+    password: تغییر رمز عبور
+appDetailPage:
+  endpoints:
+    protocol: پروتکل
+  notes:
+    title: یادداشت ها
+    detail: 'دستورالعمل نحوه استفاده از این برنامه'
+  services:
+    title: سرویس ها
+    nodata: هیچ سرویس برای این برنامه ایجاد نشده است.
+podSecurityPoliciesPage:
+  index:
+    table:
+      name: نام
+  addPodSecurityPolicy: اضافه کردن خط مشی
+  editPodSecurityPolicy: ویرایش خط مشی
+  detail:
+    header: خطی مشی
+  saveEdit: ویرایش
+  saveNew: ایجاد
+rolesPage:
+  index:
+    table:
+      noData: هنوز نقشی ایجاد نشده است
+apiPage:
+  table:
+    state: وضعیت
+    description: توضیح
+    created: ساخته شد
+authPage:
+  shibboleth:
+    enabled:
+      authenticated:
+        header:
+          text: اهراز هویت
+      disableAccess:
+        header: "محدوده خطر&trade;"
+        warning: '<b class="text-danger">هشدار:</b> غیر فعال سازی کنترل دسترسی به هر شهصی که به این صفحه دسترسی یابد کنترل کامل خواهد داد.'
+        disable: غیر فعال سازی کنترل دسترسی
+      groupsField: 'گروه ها:'
+      displayName: 'نام نمایشی:'
+      userName: 'نام کاربری:'
+      userId: 'شناسه کاربر:'
+    disabled:
+      header: '1. تنظیم حساب Shibboleth'
+      label: "{providerName} تنظیم نشده است"
+      name:
+        labelText: نمایش فیلد نام
+      username:
+        labelText: فیلد نام کاربری
+      uid:
+        labelText: فیلد UID
+      groups:
+        labelText: فیلد گروه ها
+      testAuth:
+        header: '3. تست و فعال سازی اهراز هویت'
+        subtext: 'از تنظیم بودن برنامه با تست اهراز هویت اطمینان حاصل کنید:'
+        buttonText:
+          pre: اهراز هویت با IDP
+          post: در انتظار دریافت پاسخ از IDP
+    providerName:
+      shibboleth: سیستم تشخیص هویت
+  root:
+    header: کنترل دسترسی
+  github:
+    standard: سرویس گیت هاب
+    enterprise: نسخه تجاری گیت هاب
+    header:
+      disabled:
+        label: GitHub تنظیم نشده است
+    authenticated:
+      header:
+        text: اهراز هویت
+        clientId:
+          helpText: "برای تغییر برنامه GitHub, دسترسی کنترل زیر را غیر فعال کرده و دوباره تنظیم کنید."
+      disableAccess:
+        header: "محدوده خطر&trade;"
+        warning: '<b class="text-danger">هشدار:</b> غیر فعال سازی کنترل دسترسی به هر کاربری در {appName} اجازه می دهد به این صفحه دسترسی داشته باشد.'
+    notAuthenticated:
+      header: "1. تنظیم یک برنامه GitHub"
+      ul:
+        li1:
+          text: 'برای GitHub استاندارد, <a href="https://github.com/settings/developers" target="_blank">کلیک کنید</a>.'
+          ul:
+            li1: "برای Github Enterprise, وارد حساب کاربری خود شوید. ابتدا روی تنظیمات کلیک کرده, سپس وارد برنامه ها شوید."
+        li2:
+          text: ' "Register new application" را انتخاب و فرم را پر کنید:'
+          ul:
+            li1: '<b>نام Application :</b> <span class="text-muted">Anything you like, مثال. My {appName}</span>'
+            li2: 'آدرس صفحه اصلی'
+            li3: '<b>توضیحات Application:</b> <span class="text-muted">پر کردن این گزینه دلخواه است</span>'
+        li3:
+          text: '"ثبت Application" را انتخاب کنید '
+      form:
+        header: '2. تنظیم {appName} برای استفاده از اپلیکیشن شما برای اهراز هویت'
+        subtext: 'Client ID و Secret را از قسمت بالا-سمت راست کپی و پیست کرده.'
+        clientId:
+          labelText: شناسه کلاینت
+        isGHEnterprise:
+          labelText: استفاده از اتصال امن
+        enterpriseHost:
+          labelText: هاست Enterprise
+          placeholder: 'مثال. github.example.com'
+    testAuth:
+      header: '3. تست و فعال سازی اهراز هویت'
+      buttonText:
+        pre: اهراز هویت with GitHub
+        post: در انتظار پاسخ از GitHub
+  azuread:
+    enabled:
+      promptDisable: غیر فعال سازی کنترل دسترسی
+    configure:
+      header: '1. تنظیم Azure AD Account'
+    test:
+      header: '2. تست و فعال سازی اعراز هویت'
+      username:
+        label: نام کاربری
+        placeholder: 'مثال. jsmith'
+      password:
+        label: رمز عبور
+      pre: اهراز هویت با Azure
+      post: در انتظار پاسخ از Azure
+  localAuth:
+    subtext:
+      enabled:
+        linkText: مدیریت حساب ها
+      disabled: '{appName} می تواند تنظیم شود تا دسترسی به برخی حساب ها که در دیتابیس تعریف شده اند را محدود کند. این کار هنوز انجام نشده، بنابراین هر شخصی با دسترسی به این صفحه،  به سیستم کنترل کامل دارد.'
+    accessEnabled:
+      header: 'خطر&trade;'
+      warning: '<b class="text-danger">هشدار:</b> غیر فعال سازی کنترل دسترسی دسترسی کامل به {appName} را به هر شخصی که به این صفحه دسترسی پیدا کند می دهد'
+      buttonText:
+        prompt: غیر فعال سازی کنترل دسترسی
+    accessDisabled:
+      header: '1. ایجاد کاربر ادمین'
+      helpText: 'این کاربر در {appName} کنترل کامل خواهد داشت.'
+      form:
+        login:
+          labelText: نام کاربری برای ورود
+          placeholder: 'مثال. jsmith'
+        name:
+          labelText: نام کامل
+          placeholder: 'مثال. John Smith'
+        password:
+          labelText: رمز عبور
+        confirmPassword:
+          labelText: تایید رمز عبور
+    accessControl:
+      header: '2. فعال سازی کنترل دسترسی'
+      helpText: 'برای فعال سازی کنترل دسترسی کلیک کرده و وارد شوید.'
+      buttonText:
+        pre: فعال سازی اهراز هویت لوکال
+        post: 'در حال فعال سازی...'
+catalogPage:
+  index:
+    certified:
+      rancher:
+        rancher: کارگاه رنچر
+        partner: رسمی
+      pl:
+        rancher: هسته
+        partner: رسمی
+    noData:
+      singular: هیچ templates سازگاری وجود ندارد.
+      plural: هیچ templates سازگاری در این کاتالوگ وجود ندارد.
+    action:
+      launch: مشاهده جزئیات
+      notCompatible: سازگار نیست
+      alreadyDeployed: نرم افزار در حال حاضر مستقر شده
+certificatesPage:
+  index:
+    linkTo: افزودن Certificate
+  new:
+    header: افزودن Certificate
+    form:
+      name:
+        placeholder: مثال. mydomain.com
+      description:
+        placeholder: مثال. EV cert for mydomain.com
+containersPage:
+  table:
+    sparkPrefixCpu: "پردازشگر: "
+    sparkPrefixMemory: "حافظه: "
+    sparkPrefixNetwork: "شبکه: "
+    sparkPrefixStorage: "محل ذخیره: "
+failWhalePage:
+  header: خطا
+  reloadButton: |
+    <a href="#" onclick="window.location.href = window.location.href; return false;">بارگزاری مجدد</a> یا
+  logoutButton: خروج
+haPage:
+  setup:
+    link: به راهنما مراجعه کنید
+    suffix: " برای اطلاع رسانی در مورد راه اندازی و استفاده."
+hostsPage:
+  addContainer: افزودن Container
+  hostPage:
+    portsTab:
+      table:
+        header:
+          ip: آدرس آی پی
+          service: سرویس
+        body:
+          noData: این هاست هیچ پورتی ندارد.
+    storageTab:
+      table:
+        header:
+          state: وضعیت
+          hostPath: میزبان Path
+        body:
+          noData: این هاست هیچ volumes ندارد.
+loginPage:
+  githubMessage: "{appName} از GitHub برای مدیریت حساب ها و تیم ها استفاده می کند.  دکمه زیر را فشار دهید و وارد شوید و به ما دسترسی خواندن اطلاعات اولیه خساب GitHub تان را بدهید."
+  shibbolethMessage: "{appName} از Shibboleth  برای مدیریت حساب ها استفاده می کند. برای ورود به Shibboleth IDP بر روی دکمه زیر کلیک کنید."
+  shibbolethError:
+    401: "Unauthorized"
+    500: "Internal Server Error"
+machinePage:
+  inactive: غیر فعال
+notFoundPage:
+  header: "چنین صفحه ای وجود ندارد"
+  linkTo: خانه
+registriesPage:
+  index:
+    linkTo: افزودن Registry
+    table:
+      header:
+        state: وضعیت
+        address: آدرس
+        username: نام کاربری
+        created: ساخته شد
+  new:
+    header: افزودن Registry
+    form:
+      custom:
+        labelText: آدرس
+        placeholder: مثال. registry.example.com
+        help: فقط نام هاست یا آدرس آی پی, پروتوکل را وارد نکنید (https://)
+      username:
+        labelText: نام کاربری
+        placeholder: مثال. username
+      password:
+        labelText: رمز عبور
+        placeholder: مثال. password
+servicePage:
+  multistat:
+    image: 'تصویر:'
+  linksTab:
+    header: پیوند ها
+  new:
+    form:
+      name:
+        placeholder: مثال. myapp
+      description:
+        placeholder: مثال. My application
+  newBalancer:
+    form:
+      name:
+        placeholder: مثال. website
+      description:
+        placeholder: مثال. Balancer for mycompany.com
+  portsTab:
+    notActive: پورت ها فقط وقتی سرویس فعال است قابل دسترسی اند.
+waitingPage:
+  hosts:
+    setup:
+      kubernetes: در حال تنظیم Kubernetes
+ldap:
+  header:
+    disabled:
+      label: "{providerName} تنظیم نشده"
+  accessEnabled:
+    header: اهراز هویت
+    subtext: "برای تغییر تنظیمات سرور, کنترل دسترسی را در بخش پایین غیر فعال کرده و دوباره تنظیم کنید."
+    general:
+      server: "سرور:"
+      serviceAccount: "حصاب سرویس:"
+      defaultDomain: "دامنه پیش فرض:"
+    users:
+      header: کاربران
+      login: "فیلد ورود:"
+      name: "فیلد نام:"
+      search: "فیلد جستجو:"
+      enabled: "فیلد وضعیت:"
+    group:
+      header: گروه
+      name: "فیلد نام:"
+      search: "فیلد جستجو:"
+    disable:
+      confirmDisable:
+        pre: غیر فعال سازی کنترل دسترسی
+  accessConfig:
+    header: "1. تنظیم یک سرور {providerName}"
+    port:
+      labelText: پورت
+    defaultDomain:
+      labelText: دامنه پیش فرض ورود
+      placeholder: "مثال. mycompany"
+  customizeSchema:
+    users:
+      header: کاربران
+      disabledBitMask:
+        labelText: غیر فعال سازیd Status Bitmask
+    groups:
+      header: گروه ها
+  testAuth:
+    header: "3. تست و فعال سازی اعراز هویت"
+    userName:
+      labelText: نام کاربری شما
+    password:
+      labelText: رمز عبور شما
+    authenticate:
+      pre: اهراز هویت
+      post: "در حال تست..."
+servicePartial:
+  noContainers:
+    inactive:
+      start: شروع
+catalogSettings:
+  more:
+    addActionLabel: افزودن Catalog
+    name:
+      label: نام
+      placeholder: مثال. mycatalog
+    branch:
+      label: شاخه
+      placeholder: 'مثال. master'
+confirmDelete:
+  cancelAction: لغو
+containerLogs:
+  onlyCombined: "<b>توجه:</b> Only combined stdout/stderr logs are available for this container because it was run with the TTY (-t) flag."
+  status:
+    connecting: در حال اتصال
+    connected: متصل
+    disconnected: اتصال قطع شده
+    closed: بسته شده
+containerShell:
+  status:
+    error: "خطا: {error}"
+    connecting: در حال اتصال
+    connected: متصل
+    disconnected: اتصال قطع شده
+    closed: بسته شده
+editAccount:
+  title: ویرایش Account
+  form:
+    name:
+      placeholder: مثال. John Smith
+    description:
+      label: توضیح
+      placeholder: مثال. This account is for John Smith
+editApiKey:
+  title:
+    justCreated: کلید API Created
+    editing: ویرایش API Key
+editCertificate:
+  title: ویرایش Certificate
+  name:
+    placeholder: مثال. mydomain.com
+  description:
+    placeholder: مثال. EV cert for mydomain.com
+editContainer:
+  title:
+    vm: ویرایش VM
+    container: ویرایش Container
+  name:
+    placeholder: مثال. myapp
+  description:
+    placeholder: مثال. My Application
+editHost:
+  hostname:
+    label: نام هاست
+  customName:
+    placeholder: مثال. dev1
+    help: اگر این بخش خالی باشد, نام هاست به عنوان نام نمایش داده خواهد شد.
+  description:
+    label: توضیح
+  labels:
+    label: برچسب ها
+editService:
+  title: ویرایش Service
+editStack:
+  name:
+    label: نام
+    placeholder: مثال. myapp
+  description:
+    label: توضیح
+  group:
+    placeholder: مثال. frontend, production
+stackHeader:
+  outputs: خروجی ها
+formatIp:
+  noIp: هیچ یک
+formCommand:
+  command:
+    label: دستور
+    placeholder: مثال. /usr/sbin/httpd -f httpd.conf
+  workingDir:
+    placeholder: مثال. /myapp
+  console:
+    label: کنسول
+    none: هیچ یک
+  autoRestart:
+    no: هرگز
+    always: همیشه
+formContainerLinks:
+  addActionLabel: افزودن پیوند
+formDisks:
+  addDiskLabel: افزودن Disk
+  addRootDiskLabel: افزودن Root Disk
+  name:
+    rootDisk: روت Disk
+    label: نام
+    placeholder: مثال. data
+  size:
+    label: اندازه
+  readIops:
+    placeholder: مثال. 1000
+  writeIops:
+    placeholder: مثال. 1000
+formEngineOpts:
+  engineInstallUrl:
+    placeholder: مثال. http://get.docker.com/
+    latest: آخرین
+  engineStorageDriver:
+    placeholder: مثال. overlay
+  engineOpts:
+    addActionLabel: افزودن Engine Option
+    keyPlaceholder: مثال. log-driver
+    valuePlaceholder: مثال. syslog
+  engineLabels:
+    addActionLabel: افزودن Engine Label
+    keyLabel: برچسب
+  engineEnv:
+    addActionLabel: افزودن Environment Variable
+    keyLabel: متغیر
+    keyPlaceholder: مثال. HTTP_PROXY
+    valuePlaceholder: مثال. http://your-proxy:8080
+  engineInsecureRegistry:
+    addActionLabel: افزودن Insecure Registry
+    valuePlaceholder: مثال. registry.example.com
+  engineRegistryMirror:
+    addActionLabel: افزودن Registry Mirror
+    valuePlaceholder: مثال. https://my-mirror.example.com:5000
+formHealthCheck:
+  checkType:
+    none: هیچ یک
+  host:
+    label: میزبان Header
+  port:
+    placeholder: مثال. 80
+formKeyValue:
+  addAction: افزودن Pair
+  key:
+    label: کلید
+    placeholder: کلید
+  value:
+    label: ارزش
+    placeholder: ارزش
+formNameDescription:
+  name:
+    label: نام
+    placeholder: نام
+  description:
+    label: توضیح
+    placeholder: توضیح
+formNetwork:
+  hostname:
+    label: نام هاست
+    placeholder: مثال. web
+    dockerId: استفاده از Docker container ID
+    containerName: استفاده از نام container
+    custom: انتخاب یک هاست مشخص
+  domainName:
+    label: نام دامنه
+    placeholder: مثال. example.com
+  resolvingServers:
+    placeholder: مثال. 8.8.4.4
+  searchDomains:
+    placeholder: مثال. prod.example.com
+formPorts:
+  protocol:
+    label: پروتوکل
+formScheduling:
+  field: فیلد
+  value: ارزش
+formSecurity:
+  shares:
+    placeholder: مثال. 1024
+  capabilities:
+    helpBlock:
+      link: اطلاعات بیشتر
+  deviceBinding:
+    pathHost:
+      placeholder: مثال. /dev/sdc
+    pathContainer:
+      placeholder: مثال. /dev/xsdc
+    permissions:
+      label: دسترسی ها
+formSslTermination:
+  addAlternate: افزودن Alternate Certificate
+  noCertificates: There are no other certificates to use.
+formUserData:
+  placeholder: "مثال. اطلاعات تنظیمات برای container"
+  isVmPlaceholder: "مثال. اطلاعات تنظیمات برای ماشین مجازی"
+formUserLabels:
+  addAction: افزودن برچسب
+  key:
+    label: کلید
+    placeholder: مثال. foo
+  value:
+    label: ارزش
+    placeholder: مثال. bar
+  protip: "نکته: Paste one or more lines of key=value pairs into any key field for easy bulk entry."
+formValueArray:
+  addActionLabel: افزودن Value
+  valueLabel: ارزش
+  protip: "نکته: Paste one or more lines of values into any field for easy bulk entry."
+formVolumes:
+  value:
+    prompt: یک Container انتخاب کنید...
+hostSettings:
+  header: میزبان Registration URL
+  hostUrl:
+    local: "آدرس این سایت:"
+    new:
+      labelText: "چیز دیگر:"
+      placeholder: "مثال. http://example.com:8080"
+  notPublic:
+    alert: |
+      آیا مطمئن هستید تمام هاست های شما به  <code>{activeValue}</code> دسترسی خواهند داشت ?<br/> این آدرس به نظر یک آی پی خصوصی یا داخلی است.
+identityBlock:
+  loading: در حال بارگزاری...
+inputIdentity:
+  placeholder:
+    github: افزودن یک کاربر GitHub یا نام سازمان
+    generic: افزودن یک کاربر یا گروه بر اساس نام
+  dropdownLabel:
+    teams: تیم ها و سازمان های شما
+    groups: گروه های شما
+inputPassword:
+  buttonText: تولید
+inputTextFile:
+  tooltip: خواندن از یک فایل
+labelsSection:
+  kind: نوع
+  key: کلید
+  value: ارزش
+  noData: بدون برچسب
+loginUserPass:
+  userLabel: نام کاربری
+  userPlaceholder: مثال. jsmith
+  loggingInLabel: در حال ورود...
+  passwordLabel: رمز عبور
+modalAboutComponent:
+  version: نسخه
+  ui: رابط کاربری
+modalConfirmDeactivate:
+  header: آیا اطمینان دارید
+  cancel: لغو
+  buttons:
+    project:
+      message: غیر فعال سازی محیط شما
+      button: غیر فعال سازی
+    environment:
+      message: متوقف نمودن سرویس ها برای
+      button: متوقف نمودن سرویس ها
+    default:
+      message: غیر فعال سازی
+      button: غیر فعال سازی
+modalEditDriver:
+  url:
+    label: دانلود URL
+  checksum:
+    help: "اختیاری: Verify that the downloaded driver matches the expected checksum."
+modalProcessError:
+  cause: "علت:"
+  close: بستن
+modalWelcome:
+  header: به {appName} خوش آمدید!
+  closeModal: بستن
+newCatalog:
+  catalog: "کاتالوگ:"
+  category: "دسته بندی:"
+  noConfig: این template تنظیماتی ندارد.
+  preview: پیش نمایش
+  saveConfigure: تنظیم کردن
+  saveNew: اجرا
+  saveUpgrade: ارتقا
+  selectVersionAdd: یک نسخه از template را برای deploy انتخاب کنید
+  selectVersionConfigure: یک نسخه از template را برای تنظیم کردن انتخاب کنید
+  selectVersionUpgrade: یک نسخه از template را برای ارتقا انتخاب کنید
+  startService: شروع سرویس ها بعد ایجاد
+  support: "پشتیبانی:"
+  templateVersion: نسخه Template
+  upgrade: "ارتقا:"
+  version:
+    prompt: انتخاب یک نسخه...
+newContainer:
+  name:
+    placeholder: مثال. myapp
+  description:
+    placeholder: مثال. My Application
+nodeDriver:
+  amazoneks:
+    associateWorkerNodePublicIp:
+      radio:
+        default: 'Yes'
+pageFooter:
+  notARelease: (نسخه آزمایشی)
+  issues: گزارش مشکل
+  forums: تالار های گفتگو
+  download:
+    link: دانلود CLI
+projectRow:
+  none: بدون توضیح
+registryRow:
+  address: آدرس
+  username: نام کاربری
+  created: ساخته شد
+saveCancel:
+  saving: در حال ذخیره سازی...
+  saved: ذخیره شد!
+  edit: ذخیره
+  create: ساختن
+  cancel: لغو
+schema:
+  inputBoolean:
+    y: "درست"
+    n: "غلط"
+  inputCertificate:
+    prompt: یک Certificate انتخاب کنید...
+  inputEnum:
+    option: یک گزینه انتخاب کنید...
+schedulingRuleRow:
+  theHost: هاست
+  must: باید
+  should: باید
+  shouldNot: نباید
+  mustNot: نباید
+  haveA: داشته باشد
+  of: از
+  hostLabel: برچسب هاست
+  containerLabel: container با برچسب
+  serviceName: سرویس با نام
+  containerName: container با نام
+siteAccess:
+  header: دسترسی سایت
+  noIdentity: هیچ یک
+  users: کاربران
+  groups: گروه ها
+  organizations: سازمان ها
+telemetryOpt:
+  learnMore:
+    label: اطلاعات بیشتر
+  label: همهow collection of anonymous statistics
+tooltipLink:
+  list: لیست
+viewEditDescription:
+  form:
+    name:
+      placeholder: مثال. lab
+    description:
+      placeholder: مثال. Environment for developer experimentation
+vmConsole:
+  canvas: Canvas پشتیبانی نمی شود.
+  footerActions:
+    buttonCancel: بستن
+waitKubernetes:
+  addHost: 'حداقل یک هاست اضافه کنید'
+  activateHost: 'در انتظار فعال سازی هاست'
+  startServices: 'در حال شروع سرویس ها'
+containerChoices:
+  hostGroup: "هاست: {name}"
+  unknownHost: "هاست: ???"
+nav:
+  catalog:
+    all: همه
+    library: کتابخانه
+  infra:
+    storagePage: محل ذخیره
+  user:
+    label: "منوی کاربر: {username}"
+    logout: خروج
+action:
+  activate: فعال سازی
+  clone: همانند سازی
+  deactivate: غیر فعال سازی
+  edit: ویرایش
+  evacuate: تخلیه
+  exportConfig: خروجی گرفتن از تنظیمات
+  logs: مشاهده لاگ ها
+  remove: حذف
+  replay: تکرار
+  restart: راه اندازی مجدد
+  retry: سعی مجدد
+  rollback: بحال اول بر گرداندن
+  start: شروع
+  stop: توقف
+  upgrade: ارتقا
+  viewConfig: مشاهده تنظییمات
+  viewGraph: مشاهده گراف
+  viewInApi: viewGraph in API
+  viewInstance: مشاهده Instance
+model:
+  account:
+    kind:
+      registeredAgent: عامل ثبت شده
+      agent: عامل
+      service: سرویس
+      user: کاربر
+      admin: مدیر
+      project: محیر
+  identity:
+    displayType:
+      user: کاربر
+      team: تیم
+      group: گروه
+      org: سازمان
+      localUser: کاربر محلی
+      unknown: "{type}؟"
+  projectMember:
+    role:
+      member: عضو
+      owner: ماکل
+      readonly: فقط قابل خواندن
+      restricted: دسترسی قطع شده

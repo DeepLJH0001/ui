@@ -1,0 +1,451 @@
+.pipeline-approval-tip{
+  position: relative;
+  top: 0;
+  border: 2px solid $warning;
+  margin: 10px;
+  height: 40px;
+  >.approval-head{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $warning;
+    color: white;
+    width: 150px;
+    height: 100%;
+    text-align: center;
+    line-height: 36px;
+  }
+  >.approval-content{
+    background-color: lighten($warning, 47%);
+    width: 100%;
+    padding-left: 150px;
+    line-height: 36px;
+    .content-text{
+      padding: 10px;
+    }
+    .approval-actions{
+      float: right;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+.pipeline-child-limit> *{
+  width: 100%;
+}
+.pipeline-approver-select-wrap{
+  position: relative;
+  top: 0;
+}
+.pipeline-approver-list {
+  list-style-type: none;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  width: 100%;
+  padding: 0;
+  border: 1px solid gray;
+  border-bottom: 0;
+  margin: 0;
+  >li {
+    background: white;
+    width: 100%;
+    border-bottom: 1px solid black;
+    line-height: 2;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+}
+
+.noHeader .header {
+  display: none;
+}
+
+.pipeline-container {
+  white-space: nowrap;
+  padding: 10px;
+  overflow: scroll;
+}
+
+.pipeline-wrap-header-button {
+  height: 52px;
+}
+
+.pipeline-save-cancel {
+  display: inline;
+}
+
+.pipeline-stages {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  .draggable {
+      cursor: move;
+  }
+  .stage-name {
+    padding: 8px 8px 8px 16px;
+    line-height: 2;
+    width: 100%;
+    background: $link-color;
+    color: white;
+  }
+  .new-stage-button {
+    background: #f5f5f5;
+    color: #40a9ff;
+    border: 1px dashed #d9d9d9;
+    text-align: center;
+    cursor: pointer;
+  }
+  .new-stage-button:hover {
+    color: #40a9ff;
+    background-color: #fff;
+    border-color: #40a9ff;
+  }
+  .chrome-shim{
+    position:relative;
+    z-index:1;
+  }
+  > .stages-line {
+    position: absolute;
+    top: 52px;
+    left: 90px;
+    border-top: 2px solid #ecf0f1;
+    width: calc(100% - 190px);
+    height: 1px;
+  }
+  .stage-wrap {
+    display: inline-block;
+    vertical-align: top;
+    width: 184px;
+    margin-right: 40px;
+  }
+  .stage-container {
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+  }
+  .arrow-down {
+    height: 0;
+  	width: 0;
+  	border-top: 7px solid $link-color;
+  	border-bottom: 7px solid transparent;
+  	border-left: 7px solid transparent;
+  	border-right: 7px solid transparent;
+    margin: 0 auto;
+  }
+  .arrow-next {
+    position: relative;
+    border-color: transparent;
+    left: 184px;
+    top: -40px;
+    .line {
+      border: 2px solid $link-color;
+      float: left;
+      border-left-width: 25px;
+    }
+    .arrow-right {
+      height: 0;
+      width: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 7px solid $link-color;
+      border-right: 7px solid transparent;
+      float:left;
+      margin-top: -5px;
+    }
+  }
+}
+
+.pipeline-steps {
+  text-align: center;
+  position: relative;
+  top: 0;
+  padding: 0px 8px 10px 8px;
+  > .steps-head-dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $info;
+    &.need-approve{
+      background-color: $warning;
+    }
+  }
+  > .steps-line {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    border-left: 2px solid $border;
+    height: calc(100% - 30px);
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -1;
+  }
+  >.steps-wrap {
+    padding: 4px;
+  }
+  .step-content {
+    text-align: left;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    border: 1px solid $border;
+    border-radius: 3px;
+    margin-top: 10px;
+    padding: 8px 0px 8px 10px;
+    width: 160px;
+    background-color: white;
+    cursor: pointer;
+    &:first-child {
+      margin-top: 0;
+    }
+    &.big {
+      height: 160px;
+      line-height: 160px;
+      text-align: center;
+      background-color: lighten($bg-default, 5);
+      color: $link-color;
+    }
+    > .step-name {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow-y: hidden;
+    }
+    .title {
+      color: rgba(0,0,0,.85);
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .content {
+      color: rgba(0,0,0,.45);
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  .step-add {
+    text-align: center;
+  }
+  .step-button {
+    background: #f5f5f5;
+    color: #40a9ff;
+    line-height: 32px;
+    border: 1px dashed #d9d9d9;
+  }
+  .step-button:hover {
+    color: #40a9ff;
+    background-color: #fff;
+    border-color: #40a9ff;
+  }
+}
+
+.modal-pipeline-head {
+  display: inline-block;
+  > h2,
+  p {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+.accordion {
+  .accordion-header {
+    &.header-pipeline {
+      position: relative;
+      top: 0;
+      border: none;
+      padding: 5px 10px 5px 60px;
+      &.item {
+        padding: 2px 10px;
+      }
+      &.Success {
+        background-color: lighten($success,50%);
+        color: $success;
+        *{
+          color: $success !important;
+        }
+        .expand {
+          background-color: $success;
+          color: white;
+          i{
+            color: white !important;
+          }
+        }
+      }
+      &.Failed, &.Aborted {
+        background-color: rgba(241, 83, 84, 0.2);
+        color: $error;
+        *{
+          color: $error !important;
+        }
+        .expand {
+          background-color: $error;
+          color: white;
+          i{
+            color: white !important;
+          }
+        }
+      }
+      &.Building {
+        background-color: lighten($primary,50%);
+        color: $primary;
+        *{
+          color: $primary !important;
+        }
+        .expand {
+          background-color: $primary;
+          color: white;
+          i{
+            color: white !important;
+          }
+        }
+      }
+      &.Waiting {
+        background-color: lighten($mid-grey,30%);
+        color: $mid-grey;
+        *{
+          color: $mid-grey !important;
+        }
+        .expand {
+          background-color: $mid-grey;
+          color: white;
+          i{
+            color: white !important;
+          }
+        }
+      }
+
+      .text-cell {
+        width: 200px;
+        height: 20px;
+        margin-bottom: 9.5px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .badge-state {
+        position: absolute;
+        right: 20px;
+        top: 7px;
+        width: 200px;
+        white-space: nowrap;
+      }
+      .expand {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50px;
+        .icon{
+          position: absolute;
+          top: 5px;
+          right: 8px;
+        }
+      }
+    }
+  }
+
+  .accordion-content {
+    &.content-pipeline{
+      border: none;
+      padding: 10px 0 10px 50px;
+    }
+  }
+}
+
+.pipeline-input-group{
+  position: relative;
+  top: 0;
+  height: 36.5px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .label-wrap{
+    position: absolute;
+    left: 0;
+    line-height: 36.5px;
+  }
+  .input-wrap {
+    padding-left: 150px;
+  }
+}
+
+.inline-block{
+  display: inline-block;
+}
+.timestamp{
+  color: whitesmoke;
+}
+
+.text-line-through{
+  text-decoration: line-through !important;
+}
+
+.language-select input{
+  padding: 0 6px;
+}
+
+.scm-source {
+  min-height: 80px !important;
+}
+
+.scm-opacity {
+  opacity: 1 !important;
+}
+
+.branch-select {
+  width: 200px;
+  display: inline-block;
+}
+
+.committer-avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.commit-message {
+  margin: 0;
+  line-height: 22px;
+  min-height: 22px;
+  font-size: 15px;
+  font-weight: normal;
+  overflow: hidden;
+  display: box;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+.searchable-option-active {
+  .btn-authorize {
+    color: white!important;
+    width:100%;
+    display: block;
+    text-align:left;
+  }
+}
+
+.log-actions {
+  position: sticky;
+  top: 0px;
+  text-align: right;
+  margin-right: 2px;
+}
+
+.pipeline-log {
+  .log-body {
+    a {
+      color: #f5f5f5;
+      text-decoration: underline;   
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{{container-shell
+  url=url
+  showProtip=false
+  displayName=scope.currentCluster.displayName
+  dismiss=(action "cancel")
+  disconncted=(action "cancel")
+}}
+
+<div class="footer-actions">
+  <button {{action "cancel"}} class="btn bg-primary">{{t 'generic.closeModal'}}</button>
+</div>

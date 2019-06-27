@@ -1,0 +1,88 @@
+<section>
+  {{form-name-description
+    model=config
+    nameDisabled=isEdit
+  }}
+</section>
+
+<form class="horizontal-form container-fluid text-left" autocomplete="off">
+  <div class="row">
+    <div class="col span-6 mb-0">
+      <label
+        class="acc-label"
+        for="cloudflare-root-domain"
+      >
+        {{t "globalDnsPage.providersPage.config.root.label"}}
+      </label>
+      {{input
+        classNames="form-control"
+        id="cloudflare-root-domain"
+        placeholder=(t "globalDnsPage.providersPage.config.root.placeholder")
+        type="text"
+        value=config.rootDomain
+      }}
+    </div>
+    <div class="col span-6 mb-0">
+      <label
+        class="acc-label"
+        for="cloudflare-proxy-setting"
+      >
+        {{t "globalDnsPage.providersPage.config.proxySetting.label"}}
+      </label>
+      <div class="radio input">
+        <label>
+          {{radio-button
+            classNames="form-control"
+            selection=config.cloudflareProviderConfig.proxySetting
+            value=true
+          }}
+          {{t "generic.yes"}}
+        </label>
+      </div>
+      <div class="radio input">
+        <label>
+          {{radio-button
+            classNames="form-control"
+            selection=config.cloudflareProviderConfig.proxySetting
+            value=false
+          }}
+          {{t "generic.no"}}
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col span-6 mb-0">
+      <label
+        class="acc-label"
+        for="cloudflare-api-email"
+      >
+        {{t "globalDnsPage.providersPage.config.apiEmail.label"}}{{field-required}}
+      </label>
+      {{input
+        classNames="form-control"
+        id="cloudflare-api-email"
+        placeholder=(t "globalDnsPage.providersPage.config.apiEmail.placeholder")
+        type="text"
+        value=config.cloudflareProviderConfig.apiEmail
+      }}
+    </div>
+
+    <div class="col span-6 mb-0">
+      <label
+        class="acc-label"
+        for="cloudflare-api-key"
+      >
+        {{t "globalDnsPage.providersPage.config.apiKey.label"}}{{field-required}}
+      </label>
+      {{input
+        classNames="form-control"
+        id="cloudflare-api-key"
+        placeholder=(t "globalDnsPage.providersPage.config.apiKey.placeholder")
+        type="password"
+        value=config.cloudflareProviderConfig.apiKey
+      }}
+    </div>
+  </div>
+</form>
