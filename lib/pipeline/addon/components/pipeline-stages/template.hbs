@@ -1,0 +1,47 @@
+<section class="pipeline-stages">
+  {{#each selectedConfig.stages as |item index|}}
+    <div class="stage-wrap">
+      <div class="stage-container">
+        {{#if (eq index 0)}}
+          <div class="stage-name text-capitalize clip">
+            {{index-add index}}. {{item.name}}
+          </div>
+          <div class="arrow-down"></div>
+          <div class="arrow-next">
+            <div class="line inline-block"></div>
+            <div class="arrow-right inline-block"></div>
+          </div>
+        {{else}}
+          <div class="stage-name clip">
+            <i class="icon icon-edit pull-right" style="cursor: pointer; line-height: 2" {{action 'editStage' index}}></i>
+            <span>{{index-add index}}. {{item.name}}</span>
+          </div>
+          <div class="arrow-down"></div>
+          <div class="arrow-next">
+            <div class="line inline-block"></div>
+            <div class="arrow-right inline-block"></div>
+          </div>
+        {{/if}}
+
+        {{pipeline-steps
+          pipeline=pipeline
+          stages=selectedConfig.stages
+          currentStageIndex=index
+          projectDockerCredentials=projectDockerCredentials
+          steps=item.steps
+        }}
+      </div>
+    </div>
+  {{/each}}
+  <div class="stage-wrap">
+    <div class="new-stage-button stage-name" {{action 'addStage'}}>
+      <i class="icon icon-plus"/>
+      {{t 'newPipelineStage.header.create'}}
+    </div>
+  </div>
+</section>
+
+{{pipeline-input-var-hint
+  hintAry=envvars
+  loading=false
+}}

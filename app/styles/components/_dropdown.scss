@@ -1,0 +1,268 @@
+$dropdown-bg                         : $body-bg !default;
+
+$dropdown-border                     : $light-grey !default;
+$dropdown-fallback-border            : transparent !default;
+$dropdown-divider-bg                 : $border !default;
+
+$dropdown-link-color                 : $link-color !default;
+$dropdown-link-hover-color           : $body-bg !default;
+$dropdown-link-hover-bg              : $link-color !default;
+
+$dropdown-link-active-color          : white !default;
+$dropdown-link-active-bg             : darken($link-color, 10%) !default;
+
+$dropdown-link-disabled-color        : $mid-grey !default;
+
+$dropdown-header-color               : $mid-grey !default;
+$dropdown-caret-color                : $mid-grey !default;
+
+
+$header                              : $secondary !default;
+$header-link                         : $light-grey !default;
+$header-link-active                  : $primary !default;
+$user-btn                            : darken($header, 10%) !default;
+$nav-spacing: 4px;
+
+//BASIC DROPDOWN
+$ember-basic-dropdown-content-background-color: $dropdown-bg;
+$ember-basic-dropdown-content-z-index: 1500;
+
+.ember-basic-dropdown-content {
+  list-style: none;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  border: 1px solid $dropdown-border; // IE8 fallback
+  border: 1px solid $dropdown-border;
+  border-top: 0;
+  background-clip: padding-box;
+
+
+  .nav-user {
+    display:table-cell;
+    border-radius: 0 3px 3px 0;
+    margin: 0;
+
+    > li > a {
+      display: block;
+      padding: 4px 10px;
+
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+
+  }
+  .user-auth {
+    line-height: initial;
+    padding: 10px 20px 10px 10px;
+    background: $accent-bg;
+  }
+
+  &.lang-select {
+    max-height: 300px;
+    overflow: scroll;
+  }
+
+  // Links within the dropdown menu
+  > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    clear: both;
+    font-weight: normal;
+    color: $dropdown-link-color;
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    cursor: pointer;
+    @extend .clip;
+
+    .icon {
+      font-size: 12px;
+      margin-left: 5px;
+    }
+
+    // Hover/Focus state
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $dropdown-link-hover-color;
+      background-color: $dropdown-link-hover-bg;
+    }
+  }
+
+  // Active state
+  > .active > a {
+    & {
+      color: $dropdown-link-active-color;
+      text-decoration: none;
+      outline: 0;
+      background-color: $dropdown-link-active-bg;
+    }
+
+    &:hover,
+    &:focus {
+      color: $dropdown-link-hover-color;
+      background-color: $dropdown-link-hover-bg;
+    }
+  }
+
+  // Disabled state
+  //
+  // Gray out text and ensure the hover/focus state remains gray
+  > .disabled > a {
+    &,
+    &:hover,
+    &:focus {
+      color: $dropdown-link-disabled-color;
+    }
+
+    // Nuke hover/focus effects
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: transparent;
+      // cursor: @cursor-disabled;
+    }
+  }
+
+  .divider {
+    margin: 0;
+    border-top: 1px solid $dropdown-divider-bg;
+  }
+
+  .header {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    border-bottom: 0;
+
+    A {
+      font-weight: bold;
+    }
+  }
+
+  .subitem A {
+    padding-left: 30px;
+  }
+}
+// The dropdown menu (ul)
+.dropdown-menu {
+  position: absolute;
+  z-index: 991; // DO NOT CHANGE UNLESS YOU ARE ALSO CHANGING dropdown-backdrop z-index
+  top: 100%;
+  left: auto;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  max-width: 100vw;
+  padding: 0;
+  margin: 0; // override default ul
+  list-style: none;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  background: $dropdown-bg;
+  border: 1px solid $dropdown-border; // IE8 fallback
+  border: 1px solid $dropdown-border;
+  background-clip: padding-box;
+
+  // Links within the dropdown menu
+  > li > a {
+    display: block;
+    padding: 8px 18px;
+    clear: both;
+    font-weight: normal;
+    color: $dropdown-link-color;
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    cursor: pointer;
+    @extend .clip;
+
+    // Hover/Focus state
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $dropdown-link-hover-color;
+      background-color: $dropdown-link-hover-bg;
+    }
+  }
+
+  // Active state
+  > .active > a {
+    & {
+      color: $dropdown-link-active-color;
+      text-decoration: none;
+      outline: 0;
+      background-color: $dropdown-link-active-bg;
+    }
+
+    &:hover,
+    &:focus {
+      color: $dropdown-link-hover-color;
+      background-color: $dropdown-link-hover-bg;
+    }
+  }
+
+  // Disabled state
+  //
+  // Gray out text and ensure the hover/focus state remains gray
+  > .disabled > a {
+    &,
+    &:hover,
+    &:focus {
+      color: $dropdown-link-disabled-color;
+    }
+
+    // Nuke hover/focus effects
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: transparent;
+      // cursor: @cursor-disabled;
+    }
+  }
+
+  .divider {
+    margin: 0;
+    border-top: 1px solid $dropdown-divider-bg;
+  }
+
+  .header {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    border-bottom: 0;
+
+    A {
+      font-weight: bold;
+    }
+  }
+
+  .subitem A {
+    padding-left: 30px;
+  }
+}
+
+.resource-actions {
+  > li {
+     a {
+      cursor: default;
+      transition: ease-in-out all .25s;
+    }
+  }
+}
+
+.resource-actions-tabbable {
+  height: 0;
+  visibility: hidden;
+}
+
+.principal-search-list {
+  min-width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 12px;
+  line-height: 1.15;
+  color: $dropdown-header-color;
+  white-space: nowrap;
+}

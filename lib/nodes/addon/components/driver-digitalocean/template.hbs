@@ -1,0 +1,171 @@
+<section class="horizontal-form">
+
+  {{#accordion-list showExpandAll=false as | al expandFn |}}
+
+    {{#if (eq step 1)}}
+      {{#accordion-list-item
+         title=(t "nodeDriver.digitalocean.accessToken.label")
+         detail=(t "nodeDriver.digitalocean.accessToken.help" htmlSafe=true)
+         expandAll=expandAll
+         expand=(action expandFn)
+         expandOnInit=true
+      }}
+        {{form-auth-cloud-credential
+          driverName=driverName
+          parseAndCollectErrors=(action "errorHandler")
+          primaryResource=primaryResource
+          cloudCredentials=cloudCredentials
+          finishAndSelectCloudCredential=(action "finishAndSelectCloudCredential")
+          progressStep=(action "getData")
+          cancel=(action "cancel")
+          createLabel="nodeDriver.digitalocean.authAccountButton"
+        }}
+      {{/accordion-list-item}}
+      {{top-errors errors=errors}}
+    {{else}}
+      <div class="over-hr mb-20">
+        <span>
+          {{driverOptionsTitle}}
+        </span>
+      </div>
+
+      {{#accordion-list-item
+         title=(t "nodeDriver.digitalocean.droplet.title")
+         detail=(t "nodeDriver.digitalocean.droplet.detail")
+         expandAll=expandAll
+         expand=(action expandFn)
+         expandOnInit=true
+      }}
+        <div class="row">
+          <div class="col span-6">
+            <label class="acc-label">
+              {{t "nodeDriver.digitalocean.region.label"}}
+            </label>
+            <select class="form-control" onchange={{action (mut config.region) value="target.value"}}>
+              {{#each regionChoices as |choice|}}
+                <option value={{choice.slug}} selected={{eq config.region choice.slug}}>
+                  {{choice.name}}
+                </option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="col span-6">
+            <label class="acc-label">
+              {{t "nodeDriver.digitalocean.size.label"}}
+            </label>
+            <select class="form-control" onchange={{action (mut config.size) value="target.value"}}>
+              {{#each filteredSizeChoices as |choice|}}
+                <option value={{choice.slug}} selected={{eq config.size choice.slug}}>
+                  {{t
+                    "nodeDriver.digitalocean.sizeLabel"
+                    memoryGb=choice.memoryGb
+                    highMem=choice.highMem
+                    slug=choice.slug
+                    disk=choice.disk
+                    vcpus=choice.vcpus
+                  }}
+                </option>
+              {{/each}}
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-6">
+            <label class="acc-label">
+              {{t "nodeDriver.digitalocean.image.label"}}
+            </label>
+            <select class="form-control" onchange={{action (mut config.image) value="target.value"}}>
+              {{#each imageChoices as |choice|}}
+                <option
+                  value={{choice.slug}}
+                  disabled={{choice.disabled}}
+                  selected={{eq config.image choice.slug}}
+                >
+                  {{choice.distribution}} {{choice.name}}
+                </option>
+              {{/each}}
+            </select>
+          </div>
+          <div class="col span-6">
+            <label class="acc-label">
+              {{t "nodeDriver.digitalocean.sshUser.label"}}
+            </label>
+            {{input
+              type="text"
+              value=config.sshUser
+              classNames="form-control"
+              placeholder=(t "nodeDriver.digitalocean.sshUser.placeholder")
+            }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-3 text-center">
+            <label class="acc-label">
+              {{input type="checkbox" checked=config.backups}}
+              {{t "nodeDriver.digitalocean.backups.label"}}
+            </label>
+          </div>
+          <div class="col span-3 text-center">
+            <label class="acc-label">
+              {{input type="checkbox" checked=config.privateNetworking}}
+              {{t "nodeDriver.digitalocean.privateNetworking.label"}}
+            </label>
+          </div>
+          <div class="col span-3 text-center">
+            <label class="acc-label">
+              {{input type="checkbox" checked=config.ipv6}}
+              {{t "nodeDriver.digitalocean.ipv6.label"}}
+            </label>
+          </div>
+          <div class="col span-3 text-center">
+            <label class="acc-label">
+              {{input type="checkbox" checked=config.monitoring}}
+              {{t "nodeDriver.digitalocean.monitoring.label"}}
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-6">
+            {{form-value-array
+              initialValues=tags
+              addActionLabel="nodeDriver.digitalocean.tags.addActionLabel"
+              valueLabel="nodeDriver.digitalocean.tags.valueLabel"
+              valuePlaceholder="nodeDriver.digitalocean.tags.placeholder"
+              changed=(action (mut tags))
+            }}
+          </div>
+        </div>
+      {{/accordion-list-item}}
+
+      <div class="over-hr">
+        <span>
+          {{templateOptionsTitle}}
+        </span>
+      </div>
+
+      {{form-name-description
+        model=model
+        nameRequired=true
+      }}
+
+      {{form-user-labels
+        initialLabels=labelResource.labels
+        setLabels=(action "setLabels")
+        expandAll=expandAll
+        expand=(action expandFn)
+      }}
+
+      {{form-engine-opts
+        machine=model
+        showEngineUrl=showEngineUrl
+      }}
+
+      {{top-errors errors=errors}}
+      {{save-cancel
+        save=(action "save")
+        cancel=(action "cancel")
+        editing=editing
+      }}
+    {{/if}}
+  {{/accordion-list}}
+</section>

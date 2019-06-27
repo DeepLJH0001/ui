@@ -1,0 +1,119 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+$body-bg                             : white !default;
+
+/// Regular font family
+/// @type List
+$text-font-stack          : 'Prompt', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$bold-weight              : bold;
+$base-font-size           : 15px;
+$base-line-height         : 1.4em;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack          : Consolas, "Andale Mono", "Lucida Console", Monaco, "Courier New", Courier,  monospace !default;
+
+/// Theme colors
+$primary                  : #0075A8 !default;
+$secondary                : #34495E !default;
+
+///State colors
+$success                  : #27AA5E !default;
+$warning                  : #F1C40F !default;
+$error                    : #F15354 !default;
+$info                     : #78C9CF !default;
+$disabled                 : #dee1e3 !default;
+
+//Contrast colors
+$contrasted-dark-default  : #3d3d3d !default;
+$contrasted-light-default : white !default;
+
+
+/// Copy text color
+/// @type Color
+$text-color               : #454545 !default;
+$link-color               : #3497DA !default;
+
+/// Light grey
+/// @type Color
+$light-grey               : #ecf0f1 !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey                 : #8B959C !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey                : #3d3d3d !default;
+
+$black                    : #313131;
+
+/// Main brand color
+/// @type Color
+$color                    : $primary !default;
+$accent                   : $light-grey !default;
+
+/// Container's maximum width
+/// @type Length
+$max-width                : 1280px !default;
+$min-width                : 75% !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints              : (
+'small'                   : 414px, //small max
+'medium'                  : 767px, //med max
+'large'                   : 768px, //large min
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url           : 'http://cdn.example.com/assets/';
+$base-url                 : '/assets/' !default;
+$base-url-fonts           : #{$base-url}/fonts !default;
+
+// Sparklines
+$stroke-color: white;
+$stroke-fill: white;
+$stroke-text: none;
+
+//Component badge
+$healthy-circle-color                : #23A454 !default;
+$unhealthy-circle-color              : #EF494A !default;
+$healthy-background-color            : #F1F9F5 !default;
+$unhealthy-background-color          : #FEF3F4 !default;
+$healthy-text-color                  : #23A454 !default;
+$unhealthy-text-color                : #EF494A !default;
+
+// Tooltips
+$tooltip-color                       : white !default;
+$tooltip-bg                          : rgba(0,0,0,.9) !default;
+$tooltip-opacity                     : .9 !default;
+$tooltip-arrow-color                 : $tooltip-bg !default;
+
+
+//table variables
+$table-bg              : lighten($light-grey,5)!default;
+$table-header          : $body-bg !default;
+$table-nested-header   : lighten($mid-grey, 32)!default;
+$table-bg-accent       : darken($light-grey, .5)!default;
+$table-bg-hover        : lighten($info, 15)!default;
+$table-bg-active       : $table-bg-hover!default;
+$table-bg-selected     : lighten($info, 32)!default;
+$table-border-color    : lighten($mid-grey, 30)!default;
+$table-body-separation : 25px;
+$group-row-height      : 50px;
+
+// banners
+$banner-default                      : lighten($light-grey, 5) !default;
+$banner-disabled                     : lighten($mid-grey, 35) !default;
+$banner-primary                      : lighten($primary, 63) !default;
+$banner-secondary                    : lighten($secondary, 65) !default;
+$banner-success                      : lighten($success, 55) !default;
+$banner-info                         : lighten($info, 30) !default;
+$banner-warning                      : lighten($warning, 45) !default;
+$banner-error                        : lighten($error, 35) !default;
+$banner-color                        : $secondary !default;

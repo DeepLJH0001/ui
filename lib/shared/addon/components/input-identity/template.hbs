@@ -1,0 +1,37 @@
+<form {{action "add" on="submit"}}>
+  <div class="input-group">
+    {{principal-search
+      add=(action "add")
+      filter=filter
+      includeLocal=includeLocal
+      principal=addInput
+      selectExact=(action "selectExact")
+      selectExactOnBlur=selectExactOnBlur
+      useLabel=true
+    }}
+
+    <div class="input-group-btn">
+      {{#if showDropdown}}
+        {{#basic-dropdown
+             horizontalPosition="right"
+             as |dd|}}
+          {{#dd.trigger class="btn bg-default"}}
+            <i class="icon icon-chevron-down"></i>
+          {{/dd.trigger}}
+
+          {{#dd.content class="principal-search-list"}}
+            <li role="presentation" class="dropdown-header">{{dropdownLabel}}</li>
+            {{#each dropdownChoices as |item|}}
+              <li>
+                <a {{action "addObject" item}}>
+                  {{identity-block principal=item}}
+                </a>
+              </li>
+            {{/each}}
+          {{/dd.content}}
+
+        {{/basic-dropdown}}
+      {{/if}}
+    </div>
+  </div>
+</form>

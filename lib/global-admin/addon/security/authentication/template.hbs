@@ -1,0 +1,34 @@
+<section class="header clearfix">
+  <div class="pull-left">
+    <h1 class="vertical-middle">
+      {{t "nav.admin.security.authentication"}}
+    </h1>
+  </div>
+</section>
+
+<section class="mb-20">
+  <div class="row nav nav-boxes checked-active">
+    {{#each filteredDrivers as |driver|}}
+      {{#if driver.available }}
+        {{#link-to
+           driver.route
+           alt=driver.label
+           classNames="col span-2 nav-box-item driver"
+           href=false
+        }}
+          {{#if driver.providerType }}
+            <span class="badge bg-info driver-badge">
+              {{driver.providerType}}
+            </span>
+          {{/if}}
+          <div class="auth-driver {{driver.css}}"></div>
+          <p>
+            {{driver.label}}
+          </p>
+        {{/link-to}}
+      {{/if}}
+    {{/each}}
+  </div>
+</section>
+
+{{outlet}}

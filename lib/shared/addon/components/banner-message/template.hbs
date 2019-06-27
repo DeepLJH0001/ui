@@ -1,0 +1,24 @@
+{{#if (or showIcon titleStr)}}
+  {{#if showIcon}}
+    <div class="banner-icon">
+      <span class="icon {{icon}}"></span>
+    </div>
+  {{/if}}
+  {{#if titleStr}}
+    <div class="banner-title" style={{titleStyle}}>
+      {{titleStr}}
+    </div>
+  {{/if}}
+{{/if}}
+<div class="banner-message">
+  {{#if hasBlock}}
+    {{yield}}
+  {{else}}
+    <p>{{message}}</p>
+  {{/if}}
+</div>
+{{#if showClose}}
+  <div class="banner-close" {{action "close"}}>
+    <span class="icon icon-sm icon-close"></span>
+  </div>
+{{/if}}

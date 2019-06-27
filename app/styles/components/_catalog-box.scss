@@ -1,0 +1,219 @@
+$container-height: 321px;
+$container-width: 283px;
+$font-size: 12px;
+$line-height: 1.4;
+$lines-to-show: 4;
+
+$badge-rancher: $border;
+$badge-rancher-logo: $link-color;
+$badge-partner: $warning;
+
+.catalog-box {
+  position: relative;
+  height: $container-height;
+  width: $container-width;
+  margin: 15px 0 15px 15px;
+  float: left;
+  text-align: center;
+  transition: ease-in-out all .25s;
+  // border: $border solid 1px;
+  // box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  // -webkit-transition: all 0.6s cubic-bezier(0.05, 0.2, 0.1, 1);
+  // transition: all 0.6s cubic-bezier(0.165, 0.42, 0.22, 1);
+
+  .footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .view-details {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 40px 20px 40px;
+  }
+
+  // &::after {
+  //   opacity: 0;
+  //   box-shadow: 0 5px 15px rgba(75,65,55,0.3);
+  //   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  //   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  // }
+
+  // &:hover {
+  //   border: solid $link-color 1px;
+
+  //   &::after {
+  //     opacity: 1;
+  //   }
+  // }
+
+  .itemwrap {
+    max-height: 129px;
+    overflow: hidden;
+  }
+
+  h5 {
+    text-align: center;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+
+  &.machine {
+    background: $body-bg;
+    height: 300px;
+
+    h5 {
+      padding-top: 5px;
+    }
+    .copy-button-container {
+      height:12px;
+    }
+
+    &.bg-secondary {
+      @extend .bg-secondary;
+    }
+  }
+
+  &.inactive {
+    position: relative;
+    box-shadow: none;
+    background: rgba($bg-disabled, .5);
+    opacity: .8;
+
+  .bg-default {
+    background: darken($bg-default, 7);
+  }
+
+
+    .catalog-icon {
+      opacity: 0.5;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+    }
+  }
+
+  .catalog-icon {
+    @include catalog-img;
+  }
+
+  .description {
+    display: block;
+    display: -webkit-box;
+    max-width: 200px;
+    margin: auto;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing:border-box;
+  }
+
+  &.badge-rancher {
+    border: $badge-rancher solid 1px;
+
+    .certified {
+      position: relative;
+      transform: translateY(-10px);
+
+      span {
+        background-color: $badge-rancher;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        padding: 5px 10px;
+        display: inline-block;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: .8em;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &.badge-rancher-logo {
+    border-color: $badge-rancher-logo;
+    border-width: 2px;
+
+    @extend .badge-rancher;
+
+    hr {
+      border-color: $badge-rancher-logo;
+      opacity: .15;
+    }
+
+    .certified {
+      span {
+        background-color: $badge-rancher-logo;
+        color: white;
+
+        &:before {
+          content: $icon-rancher-cow;
+          font-family: 'rancher-icons';
+          font-size: 1.25rem;
+          padding-right: 4px;
+          line-height: 0;
+        }
+      }
+    }
+  }
+
+  &.badge-partner {
+    border-color: $badge-partner;
+    border-width: 2px;
+
+    @extend .badge-rancher;
+
+    hr {
+      border-color: $badge-partner;
+      opacity: .15;
+    }
+
+    .certified {
+      span {
+        background-color: $badge-partner;
+        color: $text-color;
+      }
+    }
+  }
+
+  &.badge-thirdparty {
+    @extend .badge-rancher;
+  }
+
+  &.dotted {
+    border-style: dotted;
+  }
+
+  &.machine .catalog-icon {
+    min-height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 35%;
+
+    &.aliyunecs     { @include aliyunecs; }
+    &.amazonec2     { @include amazonec2; }
+    &.azure         { @include azure; }
+    &.custom        { @include custom; }
+    &.digitalocean  { @include digitalocean;}
+    &.exoscale      { @include exoscale; }
+    &.generic       { @include generic; }
+    &.openstack     { @include openstack; }
+    &.other         { @include other; }
+    &.packet        { @include packet; }
+    &.rackspace     { @include rackspace; }
+    &.rancherdo     { @include rancherdo;}
+    &.vmwarevsphere { @include vmwarevsphere; }
+    &.newtemplate { @include newtemplate; }
+  }
+}

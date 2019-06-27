@@ -1,0 +1,51 @@
+<section class="header clearfix">
+  <div class="pull-left">
+    <h1 class="vertical-middle">
+      {{t "ingressPage.header" name=model.ingress.displayName}}
+    </h1>
+  </div>
+  <div class="right-buttons">
+    {{badge-state model=model.ingress}}
+    {{action-menu model=model.ingress showPrimary=false classNames="ml-10 inline-block" size="sm"}}
+  </div>
+</section>
+
+{{#if model.ingress.description}}
+  <div class="row mb-30">
+    {{banner-message color="bg-secondary mb-0 mt-10" message=(linkify model.ingress.description)}}
+  </div>
+{{/if}}
+
+<section class="mt-40 horizontal-form container-fluid">
+  {{form-ingress-rule
+    ingress=model.ingress
+    namespace=model.ingress.namespace
+    editing=false
+  }}
+</section>
+
+<hr class="mt-30 mb-30" />
+
+<section class="horizontal-form container-fluid">
+  {{#accordion-list as | al expandFn | }}
+    {{form-ssl-termination
+      editing=false
+      expandAll=al.expandAll
+      expandFn=expandFn
+      ingress=model.ingress
+      namespace=model.ingress.namespace
+      namespacedCertificates=model.namespacedCertificates
+      certificates=model.certificates
+    }}
+
+
+    {{form-labels-annotations
+      classNames="accordion-wrapper"
+      editing=false
+      expandAll=al.expandAll
+      expandFn=expandFn
+      initialLabels=model.ingress.labels
+      model=model.ingress
+    }}
+  {{/accordion-list}}
+</section>

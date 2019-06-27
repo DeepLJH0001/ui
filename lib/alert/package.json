@@ -1,0 +1,20 @@
+{
+  "name": "alert",
+  "keywords": [
+    "ember-addon",
+    "ember-engine"
+  ],
+  "dependencies": {
+    "ember-auto-import": "*",
+    "ember-truth-helpers": "*",
+    "ember-intl": "*",
+    "ember-cli-htmlbars": "*",
+    "ember-cli-babel": "*",
+    "ember-href-to": "*"
+  },
+  "ember-addon": {
+    "paths": [
+      "../shared"
+    ]
+  }
+}

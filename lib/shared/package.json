@@ -1,0 +1,40 @@
+{
+  "name": "shared",
+  "keywords": [
+    "ember-addon"
+  ],
+  "dependencies": {
+    "async": "*",
+    "d3": "*",
+    "echarts": "*",
+    "@rancher/ember-api-store": "*",
+    "ember-auto-import": "*",
+    "ember-basic-dropdown": "*",
+    "ember-cli-babel": "*",
+    "ember-cli-clipboard": "*",
+    "ember-cli-htmlbars": "*",
+    "ember-cli-pagination": "*",
+    "ember-math-helpers": "*",
+    "ember-flatpickr": "*",
+    "ember-truth-helpers": "*",
+    "ember-wormhole": "*",
+    "file-saver": "*",
+    "identicon.js": "*",
+    "ipaddr.js": "*",
+    "ivy-codemirror": "*",
+    "jgrowl": "*",
+    "json2yaml": "*",
+    "jsyaml": "*",
+    "jszip": "*",
+    "liquid-fire": "*",
+    "marked": "*",
+    "prettycron": "*",
+    "prismjs": "*",
+    "semver": "*",
+    "shell-quote": "*",
+    "url-regex": "*",
+    "xterm": "*",
+    "yamljs": "*",
+    "dot-object": "*"
+  }
+}

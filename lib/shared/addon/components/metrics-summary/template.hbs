@@ -1,0 +1,14 @@
+{{#accordion-list-item
+    grafanaUrl=grafanaUrl
+    title=title
+    detail=(t 'metricsAction.description')
+    expandAll=expandAll
+    expand=(action expandFn)
+    expanded=expanded
+    componentName='sortable-table'
+    as | parent |
+}}
+  {{#if (or expanded expandAll)}}
+    {{yield this}}
+  {{/if}}
+{{/accordion-list-item}}

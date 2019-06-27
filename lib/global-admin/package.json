@@ -1,0 +1,19 @@
+{
+  "name": "global-admin",
+  "keywords": [
+    "ember-addon",
+    "ember-engine"
+  ],
+  "dependencies": {
+    "ember-intl": "*",
+    "ember-auto-import": "*",
+    "ember-cli-htmlbars": "*",
+    "ember-href-to": "*",
+    "ember-cli-babel": "*"
+  },
+  "ember-addon": {
+    "paths": [
+      "../shared"
+    ]
+  }
+}

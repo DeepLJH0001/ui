@@ -1,0 +1,2377 @@
+---
+languageName: "Português"
+languageContribute: "Ajude a traduzir o Rancher"
+generic:
+  actions: Ações
+  activate: Ativar
+  add: Adicionar
+  advanced: Avançado
+  all: Todos
+  any: Qualquer
+  application: aplicação
+  as: como
+  back: Voltar
+  cancel: Cancelar
+  closeModal: Fechar
+  cluster: Cluster
+  collapseAll: Recolher tudo
+  comingSoon: Em breve
+  command: Comando
+  confirm: Confirmar
+  containers: Contêineres
+  created: Criado
+  createdDate: "Criado em {date}"
+  custom: Personalizado
+  customize: Personalizar
+  default: Padrão
+  description: Descrição
+  details: Detalhes
+  disable: Desativar
+  disabled: Desativado
+  displayName: Nome de exibição
+  dockerId: ID do Docker
+  domainName: Nome do Domínio
+  done: Concluído
+  download: Baixar
+  edit: Editar
+  enable: Habilitar
+  enabled: Ativado
+  entrypoint: Ponto de entrada
+  environment: Ambiente
+  expandAll: Expandir tudo
+  experimental: "(experimental)"
+  from: de
+  false: 'Falso'
+  generic: 'Genérico'
+  gigabyte: 'GB'
+  hardware: Hardware
+  healthy: Sem erros
+  help: Ajuda
+  hostname: Nome do servidor
+  hours: horas
+  id: Identificador
+  image: Imagem
+  import: Importar
+  internal: Interno
+  ipAddress: Endereço de IP
+  key: Chave
+  limit: Limite
+  limits: Limites
+  loading: "Carregando..."
+  loggingOut: "Fazendo logout..."
+  member: Membro
+  mbps: Mbps
+  mibibyte: 'MiB'
+  minutes: minutos
+  milliseconds: 'Milissegundos'
+  missing: "*%FALTANDO%*"
+  moreActions: Mais Ações
+  na: 'N/D'
+  name: Nome
+  namespace: Namespace
+  namespaces: Namespaces
+  never: Nunca
+  no: "Não"
+  noRating: Sem avaliação
+  node: Nó
+  none: Nenhum
+  owner: Proprietário
+  paste: Colar
+  pod: pods
+  podRestarts: Reinícios de Pod
+  port: Porta
+  ports: Portas
+  prefix: prefixo
+  project: Projeto
+  persistentVolumeClaim: volume persistente
+  persistentVolume: volume persistente
+  random: Aleatório
+  remove: Remover
+  restarts: Reinicia
+  role: Função
+  save: Salvar
+  saved: Salvo
+  saving: Salvando
+  scope: Escopo
+  search: Busca
+  searchOrCustomInput: Procure ou insira seu valor personalizado.
+  searching: 'Procurando...'
+  seconds: segundos
+  select: Selecionar
+  service: Serviço
+  services: Serviços
+  size: Tamanho
+  state: Estado
+  tags: Rótulos
+  test: Teste
+  testing: Testando
+  to: Para
+  total: Total
+  true: 'Verdadeiro'
+  type: Tipo
+  unknown: Desconhecido
+  unknownUser: Não é possível buscar informações do usuário
+  upload: Enviar
+  url: URL
+  user: Usuário
+  uuid: UUID
+  value: Valor
+  version: Versão
+  yes: "Sim"
+  isRequired: é obrigatório
+  readOnly: Somente Leitura
+  readWrite: Leitura Escrita
+  writeOnly: Somente Escrita
+  full: Completo
+realmNames:
+  all: Todos
+  usWest: Oeste dos EUA
+  usEast: Leste dos EUA
+  asia: Ásia
+  euWest: Oeste da Europa
+  euEast: Leste da Europa
+accountsPage:
+  detail:
+    header: Detalhes do Usuário
+    table:
+      headers:
+        permission: Permissões
+        role: Função
+        clusterName: Cluster
+        projectName: Projeto
+        active: Ativo
+        created: Concedido
+      global:
+        title: Permissões globais
+        description: Acesso para gerenciar as coisas que afetam toda a instalação
+        admin: Este usuário é um administrador e possui todas as permissões.
+        noRoles: Este usuário não possui funções globais
+      cluster:
+        title: Funções de Cluster
+        description: Funções concedidas a este usuário para clusters individuais
+        noRoles: Este usuário não possui funções de cluster
+      project:
+        title: Funções do projeto
+        description: Funções concedidas a este usuário para este projeto
+        noRoles: Este usuário não possui funções de projeto
+      roles:
+        title: Funções
+  index:
+    header: Usuários
+    localLink: Adicionar Usuário
+    table:
+      id: Identificador
+      kind: Tipo
+      username: Nome de usuário local
+      identity: Identidade
+      noData: Ainda não há usuários
+      noMatch: Nenhum usuário corresponde à pesquisa atual
+      noName: Nenhum
+  new:
+    header: Adicionar Usuário
+    errors:
+      usernameReq: Nome de usuário é necessário.
+      usernameInExists: O nome de usuário já está em uso. Escolha um novo nome de usuário.
+      pwReq: É necessária uma senha.
+      role: Novos usuários são obrigados a ter um papel. Selecione uma função na lista.
+    form:
+      username:
+        labelText: Usuario
+        placeholder: "p.ex. joaosilva"
+      password:
+        labelText: Senha*
+      name:
+        labelText: Nome de exibição
+        placeholder: "p.ex. João da Silva"
+      type:
+        labelText: Tipo de Conta
+      description:
+        labelText: Descrição
+        placeholder: "p.ex. Esta conta é para João da Silva"
+  modal:
+    password: Alterar Senha
+appDetailPage:
+  header: "Aplicação: {appName}"
+  endpoints:
+    title: Pontos de extremidade
+    detail: 'Pontos de extremidade públicos deste aplicativo'
+    endpoint: Pontos de extremidade
+    protocol: Protocolo
+    noData: Nenhum endpoint público foi criado para este aplicativo.
+    noMatch: Nenhum endpoint público corresponde à pesquisa atual.
+  answers:
+    title: Respostas
+    detail: Respostas personalizadas desta aplicação
+    variable: Variável
+  notes:
+    title: Observações
+    detail: 'Instruções sobre como usar este aplicativo'
+  workloads:
+    title: Cargas de trabalho
+    detail: Cargas de trabalho criadas para este aplicativo.
+    nodata: Nenhuma carga de trabalho foi criada para este aplicativo.
+  ingress:
+    title: Regras de entrada
+    detail: Regras de ingresso criadas para este aplicativo.
+    nodata: Nenhuma regra de ingresso foi criada para este aplicativo.
+  services:
+    title: Serviços
+    detail: Serviços criados com este aplicativo
+    nodata: Nenhum serviço foi criado para este aplicativo.
+  volumes:
+    title: Volumes
+    detail: Reivindicação de volume persistente criada com esta aplicação
+    nodata: Nenhum volume declarado para essa aplicação.
+  configMaps:
+    title: Mapas de configuração
+    detail: Mapas de configuração associados a este aplicativo
+    nodata: Este aplicativo não possui mapas de configuração
+  secrets:
+    title: Segredos
+    detail: Segredos associados a este aplicativo
+    nodata: Esta aplicação não tem segredos
+podSecurityPoliciesPage:
+  index:
+    header: Políticas de Segurança Pod
+    description: Aplicar Políticas de Pods criado por um usuário com essa Função
+    table:
+      name: Nome
+      created: Horário de Criação
+      noData: Ainda não há políticas de segurança definidas para este pod
+      noMatch: Nenhuma política de segurança do pod coincide com a pesquisa atual
+  addPodSecurityPolicy: Adicionar política
+  editPodSecurityPolicy: Editar Política
+  detail:
+    header: Política do site
+  saveEdit: Editar
+  saveNew: Criar
+  new:
+    errors:
+      nameReq: Nome é obrigatório.
+      nameInExists: O nome já existe. Use um novo nome de política de segurança do pod.
+    form:
+      name:
+        labelText: Nome
+        placeholder: "ex: política"
+rolesPage:
+  title: Função
+  headers:
+    global: Global
+    cluster: Clusters
+    project: Projetos
+  index:
+    localLink: Adicionar Função
+    table:
+      builtin: Interno
+      created: Horário de Criação
+      enabled: Ativado
+      name: Nome
+      noData: Ainda não existem funções
+      noMatch: Nenhuma regra corresponde a pesquisa atual
+      subjectKind: Tipo
+      template: Modelo
+      global: Novo usuário padrão
+      cluster: Padrão do Criador de Cluster
+      project: Padrão do Criador do Projeto
+      showDefaults: Mostrar apenas padrões
+    errors:
+      inherited: "Papel {displayName} é herdada por: {roleNames}"
+  resources:
+    title: Conceder recursos
+    detail: Conceder acesso a operações específicas nos recursos Kubernetes
+  inherit:
+    title: Herdar de uma função
+    detail: Incluir todas as permissões de um outra função
+  addRole: "Adicionar função {context}"
+  editRole: Editar Função
+  saveEdit: Editar
+  saveNew: Criar
+  new:
+    errors:
+      nameReq: Nome é obrigatório.
+      memberReq: Membro é obrigatório.
+      nameInExists: O nome já existe. Por favor, use um novo nome de função.
+      ruleResourceReq: Recurso é necessário para uma regra.
+      roleTemplate: Modelo de papéis é obrigatório.
+      noSelectedRoles: Por favor, selecione pelo menos um papel para este usuário.
+      roleAlreadyExists: O usuário já tem o papel "{key}".
+    form:
+      name:
+        labelText: Nome
+        placeholder: "exemplo: Desenvolvedores"
+      context:
+        labelText: Contexto
+        detail: Quais escopos esse papel é apropriado para ser mostrado em.
+      locked:
+        labelText: Bloqueado
+        detail: Isso não afeta nenhuma ligação à função que já existe.
+        enabled: "Sim: novas ligações não podem usar essa função"
+        disabled: "Não"
+      allow:
+        create: Criar
+        delete: Excluir
+        deletecollection: 'Excluir coleção'
+        get: Obter
+        list: Lista
+        patch: Patch
+        update: Atualizar
+        watch: Assistir
+        labelText: Permitir
+        resource: Recurso
+        addAction: Adicionar Recurso
+      otherRole:
+        labelText: Incluir outras funções
+        role: Função
+        addAction: Adicionar Função
+      policy:
+        policy: Política do site
+        addAction: Adicionar política
+      default:
+        global: Novo Usuário Padrão
+        cluster: Padrão do Criador de Cluster
+        project: Padrão do Criador do Projeto
+        enabled:
+          global: "Sim: Papel padrão para novos usuários"
+          cluster: "Sim: Papel padrão para a criação de novos clusters"
+          project: "Sim: Papel padrão para a criação de novos clusters"
+        disabled: "Não"
+apiPage:
+  header: API & chaves
+  actionButton: Adicionar chave
+  currentEndpoint: 'Endpoint:'
+  detail: As Chaves de API estão vinculadas ao seu usuário específico ({name}) e podem criar, excluir e manipular todos os Clusters e Projetos aos quais você tem acesso.
+  table:
+    state: Estado
+    name: Chave de Acesso
+    description: Descrição
+    scope: Escopo
+    created: Criado
+    expires:
+      label: Expira
+      never: Nunca
+    noData: Não há chaves de API definidas
+authPage:
+  saml:
+    accessEnabled:
+      header: Autenticação
+      disable: Desabilitar controle de acessos
+    header:
+      disabled:
+        label: "{providerName} não está configurado"
+    enabled:
+      authenticated:
+        header:
+          text: Autenticação
+      groupsField: 'Grupos:'
+      displayName: 'Nome de exibição:'
+      userName: 'Usuario:'
+      userId: 'ID do usuário:'
+    disabled:
+      header: '1. Configurar conta {providerName}'
+      headerDetail: 'Digite os detalhes da conta {providerName}'
+      label: "{providerName} não está configurado"
+      name:
+        labelText: Exibir Nome do Campo
+        display: "Exibir Nome do Campo:"
+      username:
+        labelText: Campo Nome de usuário
+        display: "Campo Nome de usuário:"
+      uid:
+        labelText: Campo UID
+        display: "Campo UID:"
+      rancherApiHost:
+        labelText: "{appName} hospedeiro da API"
+        display: "{appName} hospedeiro da API:"
+      groups:
+        labelText: Grupos de Campo
+        display: "Grupos de Campo:"
+      testAuth:
+        header: '2. Teste e habilite autenticação'
+        subtext: 'Verifique se o seu aplicativo está configurado corretamente testando a autenticação com isso:'
+    providerName:
+      ping: Latência
+      adfs: Active Directory
+      keycloak: Keycloak
+      okta: Okta
+    authError: 'O acesso não foi autorizado'
+    popupError: 'Por favor, desabilite seu bloqueador de pop-up e clique em "Autenticar" novamente.'
+  ping:
+    buttonText:
+      pre: 'Autenticar com IDP'
+      post: Esperando resposta do IDP
+  keycloak:
+    buttonText:
+      pre: 'Autenticar com o Keycloak'
+      post: Esperando resposta do IDP
+  adfs:
+    buttonText:
+      pre: 'Autenticar com Active Directory'
+      post: Esperando resposta do IDP
+  okta:
+    buttonText:
+      pre: 'Autenticar com Okta'
+      post: Esperando resposta do IDP
+  shibboleth:
+    enabled:
+      authenticated:
+        header:
+          text: Autenticação
+      disableAccess:
+        header: "Zona perigosa&trade;"
+        warning: '<b class="text-danger">Cuidado:</b> Desativar o controle de acesso dará controle total sobre {appName} a qualquer pessoa que possa acessar esta página ou a API.'
+        disable: Desativar o controle de acesso
+      groupsField: 'Grupos:'
+      displayName: 'Exibir Nome:'
+      userName: 'Usuario:'
+      userId: 'ID do usuário:'
+    disabled:
+      header: '1. Configurar conta do Shibboleth'
+      label: "{providerName} não está configurado"
+      name:
+        labelText: Exibir Nome do Campo
+      username:
+        labelText: Nome de usuário
+      uid:
+        labelText: Campo UID
+      groups:
+        labelText: Grupos de Campo
+      testAuth:
+        header: '2. Teste e habilite autenticação'
+        subtext: 'Verifique se sua aplicação está configurada corretamente testando sua autenticação:'
+        buttonText:
+          pre: Autenticar com IDP
+          post: Esperando ouvir de volta do IDP
+    providerName:
+      shibboleth: Login único
+  root:
+    header: Access Control
+  github:
+    standard: GitHub
+    enterprise: GitHub Enterprise
+    header:
+      disabled:
+        label: Github não está configurado
+    authenticated:
+      header:
+        text: Autenticação
+        enterpriseHostName: "Dominio da empresa:"
+        clientId:
+          text: "ID do cliente:"
+          helpText: "Para alterar a aplicação GitHub configurado, desativar o controle de acesso abaixo e, em seguida, configurá-lo novamente."
+      disableAccess:
+        header: "Zona Perigosa&trade;"
+        warning: '<b class="text-danger">Cuidado:</b> A desativação de controle de acesso dará o controle completo sobre {appName} a qualquer um que pode chegar a esta página ou a API.'
+        disable: Desabilitar acesso ao GitHub
+    notAuthenticated:
+      header: "1. Configurar um aplicativo GitHub"
+      ul:
+        li1:
+          text: 'Para GitHub padrão, <a href="https://github.com/settings/developers" target="_blank">clique aqui</a> para ir as configurações de aplicativos em uma nova janela.'
+          ul:
+            li1: "Para Github Enterprise, faça login na sua conta.  Clique em Settings e, em seguida, Applications.."
+        li2:
+          text: 'Clique em "Register new application" e preencha o formulário:'
+          ul:
+            li1: '<b>Application name:</b> <span class="text-muted">Qualquer coisa que você goste, p.ex. my {appName}</span>'
+            li2: 'URL da Página inicial'
+            li3: '<b>Application description:</b> <span class="text-muted">Qualquer coisa que você gosta, opcional</span>'
+            li4: 'URL de retorno de chamada de autorização'
+        li3:
+          text: 'Clique em "Register Application"'
+      form:
+        header: '2. Configurar {appName} para usar a sua aplicação para autenticação'
+        subtext: 'Copie e cole o Client ID e Secret a partir do canto superior direito do seu aplicativo recém-criado.'
+        clientId:
+          labelText: Client ID*
+        clientSecret:
+          labelText: Client Secret*
+        ghEnterprise:
+          labelText: Usar uma instalação privada GitHub Enterprise
+        isGHEnterprise:
+          labelText: Usar uma conexão segura
+        enterpriseHost:
+          labelText: Enterprise Host*
+          placeholder: 'p.ex. github.exemplo.com'
+    testAuth:
+      header: '3. Testar e ativar a autenticação'
+      subtext: 'Verifique se o seu aplicativo está configurado corretamente testando a autenticação com isso:'
+      buttonText:
+        pre: Autenticar com GitHub
+        post: Esperando para ouvir de volta do GitHub
+      authError: 'O acesso ao Github não foi autorizado'
+      popupError: 'Por favor, desabilite seu bloqueador de pop-up e clique em "Autenticar" novamente.'
+  azuread:
+    header:
+      disabled:
+        label: "O Azure AD não está configurado"
+    enabled:
+      header: 'Zona Perigosa&trade;'
+      promptDisable: Desativar controle de acesso
+      general:
+        header: Geral
+    configure:
+      header: '1. Configure a Conta Azure AD'
+      replyUrl: "O Azure AD requer uma URL na lista de permissões para o servidor {appName} antes de iniciar essa configuração. Certifique-se de que o seguinte URL esteja definido na seção URL de resposta do Portal do Azure. Pode demorar até 5 minutos para que o URL da lista de permissões seja propagado."
+      help: Insira os detalhes do ID do locatário, do ID do cliente e do usuário administrador para se conectar à sua conta de autenticação do Azure AD.
+      applicationId:
+        label: ID da aplicação
+        placeholder: Uma longa string UUID
+      applicationSecret:
+        label: Segredo da Aplicação
+      serverURL:
+        label: URL do servidor Rancher
+      azureADEndpoint:
+        label: Ponto de extremidade
+      azureADGraphEndpoint:
+        label: Gráfico De Ponto De Extremidade
+      azureADTokenEndpoint:
+        label: Token De Ponto De Extremidade
+      azureADAuthEndpoint:
+        label: Ponto De Extremidade De Autenticação
+      endpoints:
+        label: Pontos de extremidade
+      regions:
+        standard: Padrão
+        china: China
+        custom: Personalizado
+      tenantId:
+        label: ID do inquilino
+        placeholder: Uma longa string UUID
+        help: Do portal do Azure AD
+    test:
+      header: '2. Teste e habilite a autenticação'
+      help: 'Verificar se tudo está configurado corretamente por um teste de autenticação com a sua conta:'
+      username:
+        label: Nome de Usuário de Login
+        placeholder: 'e.g. jsmith'
+      password:
+        label: Sua Senha
+      pre: Autenticar com Azure
+      post: Esperando ouvir de volta do Azure
+      authError: 'O acesso ao Azure não foi autorizado'
+      popupError: 'Por favor, desabilite seu bloqueador de pop-up e clique em "Autenticar" novamente.'
+  localAuth:
+    header:
+      enabled: 'Autenticação local está ativado'
+      disabled: 'A Autenticação Local não está configurada'
+    subtext:
+      enabled:
+        text: '{appName} é configurado para permitir o acesso a contas, na sua base de dados local.'
+        alwaysOn: 'A Autenticação Local estará sempre habilitada mas você terá de usar outro meio de autenticação para usar em outro local.'
+        linkText: Gerenciar Contas
+      disabled: '{appName} pode ser configurado para restringir o acesso a um conjunto de contas definido na {appName} banco de dados.  sso não é atualmente a configurado, assim qualquer um que chegar a esta página (ou a API) tem controlo total sobre o sistema.'
+    accessEnabled:
+      header: 'Zona Perigosa&trade;'
+      warning: '<b class="text-danger">Cuidado:</b> A desativação de controle de acesso dará o controle completo sobre {appName} a qualquer um que pode chegar a esta página ou a API.'
+      buttonText:
+        prompt: Desativar controle de acesso
+    accessDisabled:
+      header: '1. Configurar um usuário Admin'
+      helpText: 'Este usuário será o administrador que tem total controle sobre {appName}.'
+      form:
+        login:
+          labelText: Nome de usuário de Login*
+          placeholder: 'p.ex. joaosilva'
+        name:
+          labelText: Nome Completo
+          placeholder: 'p.ex. João da Silva'
+        password:
+          labelText: Senha*
+        confirmPassword:
+          labelText: Confirmar Senha*
+    accessControl:
+      header: '2. Ativar controle de acesso'
+      helpText: 'Clique para ativar o controle de acesso e login.'
+      buttonText:
+        pre: Ativar Autenticação local
+        post: 'Ativando...'
+backupsPage:
+  header: Snapshots do etcd
+  detail: snapshots do etcd, se ativadas, serão feitas periodicamente em intervalos predefinidos que podem ser usados para restaurar clusters de uma versão anterior.
+  table:
+    state: Estado
+    target:
+      label: Alvo
+      s3: S3
+      local: Local
+    name: Nome
+    created: Criado
+    noData: Não há snapshots do etcd
+balancerPage:
+  noMatch: Nenhum balanciador corresponde à pesquisa atual
+  noData: Nenhuma alteração a mostrar.
+  table:
+    target: Target
+catalogPage:
+  index:
+    header: 'Catálogo:'
+    refreshBtn: Atualizar
+    allCatalogs: Todos os Catálogos
+    allCategories: Todas as Categorias
+    manage: Gerenciar
+    search:
+      label: Busca
+    filters:
+      label: Filtro de Catálogo
+    certified:
+      rancher:
+        rancher: Laboratório Rancher
+        partner: Oficial
+      pl:
+        rancher: Núcleo
+        partner: Oficial
+    noData:
+      singular: Não há templates compatíveis.
+      plural: Não há templates compatíveis neste catálogo.
+    action:
+      launch: Ver Detalhes
+      notCompatible: Não compatível
+      alreadyDeployed: Já implantado
+cloudCredentialsPage:
+  header: Credenciais de nuvem
+  rightButtons:
+    addKey: Adicionar credencial de nuvem
+    nodeTemplates: Gerenciar modelos de nós
+  index:
+    table:
+      noData: Ainda não há credenciais na nuvem
+      noMatch: Nenhuma credencial de nuvem corresponde à pesquisa atual
+clusterCatalogPage:
+  header: Catálogos
+certificatesPage:
+  cn: Nome do domínio
+  expiresDate: Expira
+  fingerprint: Impressão digital
+  valid: Início Validade
+  expires: Expira
+  algorithm: Algoritmo
+  issuer: Emissor
+  serialNumber: Número Série
+  domainNames:
+    labelText: Nomes de domínio
+    single: '<a href="https://{cn}" target="_blank" rel="nofollow nefererrer noopener">{cn} <i class="icon icon-sm icon-external-link"/></a>'
+    withSan: |
+      <a href="https://{cn}" target="_blank" rel="nofollow nefererrer noopener">{cn} <i class="icon icon-sm icon-external-link"/></a> +
+      {sans, plural,
+      =1 {1 other}
+      other {# others}
+      }
+    wildcardSingle: '{cn}'
+    wildcardWithSan: |
+      {cn} +
+      {sans, plural,
+      =1 {1 outro}
+      other {# outras}
+      }
+  detail:
+    header: 'Certificado:'
+  index:
+    header: Certificados
+    linkTo: Adicionar Certificado
+    noData: Não há certificados definidos
+  new:
+    header: Adicionar Certificado
+    form:
+      name:
+        placeholder: p.ex. meudominio.com
+      description:
+        placeholder: p.ex. EV cert para meudominio.com
+membersPage:
+  title: Membros
+  add:
+    title: 'Adicionar {type} Membro'
+    form:
+      member: Membro
+      role: Função
+      kind: Tipo
+  index:
+    localLink: 'Adicionar Membro'
+    table:
+      name: Nome
+      created: Horário de Criação
+      noData: Não há usuários ainda
+      noMatch: Nenhum usuário corresponde à pesquisa atual
+      userId: Usuário
+      subjectKind: Tipo
+      template: Função
+namespacesPage:
+  header: Espaços de nomes
+  addNamespace: Adicionar Espaço De Nomes
+  noMatch: Nenhum espaço de nomes corresponde à pesquisa atual.
+  noData: Este cluster não possui namespaces definidos
+  table:
+    name:
+      label: Namespace
+    description:
+      label: Descrição
+    project:
+      label: Projeto
+    pods:
+      label: Pods
+    workloads:
+      label: Cargas de trabalho
+    created:
+      label: Criado
+clusterPage:
+  edit: Editar Cluster
+  removeMemberNote: 'Nota: A remoção do usuário não removerá suas permissões de projeto'
+  internal: '<b>Cuidado:</b> Esse é o grupo que {appName} está usando como armazenamento de dados. Somente administradores devem receber acesso de gravação a esse grupo.<br>Usuários com acesso de gravação a esse grupo podem usá-lo para conceder acesso a qualquer outro grupo gerenciado por essa instalação.'
+projectsListNamespacePage:
+  header: Espaços de nomes
+  notIn: Não está em um projeto
+  current: Neste projeto
+projectsPage:
+  header: Projetos/Namespaces
+  headerNS: Espaços de nomes
+  addProject: Adicionar Projeto
+  editProject: Editar Projeto
+  noMatch: Nenhum projeto coincide com a pesquisa atual.
+  noData: Este cluster ainda não possui projetos
+  groups:
+    none: Lista De Namespaces
+    namespaces: Projetos Agrupados/Espaços De Nomes
+  quota:
+    label: Cotas de Recursos
+  ns:
+    label: Nome do Espaço de Nomes
+    placeholder: p.ex. lab
+  name:
+    label: Nome do projeto
+    placeholder: ex. lab
+  created:
+    label: Criado
+  psp:
+    label: Políticas de Segurança Pod
+  resourceQuota:
+    title: Cotas de Recursos
+    detail: Configurar quanto dos recursos o projeto pode consumir
+  containerDefaultLimit:
+    title: Limite de Recursos Padrão do Container
+    detail: Configurar quanto dos recursos o contêiner pode consumir por padrão
+  members:
+    title: Membros
+    detail: Configurar quem tem acesso aos recursos neste projeto e o que eles têm permissões
+    user: Usuário
+    group: Grupo
+    serviceaccount: Conta de Serviço
+    labelText: Membros
+    addMember: Adicionar Membro
+    addUser: Adicionar Usuário
+    noAddUser: Você é o único usuário registrado ativo.
+    addGroup: Criar Grupo
+    addServiceAccount: Adicionar conta de serviço
+    multipleRoles: Múltiplos Papéis
+    customRoles: Papéis Personalizados
+    kind:
+      label: Tipo
+    name:
+      label: Nome
+    role:
+      label: Função
+    errors:
+      nameReq: Nome é obrigatório.
+      nameInExists: O nome já existe. Por favor, use um novo nome de projeto.
+      memberNameReq: O nome é obrigatório para um membro
+      memberRoleReq: O papel é obrigatório para um membro
+clustersPage:
+  header: Cluster
+  newCluster: Adicionar Cluster
+  newClusterName: "Adicionar Cluster: {name}"
+  editClusterName: "Editar Cluster: {name}"
+  cluster:
+    label: Nome do Cluster
+  provider:
+    label: Provedor
+  version:
+    label: Versão
+  nodes:
+    label: Nós
+  cpu:
+    label: CPU
+  memory:
+    label: RAM
+  pod:
+    label: Pods
+  storage:
+    label: Disco
+ingressPage:
+  header: 'Ingress: {name}'
+  gkeIngressWarning: 'Pode levar alguns minutos para o Kubernetes Engine alocar um endereço IP externo e preparar o balanceador de carga. Enquanto isso, você pode receber erros como HTTP 404 e HTTP 500 até que o balanceador de carga esteja pronto para atender ao tráfego.'
+  table:
+    targets:
+      label: Alvo
+    noMatch: Nenhum Balanceador de Carga corresponde a pesquisa atual.
+    noData: Não há regras de Balanceadores de Carga definidas
+containerPage:
+  header: 'Recipiente: {name}'
+  initContainer:
+    label: initContainer
+  envTab:
+    header: Variáveis de Ambiente
+    detail: 'Variáveis ​​de ambiente que foram adicionadas na criação.'
+  portsTab:
+    header: Portas
+    detail: 'Mapeamentos de portas de escuta do contêiner para hospedar portas em endereços IP públicos'
+    hostPrimaryIp: '({ip})'
+  linksTab:
+    header: Ligações
+    detail: 'Estas propriedades mostram as ligações entre recipientes neste recipiente.'
+    noData: Este recipiente não tem ligações
+  volumesTab:
+    header: Volumes
+    detail: 'Estas propriedades mostram os volumes anexados ao seu recipiente.'
+    table:
+      path: Ponto de Montagem
+      shared: Compartilhado Com
+      writable: Gravável
+      noData: Este contêiner não tem volumes montados
+      noMatch: Nenhum volume corresponde a pesquisa atual
+      noContainers: Não há outros recipientes
+  pod: Pod
+podPage:
+  header: 'Nó: {name}'
+  nodeIp: IP do nó
+  podIp: Pod IP
+  containerImage: 'Imagem de {container}'
+  image: Imagem
+  displayImage: '{image} + {sidecar, plural, =1 {1 imagem} other {# imagens}}'
+containersPage:
+  table:
+    sparkPrefixCpu: "CPU: "
+    sparkPrefixMemory: "Memória: "
+    sparkPrefixNetwork: "Rede: "
+    sparkPrefixStorage: "Armazenamento: "
+    noData: Não existem recipientes para mostrar.
+    noMatch: Nenhum recipiente corresponde à pesquisa atual.
+  welcome:
+    container: Começar imediatamente
+    containerLink: Adicionar um recipiente
+    orchestrator: Instalar outro orquestrador
+    kubernetesLink: Instalar Kubernetes
+clusterDashboard:
+  systemProject: Este é o projeto do sistema que possui todos os namespaces do sistema Kubernetes e {appName}. As alterações feitas nos recursos do projeto do sistema podem prejudicar o grupo.
+  notActive: Este cluster está atualmente em <b>{state}</b>.
+  notReady: Este cluster está atualmente <b>{state}</b>; áreas que interagem diretamente com ele não estarão disponíveis até que a API esteja pronta.
+  used: Usado
+metricsAction:
+  description: Expandir para ver métricas ao vivo
+  noData: Dados insuficientes para gráfico
+  sections:
+    workload: Métricas de carga de trabalho
+    pod: Métricas do Pod
+    container: Métricas do contêiner
+  grafana:
+    label: Grafana
+  summary:
+    label: Resumo
+  detail:
+    label: Detalhe
+  from:
+    label: De
+  to:
+    label: Para
+  periods:
+    custom: Personalizado
+    5m: 5 minutos
+    1h: 1 hora
+    6h: 6 horas
+    24h: 24 horas
+    7d: 7 dias
+    30d: 30 dias
+metrics:
+  workload-cpu-usage: Utilização da CPU
+  workload-disk-io: I/O de Disco
+  workload-memory-usage-bytes-sum: Utilização de Memória
+  workload-network-io: I/O de rede
+  workload-network-packet: Pacotes de rede
+  pod-cpu-usage: Utilização da CPU
+  pod-disk-io: I/O de disco
+  pod-memory-usage-bytes-sum: Utilização de Memória
+  pod-network-io: I/O de rede
+  pod-network-packet: Pacotes de rede
+  container-cpu-usage: Utilização da CPU
+  container-disk-io: I/O de Disco
+  container-memory-usage-bytes-sum: Utilização de Memória
+dnsPage:
+  noMatch: Nenhum registro corresponde à pesquisa atual
+  noData: Não há registros DNS para mostrar
+  type:
+    arecord: IP externo
+    cname: Nome do servidor
+    alias: Apelido
+    workload: Carga de trabalho
+    selector: Seletor
+    clusterIp: IP do Cluster
+    unknown: Desconhecido
+  table:
+    target: Alvo
+    clusterIpDetail: 'IP de Cluster: {ip}'
+editDns:
+  title:
+    new: Adicionar registro
+    edit: Editar registro
+    view: "Registro: {name}"
+  name:
+    placeholder: p.ex. meuapp
+  sessionAffinity:
+    title: Afinidade de Sessão
+    detail: Mapeie as conexões para um destino consistente baseado em seu IP de origem
+    label: Ativar afinidade de sessão
+  externalIPs:
+    addActionLabel: Adicionar IP externo
+    placeholder: ex. 80.11.12.10
+    value: IPs Externos
+  loadBalancerIP:
+    label: IP do balanceador de carga
+    placeholder: ex. 78.11.24.19
+  loadBalancerSourceRanges:
+    addActionLabel: Adicionar intervalo de origem
+    placeholder: ex. 143.231.0.0/16
+    value: Intervalos de fonte de balanceador de carga
+  healthCheckNodePort:
+    label: Porta da Verificação de Saúde do Nó
+    placeholder: ex. 8080
+  externalTrafficPolicy:
+    label: Política de Tráfego Externo
+    local: Local
+    cluster: Cluster
+  publishNotReadyAddresses:
+    label: Endereços IP Publicados
+    readyOnly: Apenas endpoints ativos
+    all: Todos os endpoints
+  sessionAffinityConfig:
+    placeholder: ex. 10800
+  kind:
+    label: Como
+    clusterIP: IP de cluster (somente interno)
+    loadBalancer: Balanceamento de Carga Layer-4
+    nodePort: NodePort (em todos os nós)
+    externalName: ExternalName
+    headless: Serviço headless
+  description:
+    placeholder: Por exemplo, versão atual do MeuApp
+  selector:
+    label: Seletor de rótulo de contêiner
+    keyLabel: Rótulo
+    addActionLabel: Adicionar Seletor
+  recordType:
+    label: "Resolve Para"
+    arecord: Um ou mais endereços IP externos
+    cname: Um nome de host externo
+    alias: Apelido do valor de outro registro de DNS
+    workload: Uma ou mais cargas de trabalho
+    selector: O conjunto de núcleos, que correspondem a um seletor
+    clusterIp: "IP do Cluster"
+  target:
+    arecord: Endereços IP de destino
+    cname: Nome do Servidor de destino
+    alias: Registros DNS de destino
+    workload: Cargas de trabalho de destino
+    selector: Seletores de núcleos alvos
+  add:
+    arecord: Adicionar IP de destino
+    alias: Adicionar registro de destino
+    workload: Adicionar carga de trabalho de destino
+    selector: Adicionar Seletor de Destino
+  placeholder:
+    arecord: p.ex. 19.82.2.24
+    cname: p.ex. exemplo.com
+  prompt:
+    alias: Selecione um Registro de DNS...
+    workload: Selecione uma Carga de trabalho...
+  errors:
+    targetRequired: 'Um ou mais "alvos" são obrigatórios'
+    selectorRequired: 'Um ou mais "seletores de núcleo" são obrigatórios'
+    mixedAlias: Um Apelido não pode ter como destino uma mistura de CNAME e outros registros
+    multipleCname: Um Apelido não pode atingir mais de um registro CNAME
+cruPersistentVolumeClaim:
+  title:
+    define: Definir reivindicação de volume
+    new: Adicionar reivindicação de volume
+    edit: 'Editar reivindicação de volume: {name}'
+    view: 'Reivindicação por Volume Persistente: {name}'
+  define:
+    addActionLabel: Definir
+  capacity:
+    label: Capacidade
+    unit: GiB
+  name:
+    placeholder: p.ex. meuvol
+  source:
+    label: Fonte
+    pv: Use um volume persistente existente
+    storageClass: Use uma classe de armazenamento para provisionar um novo volume persistente
+  pv:
+    label: Volume persistente
+    prompt: Selecione um volume persistente...
+  storageClass:
+    label: Classe de Armazenamento
+    prompt: Use a classe padrão
+cruVolumeClaimTemplate:
+  title:
+    define: Definir Modelo de Requisição de Volume
+    new: Adicionar modelo de requisição de volume
+    edit: "Editar modelo de Volume Claim: {name}"
+    view: "Modelo de Volume Claim: {name}"
+  define:
+    addActionLabel: Definir
+  capacity:
+    label: Capacidade
+    unit: GiB
+  name:
+    placeholder: ex. meuvol
+  source:
+    label: Fonte
+    pv: Use um volume persistente existente para definir um modelo
+    storageClass: Use uma Storage Class para definir um modelo
+  pv:
+    label: Volume Persistente
+    prompt: Selecione um volume persistente...
+  storageClass:
+    label: Classe de Armazenamento
+    prompt: Use a classe padrão
+  customize:
+    title: Personalizar
+    detail: Personalizar Opções Avançadas
+cruPrivateRegistry:
+  title:
+    label: Registry Prívado
+  defaultError: Você deve designar um registry privado como o padrão
+  add:
+    label: Adicionar registry privado
+  registry:
+    user:
+      label: Usuário
+    password:
+      label: Senha
+    url:
+      label: URL
+cruVolume:
+  sourcePrompt: Escolha uma fonte de volume acima...
+  title:
+    new: Definir o volume efêmero
+  define:
+    addActionLabel: Definir
+  name:
+    placeholder: p.ex. meuvol
+  source:
+    label: Fonte
+    title: Configuração De Origem
+    detail: Configurar opções para a origem de volume selecionada
+    prompt: Escolha uma fonte de volume...
+globalDnsPage:
+  header: Entradas de DNS globais
+  newDns: Adicionar entrada de DNS
+  noDnsMatch: Nenhuma entrada de DNS corresponde à pesquisa atual.
+  noDnsData: Ainda não há entradas DNS globais.
+  newProvider: Adicionar provedor de DNS
+  noDnsProviderMatch: Nenhuma provedor de DNS corresponde à pesquisa atual.
+  noDnsProviderData: Ainda não há provedores de DNS globais.
+  noProjects: Não existem projetos para selecionar
+  noProviders: Nenhum provedor acessível
+  entriesPage:
+    access:
+      noAccessMulti: Você não tem acesso ao app de destino
+      noAccessProvider: Você não tem acesso ao provedor
+      noAccessProject: Você não tem acesso ao projeto alvo
+    table:
+      name: Nome
+      fqdn: FQDN
+      target: Destino
+      provider: ID do Provedor
+    config:
+      title: Configurar entrada DNS
+      detail: Forneça detalhes da sua configuração para adicionar uma nova entrada de DNS Global
+      configType: Resolve Para
+      project: Projetos
+      fqdn:
+        label: FQDN
+        placeholder: dev.exemplo.com
+      multiCluster:
+        add:
+          label: Adicionar Destino
+      provider:
+        label: Provedor
+        placeholder: Selecione o provedor
+      projects:
+        label: Projeto Alvo
+      ttl:
+        label: DNS TTL
+  providersPage:
+    title: Provedores de DNS Globais
+    options:
+      title: Opções de provedor
+      detail: Personalizar opções para o provedor de DNS
+    members:
+      title: Acesso de membro
+      detail: Controle quem tem acesso ao recurso
+    table:
+      name: Nome
+      provider: Nome do Provedor
+      rootDomain: Domínio Raiz
+    config:
+      root:
+        label: Domínio Raiz
+        placeholder: Seu domínio principal
+      accessKey:
+        label: Chave de Acesso
+        placeholder: Sua chave de acesso
+      secretKey:
+        label: Chave Secreta
+        placeholder: Sua chave secreta
+      apiEmail:
+        label: E-mail da API
+        placeholder: Seu e-mail da API
+      apiKey:
+        label: Chave de API
+        placeholder: Sua chave de API
+failWhalePage:
+  header: Erro
+  reloadButton: |
+    <a href="#" onclick="window.location.href = window.location.href; return false;">Recarregar</a> para tentar novamente ou
+  logoutButton: Sair
+time:
+  now: Agora
+  mins: |
+    {mins, plural,
+    =1 {# min}
+    other {# mins}
+    }
+  minsAgo: |
+    {mins, plural,
+    =1 {# min atrás}
+    other {# mins atrás}
+    }
+  secsAgo: |
+    {secs, plural,
+    =1 {# segundo atrás}
+    other {# segundos atrás}
+    }
+haPage:
+  header: Alta Disponibilidade(HA)
+  setup:
+    prefix: "Vários recipientes de servidor podem ser implantados em diferentes servidores para que {appName} continue funcionando mesmo se um dos servidores falhar.  "
+    link: Veja a documentação
+    suffix: " para obter mais informações sobre a instalação e uso."
+  table:
+    address: Endereço anunciado
+    port: Porta
+    heartbeat: Visto pela última vez
+    clustered: Agrupado
+nodesPage:
+  header: Nós
+  editCluster: Editar Grupo
+  nodePoolGroup: "Grupo: {name}"
+  table:
+    clusterName: Grupo
+    role: Funções
+    cpu: CPU
+    memory: RAM
+    disk: Disco
+    pod: Núcleos
+    version: Versão
+    docker: Docker
+    unschedulable: Não agendável
+    instanceState: Estados do Contêiner
+    instanceStateWithIcon: Estados
+    noData: Este cluster não possui grupos
+    noMatch: Nenhum nó corresponde à pesquisa atual
+hostsPage:
+  cloudHostsPage:
+    addPage:
+      launch: Iniciar
+      header: Adicionar nó
+      name:
+        label: Nome do Nó
+        placeholder: p.ex. no1
+      transferUnit: TB
+      instance: 'Tipo:'
+      storage: 'Armazenamento:'
+      transfer: 'Transferência:'
+      zone: 'Zona:'
+      env: 'Ambiente:'
+      size: 'Tamanho:'
+      os: 'SO:'
+      driver: 'Driver:'
+      template: 'Nome Do Modelo:'
+  addContainer: Adicionar Contêiner
+  new:
+    header:
+      customText: Adicionar Servidor Personalizado
+      text: Adicionar nó
+    manageLink: Gerenciar machine drivers disponíveis
+    custom: Adicionar Servidor Personalizado
+    name:
+      placeholder: p.ex. no1
+    addCluster:
+      label: "Opções de Grupo"
+      description: Anexe este novo nó a um grupo, delegue funções, etc.
+      cluster:
+        label: Grupo
+      roles:
+        label: Funções
+      table:
+        label:
+          etcd: Use para o etcd
+          control: Use para gerenciamento
+          worker: Use como nó do trabalhador
+  hostPage:
+    header:
+      title: 'Nó: {name}'
+    hostname: Nome do servidor
+    ipAddress: Endereço de IP
+    version: Versão
+    kubeletVersion: Versão Kubelet
+    kubeProxyVersion: Versão Proxy do Kube
+    dockerVersion: Versão do Docker
+    kernelVersion: Versão do Kernel
+    operatingSystem: Sistema Operacional
+    conditions:
+      diskSpace: Espaço em disco
+      diskPressure: Pressão do disco
+      memoryPressure: Pressão de memória
+      ready: Kubelet
+    limits:
+      cpu: 'Limite de CPU:'
+      memory: 'Limite de memória:'
+      storage: 'Limite Local de Volumes:'
+    infoMultiStats:
+      ip: 'IP'
+      cpu: 'CPU'
+      memory: 'Memória'
+      storage: 'Volumes'
+      provider:
+        labelText: 'Fornecedor:'
+        noHost: Personalizado
+      kernel: 'Kernel'
+      docker: 'Docker:'
+      os: 'SO'
+      milliCpu:
+        labelText: mCPU
+    containersTab:
+      header: Contêineres
+      detail: Uma lista de contêineres em execução neste host
+    portsTab:
+      header: Portas
+      detail: 'Essas propriedades mostram quais portas foram mapeadas e onde.'
+      table:
+        header:
+          ip: Endereço de IP
+          port: Porta
+          service: Serviço
+          container: Contêiner
+        body:
+          noData: Este host não tem nenhum porta.
+    storageTab:
+      header: Volumes
+      detail: 'Essas propriedades mostram os detalhes do volume do seu host.'
+      table:
+        header:
+          state: Estado
+          hostPath: Caminho do Host
+          mounts: Montagens
+        body:
+          noData: Este host não tem nenhum volumes.
+k8sImport:
+  header: Importar Kubernetes Existente
+  name:
+    label: Nome do Grupo
+    placeholder: p.ex. meu-grupo-importado
+  kubeConfig:
+    label: Arquivo Kubeconfig para importar
+    placeholder: Importe ou cole no arquivo Kubeconfig do cluster a ser usado.
+  actionLabel: Importar
+k8sPage:
+  header: Kubernetes
+  dashboard:
+    title: Painel de instrumentos
+    detail: Acesse o painel de instrumentos nativo do Kubernetes.
+    button: Iniciar Painel de Instrumentos
+  shell:
+    title: Terminal
+    detail: Executar comandos <code>kubectl</code> a partir de seu navegador.
+    button: Iniciar o kubectl
+  configFile:
+    title: Arquivo de configuração
+    detail: Gere um arquivo de configuração do Kubernetes para usar <code>kubectl</code> em sua área de trabalho.
+    button: Arquivo Kubeconfig
+    generating: Gerando...
+    usage:
+      helpText: |
+        Colocar isso em <code>~/.kube/config</code>:
+      downloadText: |
+        Em seguida <a href="{downloadUrl}" target="_blank">baixar</a> (se necessário) e execute <code>kubectl</code>
+loginPage:
+  greeting: "Olá!<br>Bem-vindo à {appName}"
+  insecure: "{appName} funciona apenas com uma conexão de <code>https: //</code>. Você deve:<br><br>Usar o suporte TLS integrado ao servidor ou <br><br> Fornecer sua própria terminação TLS na frente do recipiente."
+  githubMessage: "{appName} usar GitHub para gerenciar contas e equipes.  Clique no botão a seguir para entrar e dar-nos acesso somente leitura às suas informações básicas sobre a conta GitHub."
+  shibbolethMessage: "{appName} usa Conta Única para gerenciar contas.  Clique no botão abaixo para logar-se com a Conta Única configurada."
+  shibbolethError:
+    401: "Não autorizado"
+    500: "Erro interno do servidor"
+    generic: "Houve um erro ({errorCode}) ao tentar iniciar sessão. Por favor, tente novamente."
+  error:
+    authFailedCreds: "Iniciar sessão falhou: verificação de credenciais, ou a sua conta não pode ser autorizados a iniciar."
+    authFailed: "Iniciar sessão falhou: sua conta não pode ser autorizados a iniciar."
+  readableProviders:
+    ad: AD Microsoft
+    azureAd: AD do Azure
+    local: um Usuário Local
+    openldap: OpenLDAP
+    freeipa: FreeIPA
+machinePage:
+  header: Drivers de Nó
+  inactive: Inativo
+  subtext: "Drivers adicionais <code>docker-machine</code> podem ser carregados aqui e utilizado na tela Adicionar Nó."
+  add: Adicionar Driver de Nó
+  builtin: Embutido
+  url: Localização
+notFoundPage:
+  header: "A página que você estava procurando não existe!"
+  linkTo: Ir para Página Inicial
+registriesPage:
+  index:
+    header: Credenciais do Registro
+    linkTo: Adicionar Registro
+    table:
+      header:
+        state: Estado
+        address: Endereço
+        username: Nome de usuário
+        created: Criado
+      body:
+        noData: "Você não tem nenhuma credencial de registro ainda"
+  new:
+    header: Adicionar Registro
+    form:
+      custom:
+        labelText: Endereço
+        placeholder: p.ex. registro.exemplo.com
+        help: Apenas o nome do servidor ou endereço IP, não incluir o protocolo (https://)
+      username:
+        labelText: Nome de usuário
+        placeholder: p.ex. usuario
+      password:
+        labelText: Senha
+        placeholder: p.ex. senha
+secretsPage:
+  index:
+    header: Segredos
+    linkTo: Adicionar Segredo
+    noData: Não há segredos definidos
+    noMatch: Nenhum Segredo corresponde à pesquisa atual
+  table:
+    keys: Chaves
+configMapsPage:
+  index:
+    header: Dicionários de configuração
+    linkTo: Adicionar Dicionário de Configuração
+    noData: Não há dicionários de configuração definidos
+    noMatch: Nenhum dicionário de configuração corresponde à pesquisa atual
+  table:
+    keys: Chaves
+servicePage:
+  header: 'Carga de trabalho: {name}'
+  globalScale: '{scale} por servidor'
+  endpoints: 'Pontos de extremidade:'
+  multistat:
+    type: 'Tipo de Carga de Trabalho:'
+    fqdn: 'FQDN:'
+    scale: 'Escala:'
+    image: 'Imagem:'
+    namespace: 'Espaços de nomes:'
+    created: 'Criado:'
+    daemonSetScale: '1 por nó'
+    currentScale: 'Escala Pronta: {count}'
+  serviceType:
+    deployment: Implantação
+    replicaSet: Conjunto de réplicas
+    statefulSet: Conjunto com estado
+    daemonSet: Conjunto de Serviços
+    replicationController: Controladores de replicação
+    job: Tarefa
+    cronJob: Tarefa Cron
+    pod: Núcleo Padronizado
+  external:
+    externalIp: |
+      {count, plural,
+      =1 {IP Externo:}
+      other {IPs Externos:}
+      }
+    externalHostname: 'Nome do Host Externo:'
+  selector:
+    label: 'Seletor:'
+  containersTab:
+    title: 'Contêineres'
+    detail: 'Os contêineres que compõem esse serviço.'
+  linksTab:
+    header: Ligações
+    detail: 'Estas propriedades mostram as ligações entre recipientes neste recipiente.'
+    noData: Este serviço não tem ligações
+  certsTab:
+    title: Certificados
+    detail: 'Certificados usados ​​em requisições feitas por TLS.'
+    default: Certificado Padrão
+    additional: Certificados SNI adicionais
+  new:
+    form:
+      name:
+        placeholder: p.ex. myapp
+      description:
+        placeholder: p.ex. Minha aplicação
+  newBalancer:
+    upgradeImage: "A imagem do software balanceador será atualizada de <code>{from}</code> <code>{to}</code>."
+    form:
+      name:
+        placeholder: p.ex. site
+      description:
+        placeholder: p.ex. Balanceador para minhaempresa.com
+  newIngress:
+    form:
+      name:
+        placeholder: p.ex. site
+      description:
+        placeholder: p.ex. Balanceador para minhaempresa.com
+  portsTab:
+    title: Portas
+    detail: 'Portas mapeadas de um IP do servidor para as portas de escuta de um contêiner.'
+    notActive: Portas estão disponíveis apenas enquanto o serviço está ativo.
+  logTab:
+    title: Log de serviço
+    detail: 'Eventos de orquestração recentes que ocorreram para este serviço'
+  type:
+    service: Serviço
+    selectorservice: Seletor
+    loadbalancerservice: Balanceador de carga
+    dnsservice: Apelidos
+    externalservice-ip: IP externo
+    externalservice-host: Nome Externo
+    kubernetesservice: Serviço K8s
+    composeservice: Compor serviço
+    networkdriverservice: Serviço de rede
+    storagedriverservice: Serviço de Armazenamento
+  sidekick:
+    tabHeader: Sidecars
+    header: Workload & Sidecars
+    helpBlock: Selecione o container principal ou um dos sidecars
+signupPage:
+  header: 'Inscreva-se para {appName}'
+  form:
+    button: Registrar
+    labels:
+      loginUsername: Nome
+      email: E-mail
+  emailSuccess:
+    header: 'Bem vindo a {appName}'
+    confirm:
+      subtext: Confirme seu e-mail clicando no link de verificação que acabamos de enviar para sua caixa de entrada.
+      resend: Reenviar email
+stackPage:
+  header:
+    singleBanner: Visualizar uma única pilha
+    backLink: De volta a todas as pilhas
+  basics:
+    tagsCopy: Copiar etiquetas como lista separada por vírgulas
+  containers:
+    header: Contêineres
+    detail: Standalone Containers e Serviços conteinerizados na Stack
+    status: |
+      {count, plural,
+      =0 {Nenhum contêiner}
+      =1 {# contêiner}
+      other {# contêineres}
+      }
+  loadBalancers:
+    header: Balanceadores de carga
+    detail: 'Load Balancer containers que estão separados dessa pilha'
+    status: |
+      {count, plural,
+      =0 {Nenhum balanceador}
+      =1 {# balanceador}
+      other {# balanceadores}
+      }
+  dnsServices:
+    header: Entradas de DNS
+    detail: 'Balanceadores de carga que estão para além dessa pilha'
+    status: |
+      {count, plural,
+      =0 {Nenhuma entrada}
+      =1 {# entrada}
+      other {# entradas}
+      }
+  scalingGroups:
+    header: Grupos de dimensionamento
+    detail: 'Contêineres existentes neste grupo de dimensionamento'
+    status: |
+      Executar {count, plural,
+      =0 {Nenhum contêiner}
+      =1 {# contêiner}
+      other {# contêineres}
+      }
+  volumesTab:
+    header: Volumes
+    detail: 'Estas propriedades mostram os volumes anexados ao seu recipiente.'
+    table:
+      path: Ponto de Montagem
+      shared: Compartilhado Com
+      writable: Gravável
+      noData: Esta pilha não tem volumes montados
+      noMatch: Nenhum volume corresponde a pesquisa atual
+newStack:
+  header: Importar YAML
+  name:
+    placeholder: p.ex. meuapp
+  description:
+    placeholder: p.ex. Pilha MeuApp
+  files:
+    label: Arquivos
+    addActionLabel: Adicione um arquivo
+    uploadActionLabel: Ler a partir do Disco
+    namePlaceholder: Nome do Arquivo
+    valuePlaceholder: Conteúdo Do Arquivo
+    protipLabel: Suporta {appName} <code>compose.yml</code>, <code>docker-compose.yml</code> e arquivos de manifesto do Kubernetes
+  answers:
+    label: Respostas (substituições de variáveis)
+    addActionLabel: Adicionar Resposta
+nodeTemplatesPage:
+  header: Modelos de Nós
+  rightButtons:
+    actionButton: Adicionar Modelo
+    cloudCredentials: Gerenciar credenciais de nuvem
+  detail: Templates de nó são utilizados para implementar nós que formam um Cluster em um provedor de infraestrutura.
+  table:
+    state: Estado
+    name: Nome
+    provider: Provedor
+    location: Localização
+    size: Tamanho
+    usedBy: Usado por
+    noData: Não há modelos de nós definidos
+    usedByNone: Sem clusters
+    unknown: Desconhecido
+storageClassPage:
+  header: Classe de Armazenamento
+  addActionLabel: Adicionar Classe
+  noData: Não existem classes de armazenamento definidos
+  noMatch: Nenhuma classe de armazenamento corresponde à pesquisa atual
+  provisioner:
+    label: Provisionador
+  default:
+    label: Padrão
+persistentVolumePage:
+  header: Volumes Persistentes
+  addActionLabel: Adicionar Volume
+  noData: Não há volumes persistentes definidos
+  noMatch: Nenhum volume persistente corresponde à pesquisa atual
+  source:
+    label: Fonte
+userPreferencesPage:
+  header: Preferências
+  theme:
+    header: Tema
+    light: Claro
+    auto: Auto
+    autoDetail: Auto fará a transição para o escuro das 18h às 6h
+    dark: Dark
+  generalInfo:
+    header: Minha Conta
+    name:
+      label: Nome
+    username:
+      label: Nome de usuário
+    email:
+      label: E-
+    password:
+      text: Alterar senha
+verifyPage:
+  header: "Você confirmou seu e-mail com sucesso!"
+  subtext: Precisamos de mais algumas informações antes de podermos finalizar sua conta.
+  account:
+    header: Conta criada
+    subtext: Clique no link abaixo para ser levado para a página de login.
+    linkText: Login
+verifyResetPasswordPage:
+  header: Recuperar senha
+  button: Atualizar Senha
+  success:
+    header: Redefinir senha!
+    subtext: Clique no link abaixo para ser levado para a página de login.
+    linkText: Login
+waitingPage:
+  hosts:
+    setup:
+      kubernetes: Configurando Kubernetes
+notifierPage:
+  notifiers: Notificadores
+  testedBtnLabel: OK
+  testingBtnLabel: Testando
+  deleteErrorMessage: 'Notificador {displayName} está em uso por: {alertNames}'
+  notifierTypes:
+    slack: Slack
+    email: E-mail
+    pagerduty: PagerDuty
+    webhook: Webhook
+    wechat: WeChat
+  slack:
+    url: URL
+    urlPlaceholder: ex. https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
+    defaultRecipient:
+      label: Canal padrão
+      helpText: Opcional. Por padrão, as notificações são enviadas para o canal padrão de entrado dos WebHook. Ao configurar um alerta, o canal pode ser substituído.
+    defaultRecipientPlaceholder: 'ex. #exemplo'
+    helpText: |
+      Veja como você <a href="https://slack.com/apps/A0F7XDUAZ-incoming-webhooks" target="_blank" rel="nofollow noopener noreferrer">cria Entrada de WebHooks</a> para o Slack.
+  smtp:
+    server: Servidor SMTP
+    host: Servidor
+    hostPlaceholder: ex. 192.168.1.121
+    port: Porta
+    portPlaceholder: ex. 465
+    sender: Remetente
+    userName: Usuário
+    userNamePlaceholder: 'exemplo: João'
+    password: Senha
+    passwordPlaceholder: Sua Senha
+    defaultRecipient:
+      label: Endereço de entrega padrão
+      helpText: Ao configurar um alerta, o destinatário pode ser substituído.
+    defaultRecipientPlaceholder: ex. admin@exemplo.com
+  pagerduty:
+    serviceKey:
+      label: Chave de integração padrão
+      helpText: Ao configurar um alerta, a chave de integração pode ser substituída.
+    serviceKeyPlaceholder: Sua chave de integração do PagerDuty
+  wechat:
+    recipientType:
+      tag: Tag
+      user: Usuário
+    secret:
+      label: Segredo da Aplicação
+    agent:
+      label: ID do agente da aplicação
+    corp:
+      label: ID da Corporação
+    defaultRecipient:
+      label: Destinatário Padrão
+    secretPlaceholder: O segredo do app
+    agentPlaceholder: ex. 1000003
+    corpPlaceholder: 'ex: wwc0cc3d58f9b021b6'
+    defaultRecipientPlaceholder: ex. 2
+  webhook:
+    url: URL
+    urlPlaceholder: URL do seu webhook
+  testAction:
+    testing: TESTANDO
+    testOk: Configurações validadas.
+    test: TESTE
+  clone: Clonar
+  index:
+    table:
+      created: Criado
+      noMatch: Sem correspondência
+ldap:
+  providerName:
+    openldap: OpenLDAP
+    ad: Active Directory
+    freeipa: FreeIPA
+    saveLabels:
+      openldap: Autenticar com OpenLDAP
+      ad: Autenticar com o Active Directory
+  accessEnabled:
+    header: Autenticação
+    subtext: "Para alterar a configuração do servidor, desativar o controle de acesso abaixo e, em seguida, configurá-lo novamente."
+    general:
+      header: Geral
+      server: "Servidor:"
+      tls: "TLS:"
+      serviceAccount: "Conta de Serviço:"
+      searchBase: "Base de pesquisa:"
+      defaultDomain: "Domínio Padrão:"
+    users:
+      header: Usuários
+      objectClass: "Classe de Objeto:"
+      login: "Campo Login:"
+      name: "Campo Nome:"
+      search: "Campo Pesquisar:"
+      searchFilter: "Filtro de Busca:"
+      enabled: "Campo ativado:"
+      disabledBitMask: "Máscara de bits Desativado:"
+    group:
+      header: Grupo
+      objectClass: "Classe de Objeto:"
+      name: "Campo Nome:"
+      search: "Campo Pesquisar:"
+      searchFilter: "Filtro de Busca:"
+    disable:
+      confirmDisable:
+        pre: Desativar controle de acesso
+  accessConfig:
+    header: "1. configurar um servidor {providerName}"
+    subtext1: "Digite o endereço, porta e protocolo para conectar ao seu servidor {providerName}.  <code>389</code> ié a porta padrão para inseguro, <code>636</code> para TLS."
+    subtext2: "{appName} precisa de uma conta de serviço que tenha acesso (somente leitura) a todos os domínios que será capaz de fazer login, para que possamos determinar quais grupos um usuário é membro de quando eles fazem um pedido com uma Chave de API."
+    port:
+      labelText: Porta
+      checkbox: TLS
+    defaultDomain:
+      helpText: "Este domínio será usado se um usuário fizer logon sem especificar um."
+      labelText: Domínio de logon padrão*
+      placeholder: "p.ex. minhaempresa"
+  customizeSchema:
+    header: "2. Personalizar Esquema"
+    helpText: "Se o seu esquema não coincide com o formato padrão do ActiveDirectory, você pode personalizá-lo aqui."
+    cert:
+      labelText: Certificado CA
+      helpText: Se necessário, informe um certificado de CA
+      placeholder: "Colar certificado, começando com -----BEGIN CERTIFICATE-----"
+    users:
+      header: Usuários
+      objectClass:
+        labelText: Classe de Objeto
+      login:
+        labelText: Atributo de Login
+      searchFilter:
+        labelText: Filtro de Busca
+      disabledBitMask:
+        labelText: Máscara de bits Desativado
+    groups:
+      header: Grupos
+      objectClass:
+        labelText: Classe de Objeto
+      search:
+        labelText: Atributo de busca
+      searchFilter:
+        labelText: Filtro de Pesquisa
+      groupMemberUser:
+        placeholder: UID
+      groupDN:
+        placeholder: distinguishedName
+  testAuth:
+    header: "3. Testar e ativar a autenticação"
+    helpText: "Verificar se tudo está configurado corretamente pela autenticação de testes com a sua conta {providerName}:"
+    userName:
+      labelText: Seu Nome de Usuário*
+    password:
+      labelText: Sua Senha*
+    authenticate:
+      pre: Autenticar
+      post: "Testando..."
+servicePartial:
+  noContainers:
+    label: Sem contêineres ainda..
+    inactive:
+      start: Iniciar
+accordionRow:
+  status:
+    none: Nenhum
+    incomplete: Incompleto
+    error: Erro
+    notConfigured: Não Configurado
+    configured: Configurado
+    standard: Padrão
+    custom: Personalizado
+    specific: Especifico
+    any: Qualquer
+    rule: "{count, plural, =1 {#1 Regra} other {# Regras}}"
+advancedSection:
+  showText: Mostrar opções avançadas
+  hideText: Ocultar opções avançadas
+annotationsSection:
+  title: Anotações
+  detail: Metadados chave/valor.
+  key: Chave
+  value: Valor
+  noData: Nenhuma anotação
+  noMatch: Nenhuma anotação corresponde à pesquisa atual
+authorizedEndpoint:
+  fqdn:
+    label: FQDN
+taintsSection:
+  key: Chave
+  value: Valor
+  effect: Efeito
+billingInfo:
+  header: Informações de cobrança
+  noSub: Você não tem um método de pagamento ativo
+  table:
+    title:
+      actions: Ações
+cloudProvider:
+  title: Provedor de Nuvem
+  amazon: Amazon
+  azure: Azure
+  name: Nome do provedor de nuvem
+catalogSettings:
+  header: Catálogos
+  currentCluster: Cluster
+  currentProject: Projeto
+  globalCatalog: Global
+  library:
+    label: Biblioteca
+  helm:
+    stable:
+      label: Helm Estável
+    incubator:
+      label: Helm Incubator
+  community:
+    header:
+      rancher: Contribuição da Comunidade
+      pl: Contribuição da Comunidade
+    detail:
+      rancher: Templates criados e mantidos pelos membros da comunidade.  Não certificado por Rancher Labs.
+      pl: Templates criados e mantidos pelos membros da comunidade.
+  more:
+    header: Mais
+    addActionLabel: Adicionar Catálogo
+    name:
+      label: Nome
+    url:
+      label: URL do catálogo
+    kind:
+      label: Tipo
+      native: Nativo
+      helm: Helm
+    branch:
+      label: Branch
+    username:
+      label: Usuário
+      required: '"Usuário" é obrigatório'
+      placeholder: Seu Usuário
+    password:
+      label: Senha
+      required: '"Senha" é obrigatória'
+      placeholder: Sua Senha
+clusterRow:
+  loginDefault: Login
+clusterNew:
+  config:
+    label: Provedor
+  nodes:
+    title: Nós
+  security:
+    title: Segurança
+  amazoneks:
+    shortLabel: Amazon EKS
+  tencenttke:
+    access:
+      next: "Próximo: Configurar Cluster"
+    node:
+      title: Tipo de Instância
+      next: "Próximo: Configurar Instância"
+    instance:
+      title: Configuração de Instância
+    keyPair:
+      label: Par de Chaves
+    region:
+      label: Região
+    vpc:
+      label: VPC
+    zone:
+      label: Zona de Disponibilidade
+      required: A zona de disponibilidade é obrigatória
+    instanceType:
+      label: Tipo de Instância
+      required: Tipo de Instância é obrigatório
+  azureaks:
+    shortLabel: Azure AKS
+    subscriptionId:
+      label: ID de Inscrição
+    machineType:
+      label: Tamanho da VM
+      prompt: Escolha um tamanho...
+    dns:
+      label: Prefixo DNS
+    security:
+      label: Segurança
+    image:
+      label: Imagem
+    size:
+      label: Tamanho
+    dockerPort:
+      placeholder: '2376'
+    environment:
+      label: Ambiente
+    networking:
+      default: Padrão
+      advanced: Avançado
+      dockerBridgeCidr:
+        label: Endereço da ponte (bridge) do Docker
+    sshUser:
+      label: Usuário SSH
+    storageType:
+      label: Tipo de Armazenamento
+    vnet:
+      label: VNet
+    openPort:
+      label: Porta Aberta
+    privateIpAddress:
+      label: IP Privado
+      placeholder: 127.0.0.1
+    staticPublicIp:
+      label: IP público
+    noPublicIp:
+      label: Nenhum IP Público
+    clientId:
+      label: ID do Cliente
+      placeholder: Seu ID do Cliente
+    region:
+      label: Região
+    enableMonitoring:
+      label: Monitoramento
+    networkPolicy:
+      label: Política de Rede
+      placeholder: Selecione uma Política de Rede
+    tags:
+      label: Tags
+      addActionLabel: Adicionar etiqueta
+  aliyunkcs:
+    clusters:
+      k8s: Kubernetes
+    storageSize:
+      placeholder: ex. 120
+    keyPair:
+      label: Par de Chaves
+    regionId:
+      label: Região
+    instanceType:
+      label: Tipo Instância
+  googlegke:
+    checkingServiceAccount: Autenticando...
+    zone:
+      label: Zona
+    project:
+      label: Projeto
+    enablePrivateNodes:
+      label: Cluster Privado
+    imageType:
+      UBUNTU: Ubuntu
+    network:
+      label: Rede
+    userInfo:
+      label: Informações do usuário
+    taints:
+      key:
+        label: Chave
+        placeholder: Chave
+      value:
+        label: Valor
+        placeholder: Valor
+  huaweicce:
+    region:
+      label: Região
+    nodeOption:
+      title: Nós
+    description:
+      label: Descrição
+    authenticatingProxyCa:
+      label: Certificado
+    loginMode:
+      keyPair: Par de Chaves
+    authentiactionMode:
+      rbac: RBAC
+  rke:
+    registry:
+      user:
+        label: Usuário
+      password:
+        label: Senha
+confirmDelete:
+  title: 'Tem certeza de que deseja excluir'
+  protip: 'Dica: Mantenha a chave {key} enquanto clicar Delete para ignorar essa confirmação.'
+  confirmAction: Excluir
+  cancelAction: Cancelar
+containerLogs:
+  onlyCombined: "<b>Nota:</b> Somente logs de stdout/stderr combinados estão disponíveis para este contêiner porque foi executado com o TTY (-t) flag."
+  combined: Combinado
+  stdout: Saída Padrão
+  stderr: Erro Padrão
+  protip: "Dica: Mantenha pressionada a tecla {key} ao abrir os logs para iniciar uma nova janela."
+  scrollTop: Rolar para Cima
+  scrollBottom: Rolar para Baixo
+  clear: Limpar Tela
+  status:
+    initializing: Inicializando...
+    connecting: Conectando...
+    connected: Conectado
+    disconnected: Desconectada
+    closed: Fechado
+containerShell:
+  protip: "Dica: Mantenha pressionada a tecla {key} ao abrir o acesso shell para iniciar uma nova janela."
+  status:
+    initializing: Inicializando...
+    error: "Erro: {error}"
+    connecting: Conectando...
+    connected: Conectado
+    disconnected: Desconectada
+    closed: Fechado
+copyToClipboard:
+  tooltip: Copiar para Área de Transferência
+  copied: Copiado!
+editAccount:
+  title: Editar Conta
+  form:
+    name:
+      placeholder: p.ex. João da Silva
+    kind:
+      label: Tipo de Conta
+    description:
+      label: Descrição
+      placeholder: p.ex. Esta conta é para João da Silva
+    oldPassword:
+      label: Senha Atual
+    newPassword:
+      label: Nova Senha
+    confirmPassword:
+      label: Confirmar Senha
+    identity:
+      label: Identidade
+editApiKey:
+  title:
+    justCreated: Chave de API Criada
+    editing: Editar a chave de API
+  saveWarning2: Se você perdê-lo, você precisará criar uma nova chave de API.
+editCertificate:
+  title: Editar Certificado
+  name:
+    placeholder: p.ex. meudominio.com
+  description:
+    placeholder: p.ex. EV cert para meudominio.com
+editContainer:
+  title:
+    vm: Editar VM
+    container: Editar Contêiner
+  name:
+    placeholder: p.ex. myapp
+  description:
+    placeholder: p.ex. Minha Aplicação
+editHost:
+  hostname:
+    label: Nome do Host
+  customName:
+    label: Nome Personalizado
+    placeholder: p.ex. dev1
+    help: Se for deixado vazio, será mostrado o nome do host como o nome.
+  description:
+    label: Descrição
+  labels:
+    label: Rótulos
+editService:
+  title: Editar Serviço
+editStack:
+  name:
+    label: Nome
+    placeholder: p.ex. myapp
+  description:
+    label: Descrição
+formatIp:
+  noIp: Nenhum
+formCommand:
+  command:
+    label: Comando
+    placeholder: p.ex. /usr/sbin/httpd -f httpd.conf
+  workingDir:
+    label: Dir. de Trabalho
+    placeholder: p.ex. /myapp
+  console:
+    both: 'Interativo &amp; TTY <span class="text-muted">(-i -t)</span>'
+    interactive: 'Interativo <span class="text-muted">(-i)</span>'
+    none: Nenhum
+  autoRestart:
+    label: Reinício Automático
+    no: Nunca
+    onFailure: 'Em caso de falha <span class="text-muted">(non-0 exit code)</span>, para sempre'
+    onFailureCondPrefix: Em caso de falha, até
+    onFailureCondSuffix: |
+      {limit, plural,
+      =1 {vez}
+      other {vezes}
+      }
+    always: Sempre
+formContainerLinks:
+  addActionLabel: Adicionar Ligações
+formDisks:
+  addDiskLabel: Adicionar Disco
+  addRootDiskLabel: Adicionar Raiz do Disco
+  name:
+    rootDisk: Raiz do Disco
+    label: Nome
+    placeholder: p.ex. data
+  size:
+    label: Tamanho
+    rootDisk: Determinado pela raiz da imagem
+formEngineOpts:
+  engineInstallUrl:
+    label: URL de instalação do Docker
+    placeholder: p.ex. http://get.docker.com/
+  engineStorageDriver:
+    label: Driver de Armazenamento
+    placeholder: p.ex. overlay
+  engineOpts:
+    label: Opções de Engine
+    addActionLabel: Adicionar Opção de Engine
+    keyPlaceholder: p.ex. log-driver
+    valuePlaceholder: p.ex. syslog
+  engineLabels:
+    label: Rótulos de Engine
+    addActionLabel: Adicionar Rótulo de Engine
+    keyLabel: Rótulo
+  engineEnv:
+    label: Ambiente de Engine
+    addActionLabel: Adicionar Variável de Ambiente
+    keyPlaceholder: p.ex. HTTP_PROXY
+    valuePlaceholder: p.ex. http://your-proxy:8080
+  engineInsecureRegistry:
+    label: Registros Inseguros
+    addActionLabel: Adicionar Registro Inseguro
+    valueLabel: Domínio de Registro
+    valuePlaceholder: p.ex. registro.exemplo.com
+  engineRegistryMirror:
+    label: Espelhos de Registro
+    addActionLabel: Adicionar Espelho de Registro
+    valueLabel: URL Espelho
+    valuePlaceholder: p.ex. https://meu-espelho.exemplo.com:5000
+formHealthCheck:
+  checkType:
+    none: Nenhum
+  host:
+    label: Cabeçalho do Host
+  port:
+    placeholder: p.ex. 80
+formKeyValue:
+  addAction: Adicionar Par
+  key:
+    label: Chave
+    placeholder: Chave
+  value:
+    label: Valor
+    placeholder: Valor
+  protip: 'Dica: Colar uma ou mais linhas de pares chave=valor em qualquer campo de chave para a fácil entrada em massa.'
+formImage:
+  label: Selecione Imagem
+  container:
+    placeholder: "p.ex. ubuntu:trusty"
+formNameDescription:
+  name:
+    label: Nome
+    placeholder: Nome
+  description:
+    label: Descrição
+    placeholder: Descrição
+formPorts:
+  addAction: Mapa de Porta
+  protocol:
+    label: Protocolo
+  noPorts: Este contêiner não tem nenhuma mapa de porta.
+formSslTermination:
+  defaultCertificate:
+    prompt: Escolha um Certificado...
+  alternateCertificate:
+    prompt: Escolha um Certificado...
+formUserLabels:
+  addAction: Adicionar Rótulo
+  key:
+    label: Chave
+    placeholder: p.ex. foo
+  value:
+    label: Valor
+    placeholder: p.ex. bar
+  protip: "Dica: Colar uma ou mais linhas de pares chave=valor em qualquer campo de chave para a fácil entrada em massa."
+formValueArray:
+  addActionLabel: Adicionar Valor
+  valueLabel: Valor
+  protip: "Dica: Cole um ou mais linhas de valores em qualquer campo para a fácil entrada em massa."
+formVolumes:
+  value:
+    prompt: Selecione um Contêiner...
+hostSettings:
+  header: URL de Registro Host
+  subtext: Qual URL base do hosts devem ser usadas para conectar na API {appName}?
+  hostUrl:
+    local: "Endereço deste site:"
+    new:
+      labelText: "Outro:"
+      placeholder: "p.ex. http://exemplo.com:8080"
+  helpText:
+    static1: "Não incluir <code>/v1</code> ou qualquer outro caminho, mas se você está fazendo"
+    static2: "em frente de {appName}, certifique-se de usar <code>https://</code>."
+    isRancher: '<a href="{docsBase}/installing-rancher/installing-server/basic-ssl-config/" target="_blank">Terminação SSL</a>'
+    sslTerm: Terminação SSL
+  notPublic:
+    alert: |
+      Tenha a certeza de que todos os hosts que você irá criar serão capazes de alcançar <code>{activeValue}</code> ?<br/>Parece um IP privado ou rede local.
+identityBlock:
+  loading: Carregando...
+inputIdentity:
+  placeholder:
+    github: Adicionar um nome de usuário ou organização do GitHub
+    generic: Adicionar um usuário ou grupo por nome
+inputPassword:
+  buttonText: Gerar
+inputTextFile:
+  tooltip: Ler de um arquivo
+labelsSection:
+  kind: Tipo
+  key: Chave
+  value: Valor
+  noData: Sem rótulos
+loginUserPass:
+  userLabel: Nome de Usuário
+  userPlaceholder: p.ex. joaosilva
+  loggingInLabel: Entrando...
+  passwordLabel: Senha
+modalAboutComponent:
+  component: Componente
+  version: Versão
+  ui: Interface de Usuário
+modalAddCloudKey:
+  saving:
+    validating: Validando Chaves
+modalConfirmDeactivate:
+  header: Tem certeza que você quer
+  protip: "Dica: Mantenha pressionada a tecla {key} enquanto clicar em {isServiceButton} para contornar essa confirmação."
+  cancel: Cancelar
+modalEditDriver:
+  url:
+    label: URL de Download
+  uiUrl:
+    label: URL de UI Personalizada
+    link: Ver <a href="https://github.com/rancher/ui-driver-skel" target="_blank">ui-driver-skel</a> para mais informações.
+  checksum:
+    help: "Opcional: Verifique se o driver baixado corresponde ao checksum esperada."
+modalProcessError:
+  header: Informação de Exceção
+  cause: "Causa:"
+  none: N/D
+  close: Fechar
+newCatalog:
+  catalog: "Catálogo:"
+  category: "Categoria:"
+  config: Opções de Configuração
+  license: "Licença:"
+  maintainedBy: Mantido por membros da comunidade
+  maintainer: "Mantenedor:"
+  official: Oficialmente Certificado
+  preview: Visualizar
+  saveNew: Iniciar
+  saveUpgrade: Atualizar
+  startService: Iniciar os serviços depois de criar
+  support: "Suporte:"
+  templateVersion: Versão do Template
+  unknownType: "Tipo de pergunta não reconhecida:"
+  upgrade: "Atualizar:"
+  url: "URL do Projeto:"
+  version:
+    prompt: Escolha uma versão...
+newContainer:
+  saveNew: Criar
+  name:
+    placeholder: p.ex. myapp
+  description:
+    placeholder: p.ex. Minha Aplicação
+nodeDriver:
+  amazoneks:
+    associateWorkerNodePublicIp:
+      radio:
+        default: 'Yes'
+pageFooter:
+  notARelease: (Não é uma Release)
+  help: 'Ajuda'
+  issues: Registre uma Issue
+  forums: Fóruns
+  download:
+    link: Baixar CLI
+projectRow:
+  none: Sem descrição
+saveCancel:
+  saving: Salvando...
+  saved: Salvo!
+  edit: Salvar
+  create: Criar
+  cancel: Cancelar
+schema:
+  inputBoolean:
+    y: "Verdade"
+    n: "Falso"
+  inputCertificate:
+    prompt: Escolher um Certificado...
+  inputEnum:
+    option: Escolha uma Opção...
+schedulingRuleRow:
+  theHost: O host
+  haveA: tem um
+  of: de
+tooltipLink:
+  list: Lista
+tooltipWarning:
+  notConfigured: Controle de Acesso Não Configurado
+  dismiss: Dispensar
+viewEditDescription:
+  form:
+    name:
+      placeholder: p.ex. lab
+    description:
+      placeholder: p.ex. Ambiente para experimentação de desenvolvedor
+vmConsole:
+  protip: "Dica: Mantenha pressionada a tecla {key} ao abrir acesso shell para iniciar uma nova janela."
+  canvas: Canvas não é suportado.
+  footerActions:
+    buttonSend: Enviar Ctrl-Alt-Delete
+    buttonCancel: Fechar
+nav:
+  srToggleDropdown: Alternar Dropdown
+  catalog:
+    all: Todos
+    library: Biblioteca
+  infra:
+    tab: Infra-estrutura
+    certificates: Certificados
+    registries: Registros
+  admin:
+    settings:
+      tab: Configurações
+      auth: Controle de Acesso
+      advanced: Avançado
+  user:
+    label: "Menu do Usuário: {username}"
+    logout: Sair
+  userPreferences:
+    link: "Preferências"
+action:
+  activate: Ativar
+  clone: Clonar
+  console: Abrir Console
+  deactivate: Desativar
+  edit: Editar
+  execute: Executar Shell
+  exportConfig: Configuração de Exportação
+  logs: Exibir Logs
+  remove: Excluir
+  restart: Reiniciar
+  retry: Tente novamente
+  start: Iniciar
+  stop: Parar
+  upgrade: Atualizar
+  viewConfig: Exibir Configuração
+  viewGraph: Exibir Gráfico
+  viewInApi: Exibir na API
+model:
+  identity:
+    displayType:
+      localUser: Usuário local
+  machine:
+    role:
+      worker: Worker
+      etcd: etcd
+  projectMember:
+    role:
+      member: Membro
+      owner: Dono
+      readonly: Somente leitura
+storageClass:
+  azure-disk:
+    title: Disco do Azure
+volumeSource:
+  nfs:
+    title: Compartilhamento NFS
+  customLogPath:
+    logFormat:
+      label: Formato do Log

@@ -1,0 +1,52 @@
+<tr class="main-row">
+  <td valign="middle" class="row-check" style="padding-top: 2px;">
+    {{check-box nodeId=model.id}}
+  </td>
+  <td data-title="{{dt.state}}" class="state">
+    {{badge-state model=model}}
+  </td>
+  <td data-title="{{dt.name}}" class="clip">
+    <a href="{{href-to "authenticated.project.dns.detail" model.id}}">{{model.displayName}}</a>
+    {{#if model.showTransitioningMessage}}
+      <div class="clip text-small {{model.stateColor}}">{{uc-first model.transitioningMessage}}</div>
+    {{else}}
+      {{#if model.displayEndpoints}}
+        <div class="clip text-small">
+          {{model.displayEndpoints}}
+        </div>
+      {{/if}}
+      {{#if (and (not-eq model.recordType "clusterIp") model.clusterIp)}}
+        <div class="text-small text-muted">{{t 'dnsPage.table.clusterIpDetail' ip=model.clusterIp}}</div>
+      {{/if}}
+    {{/if}}
+  </td>
+  <td data-title="{{dt.displayType}}">
+    {{model.displayType}}
+  </td>
+  <td data-title="{{dt.target}}">
+    {{#if (eq model.recordType "workload")}}
+      {{#each model.targetWorkloads as |record idx|}}
+        <div>
+          <a href="{{href-to "workload" record.id}}">{{record.displayName}}</a>
+        </div>
+      {{/each}}
+    {{else if (eq model.recordType "alias")}}
+      {{#each model.targetDnsRecords as |record idx|}}
+        <div>
+          <a href="{{href-to "authenticated.project.dns.detail" record.id}}">{{record.displayName}}</a>
+        </div>
+      {{/each}}
+    {{else if (eq model.recordType "selector")}}
+      {{#each model.selectorArray as |obj|}}
+        <div>
+          <span class="tag-xs bg-info">{{obj.key}}={{obj.value}}</span>
+        </div>
+      {{/each}}
+    {{else}}
+      {{nl-to-br model.displayTarget}}
+    {{/if}}
+  </td>
+  <td data-title="{{dt.actions}}" class="actions">
+    {{action-menu model=model}}
+  </td>
+</tr>

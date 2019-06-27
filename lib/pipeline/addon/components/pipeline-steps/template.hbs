@@ -1,0 +1,25 @@
+<div class="pipeline-steps">
+  <div class="steps-wrap">
+    {{#each steps as |step index|}}
+      <div class="step-content">
+        {{#if isScm}}
+          <div class="step-name text-muted">
+            {{step-summary model=step pipeline=pipeline}}
+          </div>
+        {{else}}
+          <div class="step-name text-muted" {{action 'editStep' index}}>
+            {{step-summary model=step pipeline=pipeline}}
+          </div>         
+        {{/if}}
+      </div>
+    {{/each}}
+    {{#unless isScm}}
+      <div class="mt-10 p-0 step-button step-content text-center" {{action 'addStep'}} style="margin: 0 auto;">
+        <span>
+          <i class="icon icon-plus"/>
+          {{t 'newPipelineStage.addStep'}}
+        </span>
+      </div>
+    {{/unless}}
+  </div>
+</div>

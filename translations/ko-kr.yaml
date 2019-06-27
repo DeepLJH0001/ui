@@ -1,0 +1,1021 @@
+---
+languageName: "영어"
+languageContribute: "Rancher 번역을 도와주세요"
+generic:
+  actions: 동작
+  activate: 활성화
+  add: 추가
+  advanced: 고급
+  all: 전체
+  any: 아무거나
+  application: 애플리케이션
+  as: 로
+  back: 뒤로
+  cancel: 취소
+  closeModal: 닫기
+  cluster: 클러스터
+  collapseAll: 모두 접기
+  comingSoon: 출시 예정
+  command: 명령어
+  confirm: 확인
+  containers: 컨테이너
+  created: 생성됨
+  createdDate: "생성일 {date}"
+  custom: 커스텀
+  customize: 커스터마이즈
+  default: 기본값
+  description: 설명
+  details: 상세 정보
+  disable: 비활성화
+  disabled: 비활성화됨
+  displayName: 표시되는 이름
+  dockerId: Docker ID
+  domainName: 도메인 이름
+  done: 완료
+  download: 다운로드
+  edit: 수정하기
+  enable: 활성화
+  enabled: 활성화됨
+  entrypoint: Entrypoint
+  environment: 환경
+  expandAll: 모두 확장
+  from: 출처
+  generic: '일반'
+  gigabyte: 'GB'
+  hardware: 하드웨어
+  healthy: 정상
+  help: 도움말
+  hostname: 호스트명
+  hours: 시간
+  id: ID
+  image: 이미지
+  import: 가져오기
+  internal: 내부
+  ipAddress: IP 주소
+  key: 키
+  limit: 제한
+  limits: 제한
+  loading: "로딩중..."
+  loggingOut: "로그아웃 중..."
+  member: 멤버
+  mbps: Mbps
+  mibibyte: 'MiB'
+  minutes: 분
+  milliseconds: '밀리초'
+  missing: "*%MISSING% *"
+  moreActions: 더 많은 작업
+  na: '해당 없음'
+  name: 이름
+  namespace: 네임스페이스
+  namespaces: 네임 스페이스
+  never: 하지 않음
+  no: "아니요"
+  noRating: No Rating
+  node: 노드
+  none: 없음
+  owner: 소유자
+  paste: 붙여넣기
+  pod: pod
+  port: 포트
+  ports: 포트
+  prefix: 접두사
+  project: 프로젝트
+  persistentVolumeClaim: 지속적인 볼륨 주장
+  persistentVolume: 지속적인 볼륨
+  random: 무작위
+  remove: 제거
+  restarts: 재시작
+  role: 역할
+  save: 저장
+  saved: 저장됨
+  saving: 저장 중
+  scope: 스코프
+  search: 찾기
+  searchOrCustomInput: 사용자 정의 값을 검색하거나 입력하십시오.
+  searching: '검색 중...'
+  seconds: 초
+  select: 선택
+  service: 서비스
+  services: 서비스
+  size: 크기
+  state: 상태
+  tags: 태그
+  test: 테스트
+  testing: 테스트 중
+  to: 에게
+  total: 총합계
+  type: 타입
+  unknown: 알수 없음
+  unknownUser: 사용자 정보를 가져올 수 없습니다.
+  upload: 업로드
+  url: URL
+  user: 사용자
+  uuid: UUID
+  value: 값
+  version: 버전
+  yes: "예"
+  isRequired: 필수항목
+  readOnly: 읽기 전용
+  readWrite: 읽기 쓰기
+  writeOnly: 쓰기 전용
+  full: 전체
+realmNames:
+  all: 전체
+  usWest: 미국 서부
+  usEast: 미국 동부
+  asia: 아시아
+  euWest: 유럽 서부
+  euEast: 유럽 동부
+accountsPage:
+  detail:
+    header: 사용자 세부정보
+    table:
+      headers:
+        permission: 권한
+        role: 역할
+        clusterName: 클러스터
+        projectName: 프로젝트
+        active: 활성
+        created: 부여 됨
+      global:
+        title: 전역 권한
+        description: 전체 설치에 영향을 미치는 항목 관리에 대한 액세스
+        admin: 이 사용자는 관리자이며 모든 권한을 가집니다.
+        noRoles: 이 사용자에게는 글로벌 역할이 없습니다.
+      cluster:
+        title: 클러스터 역할
+        description: 개별 클러스터에 대해 해당 사용자에게 부여된 역할
+        noRoles: 이 사용자에게는 클러스터 역할이 없습니다.
+      project:
+        title: 프로젝트 역할
+        description: 개별 프로젝트에 대해 이 사용자에게 부여된 역할
+        noRoles: 이 사용자에게는 프로젝트 역할이 없습니다.
+      roles:
+        title: 역할
+  index:
+    header: 사용자
+    localLink: 사용자 추가
+    table:
+      id: ID
+      kind: 종류
+      username: 로컬 사용자 이름
+      identity: 신원
+      noData: 아직 사용자가 없습니다.
+      noMatch: 현재 검색어와 일치하는 사용자가 없습니다.
+      noName: 없음
+  new:
+    header: 사용자 추가
+    errors:
+      usernameReq: 사용자 이름은 반드시 입력해야 합니다.
+      usernameInExists: 사용자 이름이 이미 사용 중입니다. 새로운 사용자 이름을 사용하십시오.
+      pwReq: 비밀번호는 필수항목입니다.
+      role: 새로운 사용자는 역할을 가져야합니다. 목록에서 역할을 선택하십시오.
+    form:
+      username:
+        labelText: 사용자 이름
+        placeholder: "예를 들어 jsmith"
+      password:
+        labelText: 암호
+      name:
+        labelText: 표시되는 이름
+        placeholder: "예를 들어 존 스미스"
+      type:
+        labelText: 계정 유형
+      description:
+        labelText: 설명
+        placeholder: "예: 이 계정은 Johon Smith 입니다."
+  modal:
+    password: 비밀번호 변경하기
+appDetailPage:
+  header: "앱 : {appName}"
+  endpoints:
+    title: 엔드포인트
+    detail: '이 애플리케이션의 공용 엔드포인트'
+    endpoint: 엔드포인트
+    protocol: 프로토콜
+    noData: 이 애플리케이션에 대해 작성된 공용 엔드포인트가 없습니다.
+    noMatch: 현재 검색어와 일치하는 공용 엔드포인트가 없습니다.
+  answers:
+    title: 답변
+    detail: 이 질문에 대한 사용자 정의 답변
+    variable: 변수
+  notes:
+    title: 메모
+    detail: '애플리케이션 사용 방법에 대한 설명서'
+  workloads:
+    title: 워크로드
+    detail: 이 애플리케이션에 대한 워크로드가 생성되었습니다.
+    nodata: 이 애플리케이션에 대해 생성된 워크로드가 없습니다.
+  ingress:
+    title: Ingress 규칙
+    detail: 이 애플리케이션에 대한 Ingress 규칙이 생성되었습니다.
+    nodata: 이 애플리케이션을 위해 생성된 Ingress 규칙이 없습니다.
+  services:
+    title: 서비스
+    detail: 이 애플리케이션에 대한 서비스가 생성되었습니다.
+    nodata: 이 애플리케이션에 대해 생성된 서비스가 없습니다.
+  volumes:
+    title: 볼륨
+    detail: 이 애플리케이션으로부터 Persistent Volume claims 가 생성되었습니다.
+    nodata: 이 애플리케이션으로부터 생성된 volume claims 가 없습니다.
+  configMaps:
+    title: Config Maps
+    detail: 이 응용 프로그램과 관련된 Config Maps
+    nodata: 이 응용 프로그램에는 config maps가 없습니다.
+  secrets:
+    title: 시크릿
+    detail: 이 애플리케이션에 연관된 시크릿
+    nodata: 이 애플리케이션에는 시크릿이 없습니다.
+podSecurityPoliciesPage:
+  index:
+    header: Pod 보안 정책
+    description: 이 역할의 사용자가 만든 파드에 정책 적용
+    table:
+      name: 이름
+      created: 생성 시간
+      noData: 포드 보안 정책이 정의되지 않았습니다.
+      noMatch: 현재 검색과 일치하는 포드 보안 정책이 없습니다.
+  addPodSecurityPolicy: 정책 추가
+  editPodSecurityPolicy: 정책 편집
+  detail:
+    header: 정책
+  saveEdit: 수정
+  saveNew: 생성
+  new:
+    errors:
+      nameReq: 이름은 필수 입력사항입니다.
+      nameInExists: 이름이 이미 있습니다. 새 포드 보안 정책명을 사용하십시요.
+    form:
+      name:
+        labelText: 이름
+        placeholder: "예: 정책"
+rolesPage:
+  title: 역할
+  headers:
+    global: 전역
+    cluster: 클러스터
+    project: 프로젝트
+  index:
+    localLink: 역할 추가
+    table:
+      builtin: 빌트인
+      created: 생성 시간
+      enabled: 활성화됨
+      name: 이름
+      noData: 역할이 없습니다.
+      noMatch: 현재 검색과 일치하는 역할이 없음
+      subjectKind: 종류
+      template: 템플릿
+      global: 새 사용자 기본값
+      cluster: 클러스터 생성기 기본값
+      project: 프로젝트 생성기 기본값
+      showDefaults: 기본값 만 표시
+    errors:
+      inherited: "역할 {displayName} 은(는) {roleNames} 에서 상속됨"
+  resources:
+    title: 리소스 권한부여
+    detail: Kubernetes 리소스의 특정 작업에 대한 액세스 권한 부여
+  inherit:
+    title: 역할로부터 상속
+    detail: 다른 역할의 모든 사용 권한을 포함
+  addRole: "{context} 역할 추가"
+  editRole: 역할 편집
+  saveEdit: 편집
+  saveNew: 생성
+  new:
+    errors:
+      nameReq: 이름은 필수 입력사항입니다.
+      memberReq: 멤버는 필수 입력사항입니다.
+      nameInExists: 이름이 이미 있습니다. 새 역할 이름을 사용하십시오.
+      ruleResourceReq: 규칙에는 리소스가 필요합니다.
+      roleTemplate: 역할(Role) 템플릿이 필요합니다.
+      noSelectedRoles: 이 사용자에게 부여할 역할을 선택하세요.
+    form:
+      name:
+        labelText: 이름
+        placeholder: "예: 개발자"
+      context:
+        labelText: 컨텍스트
+      locked:
+        labelText: 잠김
+        detail: 이미 존재하는 역할에 대한 바인딩에는 영향을주지 않습니다.
+        enabled: "예: 새 바인딩에서이 역할을 사용할 수 없습니다."
+        disabled: "아니요"
+      allow:
+        create: 생성
+        delete: 삭제
+        deletecollection: '컬렉션 삭제'
+        get: Get
+        list: List
+        patch: Patch
+        update: 수정
+        watch: Watch
+        labelText: 허용
+        resource: 리소스
+        addAction: 리소스 추가
+      otherRole:
+        labelText: 다른 역할 포함
+        role: 역할
+        addAction: 역할 추가
+      policy:
+        policy: 정책
+        addAction: 정책 추가
+      default:
+        global: 새 사용자 기본값
+        cluster: 클러스터 생성기 기본값
+        project: 프로젝트 생성기 기본값
+        enabled:
+          global: "예: 신규 사용자의 기본 역할"
+          cluster: "예: 새 클러스터 생성을위한 기본 역할"
+          project: "예: 새 프로젝트 생성을위한 기본 역할"
+        disabled: "아니요"
+apiPage:
+  header: API & Keys
+  actionButton: 키 추가
+  currentEndpoint: '엔드포인트'
+  detail: API 키는 특정 사용자 ({name}) 와 연결되어 있으며 액세스 할 수있는 모든 클러스터 및 프로젝트를 작성, 삭제 및 조작 할 수 있습니다.
+  table:
+    state: 상태
+    name: 액세스 키
+    description: 설명
+    scope: 스코프
+    created: 생성됨
+    expires:
+      label: 만료
+      never: 하지 않음
+    noData: 정의된 API 키가 없습니다
+authPage:
+  saml:
+    accessEnabled:
+      header: 인증
+      disable: 액세스 제어 사용 중지
+    header:
+      disabled:
+        label: "{providerName} 이 구성되지 않음"
+    enabled:
+      authenticated:
+        header:
+          text: 인증
+      groupsField: '그룹:'
+      displayName: '표시 이름:'
+      userName: '사용자 이름:'
+      userId: '사용자 ID:'
+    disabled:
+      name:
+        labelText: 이름 필드 표시
+        display: "이름 필드 표시:"
+      username:
+        labelText: 사용자 이름 필드
+        display: "사용자 이름 필드:"
+      uid:
+        labelText: UID 필드
+        display: "UID 필드:"
+      rancherApiHost:
+        labelText: "{appName} API 호스트"
+        display: "{appName} API 호스트:"
+      groups:
+        labelText: 그룹 필드
+        display: "그룹 필드:"
+      testAuth:
+        header: 'Test & 인증 활성화'
+        subtext: '인증을 테스트하여 응용 프로그램이 올바르게 구성되었는지 확인하십시오.'
+    providerName:
+      ping: Ping
+      adfs: AD FS
+      keycloak: Keycloak
+      okta: Okta
+    authError: '액세스 권한이 없습니다.'
+    popupError: '팝업 차단을 해제하시고 "인증"을 다시 클릭하십시오.'
+  okta:
+    buttonText:
+      pre: 'Okta 인증'
+  shibboleth:
+    enabled:
+      authenticated:
+        header:
+          text: 인증
+      disableAccess:
+        disable: 액세스 제어 사용 안 함
+      groupsField: '그룹'
+      displayName: '사용자 이름'
+      userName: '사용자 이름:'
+      userId: '사용자 ID:'
+    disabled:
+      name:
+        labelText: 표시 이름 필드
+      username:
+        labelText: 사용자 이름 필드
+      uid:
+        labelText: UID 필드
+      groups:
+        labelText: 그룹 필드
+      testAuth:
+        header: 'Test & 인증 활성화'
+    providerName:
+      shibboleth: Shibboleth
+  root:
+    header: 액세스 제어
+  github:
+    standard: GitHub
+    enterprise: GitHub Enterprise
+    header:
+      disabled:
+        label: GitHub이 구성되지 않았다.
+    authenticated:
+      header:
+        text: 인증
+        enterpriseHostName: "Enterprise Host:"
+        clientId:
+          text: "클라이언트 ID:"
+      disableAccess:
+        disable: Github 액세스 비활성화
+    notAuthenticated:
+      ul:
+        li1:
+          ul:
+            li1: "Github Enterprise의 경우 로그인하십시오. 설정을 클릭한 다음 애플리케이션을 클릭하십시오."
+        li2:
+          ul:
+            li2: '홈페이지 URL'
+            li3: '<b>응용 프로그램 설명:</b> <span class="text-muted">모든 것, 선택 사항</span>'
+      form:
+        clientId:
+          labelText: 클라이언트 ID
+  azuread:
+    configure:
+      regions:
+        china: 중국
+    test:
+      username:
+        placeholder: '예: jsmith'
+      password:
+        label: 로그인 비밀 번호
+      pre: Azure를 위한 인증
+  localAuth:
+    accessDisabled:
+      form:
+        login:
+          labelText: 로그인 사용자명
+          placeholder: '예: jsmith'
+        name:
+          labelText: 성명
+          placeholder: '예: 존 스미스'
+        password:
+          labelText: 암호
+        confirmPassword:
+          labelText: 암호 확인
+backupsPage:
+  table:
+    state: 상태
+    target:
+      label: 대상
+      s3: S3
+      local: 지역
+    name: 이름
+catalogPage:
+  index:
+    header: 카탈로그
+    refreshBtn: 새로고침
+    allCatalogs: 모든 카탈로그
+    allCategories: 모든 카테고리
+    manage: 관리
+    search:
+      label: 검색
+    filters:
+      label: 카탈로그 필터
+    certified:
+      rancher:
+        rancher: Rancher 연구소
+        partner: 공식
+      pl:
+        rancher: 코어
+        partner: 공식
+    action:
+      launch: 세부정보 보기
+      alreadyDeployed: 이미 배포됨
+clusterCatalogPage:
+  header: 카탈로그
+certificatesPage:
+  cn: 도메인 이름
+  expiresDate: 만료
+  algorithm: 알고리즘
+  serialNumber: 일련 번호
+  domainNames:
+    single: '<a href="https://{cn}" target="_blank" rel="nofollow noreferrer noopener">{cn} <i class="icon icon-sm icon-external-link"/></a>'
+    withSan: |
+      <a href="https://{cn}" target="_blank" rel="nofollow nefererrer noopener">{cn} <i class="icon icon-sm icon-external-link"></i></a> +
+      {sans, plural,
+      =1 {1 other}
+      other {# others}
+      }
+    wildcardSingle: '{cn}'
+  detail:
+    header: '인증서: {name}'
+  index:
+    header: 인증서
+    linkTo: 인증서 추가
+  new:
+    header: 인증서 추가
+membersPage:
+  add:
+    form:
+      member: 멤버
+      role: 역할
+  index:
+    table:
+      name: 이름
+      created: 생성 시간
+      userId: 사용자
+      template: 역할
+namespacesPage:
+  header: 네임 스페이스
+  addNamespace: 네임 스페이스 추가
+  table:
+    name:
+      label: 네임스페이스
+    project:
+      label: 프로젝트
+    workloads:
+      label: 워크로드
+    created:
+      label: 생성일
+clusterPage:
+  edit: 클러스터 편집
+projectsListNamespacePage:
+  header: 네임 스페이스
+projectsPage:
+  headerNS: 네임스페이스
+  addProject: 프로젝트 추가
+  editProject: 프로젝트 편집
+  quota:
+    label: 리소스 할당량
+  created:
+    label: 생성일
+  members:
+    user: 사용자
+    group: 그룹
+    addGroup: 그룹 추가
+    addServiceAccount: 서비스 계정 추가
+    kind:
+      label: 종류
+    name:
+      label: 이름
+    errors:
+      nameReq: 이름은 필수 입력사항입니다.
+      nameInExists: 이름이 이미 있습니다. 새 프로젝트 이름을 사용하십시오.
+clustersPage:
+  header: 클러스터
+  newCluster: 클러스터 추가
+  editClusterName: "클러스터 편집 : {name}"
+  cluster:
+    label: 클러스터 이름
+  provider:
+    label: '프로바이더:'
+  version:
+    label: 버전
+  nodes:
+    label: 노드
+  cpu:
+    label: CPU
+  memory:
+    label: RAM
+  storage:
+    label: 디스크
+containerPage:
+  header: '컨테이너: {name}'
+  initContainer:
+    label: initContainer
+  portsTab:
+    header: 포트
+    hostPrimaryIp: '({ip})'
+  linksTab:
+    header: 링크
+  volumesTab:
+    header: 볼륨
+    table:
+      path: 마운트 포인트
+      writable: 쓰기가능
+podPage:
+  nodeIp: 노드 IP
+  image: 이미지
+containersPage:
+  table:
+    sparkPrefixCpu: "CPU: "
+    sparkPrefixMemory: "메모리: "
+    sparkPrefixNetwork: "네트워크: "
+    sparkPrefixStorage: "저장소: "
+  welcome:
+    containerLink: 컨테이너 추가
+    kubernetesLink: Kubernetes 설치
+metricsAction:
+  sections:
+    pod: 포드 통계
+  grafana:
+    label: Grafana
+metrics:
+  container-memory-usage-bytes-sum: 메모리 사용률
+dnsPage:
+  type:
+    arecord: 외부 IP
+    cname: 호스트이름
+    alias: Alias
+    clusterIp: 클러스터 IP
+    unknown: Unknown
+  table:
+    clusterIpDetail: '클러스터 IP: {ip}'
+editDns:
+  loadBalancerIP:
+    label: 로드 밸런서 IP
+    placeholder: 예를 들어 78.11.24.19
+  loadBalancerSourceRanges:
+    addActionLabel: 소스 범위 추가
+    placeholder: 예를 들어 143.231.0.0/16
+  healthCheckNodePort:
+    placeholder: 예를 들어 8080
+  externalTrafficPolicy:
+    local: 지역
+    cluster: 클러스터
+  publishNotReadyAddresses:
+    all: 모든 엔드포인트
+  sessionAffinityConfig:
+    placeholder: 예를 들어 10800
+  kind:
+    clusterIP: 클러스터 IP (내부 전용)
+    loadBalancer: 레이어4 로드 밸런서
+    nodePort: NodePort (모든 노드에서)
+    externalName: ExternalName
+    headless: 헤드리스 서비스
+  recordType:
+    clusterIp: "클러스터 IP"
+  placeholder:
+    arecord: e.g. 19.82.2.24
+    cname: e.g. example.com
+cruPersistentVolumeClaim:
+  capacity:
+    unit: GiB
+cruVolumeClaimTemplate:
+  capacity:
+    label: 용량
+    unit: GiB
+  name:
+    placeholder: 예를 들어 myvol
+  source:
+    label: 소스
+  pv:
+    label: 영구 볼륨
+  storageClass:
+    label: 스토리지 클래스
+  customize:
+    title: 커스터마이즈
+globalDnsPage:
+  entriesPage:
+    config:
+      project: 프로젝트
+      fqdn:
+        label: FQDN
+        placeholder: dev.example.com
+      ttl:
+        label: DNS TTL
+  providersPage:
+    title: 글로벌 DNS 공급자
+failWhalePage:
+  header: 에러
+  reloadButton: |
+    <a href="#" onclick="window.location.href = window.location.href; return false;">리로드</a> 다시 시도
+  logoutButton: 로그아웃
+haPage:
+  header: 고 가용성
+  setup:
+    prefix: "호스트 중 하나가 장애가 가는 경우에도 {appName} 계속 실행 되도록 여러 컨테이너를 서로 다른 호스트에 배포할 수 있습니다.  "
+    link: 문서 보기
+    suffix: " 설치 및 사용에 관한 정보."
+  table:
+    port: 포트
+nodesPage:
+  header: 노드
+  editCluster: 클러스터 수정
+  table:
+    clusterName: 클러스터
+    role: 역할
+    cpu: CPU
+    disk: 디스크
+    version: 버전
+    docker: 도커
+hostsPage:
+  cloudHostsPage:
+    addPage:
+      header: 노드 추가
+      name:
+        label: 노드 이름
+      transferUnit: TB
+  new:
+    addCluster:
+      cluster:
+        label: 클러스터
+      roles:
+        label: 역할
+  hostPage:
+    hostname: 호스트 이름
+    ipAddress: IP 주소
+    version: 버전
+    dockerVersion: 도커 버전
+    kernelVersion: 커널 버전
+    operatingSystem: 운영 체제
+    limits:
+      cpu: 'CPU 제한:'
+      memory: '메모리 제한:'
+    infoMultiStats:
+      ip: 'IP'
+      cpu: 'CPU'
+      memory: '메모리'
+      storage: '볼륨'
+      kernel: '커널'
+      docker: '도커:'
+      os: 'OS'
+      milliCpu:
+        labelText: mCPU
+    containersTab:
+      header: 컨테이너
+      detail: 이 호스트에서 실행 하는 컨테이너의 목록
+    portsTab:
+      header: 포트
+      table:
+        header:
+          ip: IP 주소
+          service: 서비스
+    storageTab:
+      header: 볼륨
+      table:
+        header:
+          state: 상태
+loginPage:
+  shibbolethError:
+    401: "Unauthorized"
+    500: "Internal Server Error"
+registriesPage:
+  index:
+    table:
+      header:
+        username: 사용자 이름
+        created: 생성일
+  new:
+    form:
+      username:
+        labelText: 사용자 이름
+        placeholder: '예: 사용자 이름'
+      password:
+        labelText: 비밀번호
+servicePage:
+  multistat:
+    created: '생성됨:'
+  serviceType:
+    job: 작업
+  containersTab:
+    title: '컨테이너'
+  certsTab:
+    title: 인증서
+    default: 기본 인증서
+  newBalancer:
+    form:
+      name:
+        placeholder: 예. 웹사이트
+  type:
+    service: 서비스
+    selectorservice: Selector
+    loadbalancerservice: Load Balancer
+    dnsservice: 별칭
+    externalservice-ip: 외부 Ip
+    externalservice-host: 외부 이름
+    kubernetesservice: K8s 서비스
+    networkdriverservice: 네트워크 서비스
+    storagedriverservice: 스토리지 서비스
+signupPage:
+  form:
+    button: 회원가입
+    labels:
+      loginUsername: 이름
+      email: 이메일
+  emailSuccess:
+    confirm:
+      resend: 이메일 다시 보내기
+stackPage:
+  containers:
+    header: 컨테이너
+  loadBalancers:
+    header: Load Balancers
+newStack:
+  header: YAML 가져 오기
+storageClassPage:
+  addActionLabel: 클래스 추가
+userPreferencesPage:
+  header: 환경 설정
+  theme:
+    header: 테마
+    light: 밝은 테마
+    auto: 자동
+    autoDetail: 오전 6시 부터 오후 6 까지 자동으로 어두운 테마로 변경됩니다.
+    dark: 어두운 테마
+  generalInfo:
+    header: 내 계정
+    name:
+      label: 이름
+    username:
+      label: 사용자 이름
+    email:
+      label: 이메일
+    password:
+      text: 비밀번호 변경
+verifyPage:
+  account:
+    linkText: 로그인
+verifyResetPasswordPage:
+  header: 비밀번호 초기화
+  button: 비밀번호 변경
+  success:
+    header: 비밀번호 재설정 됨
+    subtext: 로그인 페이지로 이동 하려면 아래 링크를 클릭 합니다.
+    linkText: 로그인
+notifierPage:
+  testedBtnLabel: 확인
+  notifierTypes:
+    email: 이메일
+  smtp:
+    port: 포트
+    userName: 사용자 이름
+    password: 비밀번호
+    passwordPlaceholder: 비밀번호
+  testAction:
+    testOk: 설정이 검증되었습니다.
+    test: 테스트
+  clone: 복제
+  index:
+    table:
+      created: 생성일
+servicePartial:
+  noContainers:
+    inactive:
+      start: 시작
+catalogSettings:
+  header: 카탈로그
+  library:
+    label: 라이브러리
+    detail: '{appName} 으로 유지하는 선별된 애플리케이션 템플릿의 공식 저장소.'
+  helm:
+    stable:
+      label: Helm Stable
+  more:
+    addActionLabel: 카탈로그 추가
+clusterRow:
+  noHosts: 외부 클러스터에 노드가 없습니다.
+  addHost: 노드 추가
+clusterNew:
+  advanced:
+    cancel: 양식으로 편집
+  nodes:
+    title: 노드
+  azureaks:
+    publishSettingsFile:
+      label: 게시 설정
+      placeholder: 게시 설정 파일
+    networking:
+      vnetresourcegroup:
+        prompt: 가상 네트워크를 선택하십시오.
+  rke:
+    ignoreDockerVersion:
+      label: 노드의 도커 버전
+confirmDelete:
+  title: '삭제하시겠습니까?'
+  confirmAction: 제거
+  cancelAction: 취소
+containerLogs:
+  clear: 화면 지우기
+  status:
+    initializing: 초기화 중...
+    connected: 연결됨
+containerShell:
+  status:
+    connected: 연결됨
+    disconnected: 연결 끊김
+    closed: 닫힘
+copyToClipboard:
+  copied: 복사되었습니다!
+cruRegistry:
+  address:
+    dockerhub: DockerHub
+dangerZone:
+  header: 고급 설정
+editAccount:
+  form:
+    name:
+      placeholder: '예: 홍길동'
+editApiKey:
+  title:
+    justCreated: API 키 생성됨
+editCluster:
+  name:
+    label: 이름
+  systemStacks:
+    cancel: 시스템 스택 추가 취소
+editContainer:
+  title:
+    vm: VM 수정
+editHost:
+  ips:
+    addActionLabel: IP 추가
+formIngressBackends:
+  targetPort:
+    placeholder: '예: 80'
+formBalancerListeners:
+  access:
+    internal: 내부
+  sourcePort:
+    placeholder: '예: 80'
+formBalancerRules:
+  access:
+    internal: 내부
+  protocol:
+    label: 프로토콜
+  sourceIp:
+    placeholder: "예: 1.2.3.4; 기본값 : 모두"
+formCommand:
+  console:
+    label: 콘솔
+  autoRestart:
+    label: 자동으로 다시 시작
+    always: 항상
+formContainerLinks:
+  addActionLabel: 링크 추가
+  alias:
+    placeholder: '예: 데이터베이스'
+formDisks:
+  name:
+    label: 이름
+    placeholder: '예: 데이터'
+  size:
+    label: 크기
+  driver:
+    label: 드라이버
+formEngineOpts:
+  engineInstallUrl:
+    recommended: 추천
+    latest: 최근
+  engineOpts:
+    addActionLabel: 엔진 옵션 추가
+  engineLabels:
+    addActionLabel: 엔진 라벨 추가
+formEnvVar:
+  labels:
+    key: 키
+    value: 값
+formGlobalRoles:
+  role:
+    create-clusters:
+      label: 새 클러스터 생성
+formKeyValue:
+  key:
+    label: 키
+formScheduling:
+  hostMax: 최대 노드 수
+formSeLinuxodSecurityPolicy:
+  role:
+    label: 역할
+modalConfirmDeactivate:
+  cancel: 취소
+modalConfirmRemovePayment:
+  title: '삭제하시겠습니까?'
+nodeDriver:
+  amazoneks:
+    associateWorkerNodePublicIp:
+      radio:
+        default: 'Yes'
+  azure:
+    publishSettingsFile:
+      label: 게시 설정
+      placeholder: 사용자의 게시 설정 파일
+registryRow:
+  created: 생성됨
+saveCancel:
+  saving: 저장 중...
+  saved: 저장됨!
+  edit: 저장
+  next: 다음
+  create: 생성
+  cancel: 취소
+vmConsole:
+  footerActions:
+    buttonSend: Ctrl-Alt-Delete 보내기
+    buttonCancel: 닫기
+nav:
+  cluster:
+    nodes: 노드
+  hosts:
+    tab: 노드
+    addHost: 노드 추가
+  admin:
+    machines: 노드
+    settings:
+      tab: 설정
+  settings:
+    tab: 설정
+action:
+  remove: 삭제

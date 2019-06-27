@@ -1,0 +1,47 @@
+{{#accordion-list showExpandAll=false as | al expandFn |}}
+  <div class="over-hr">
+    <span>
+      {{driverOptionsTitle}}
+    </span>
+  </div>
+
+  {{#each-in schema.resourceFields as |key value|}}
+    {{api-field
+      resource=config
+      resourceType=driverName
+      field=key
+      value=(get config key)
+      schema=schema
+      typeDocs=typeDocumentations
+    }}
+  {{/each-in}}
+
+  <div class="over-hr">
+    <span>
+      {{templateOptionsTitle}}
+    </span>
+  </div>
+
+  {{form-name-description
+    model=model
+    nameRequired=true
+  }}
+
+  {{form-user-labels
+    initialLabels=labelResource.labels
+    setLabels=(action "setLabels")
+    expandAll=null
+  }}
+
+  {{form-engine-opts
+    machine=model
+    showEngineUrl=showEngineUrl
+  }}
+
+  {{top-errors errors=errors}}
+  {{save-cancel
+    save=(action "save")
+    cancel=(action "cancel")
+    editing=editing
+  }}
+{{/accordion-list}}

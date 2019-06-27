@@ -1,0 +1,48 @@
+<section class="header clearfix">
+  <h1>{{title}}</h1>
+</section>
+
+<div class="row">
+  <div class="col span-12">
+    <label class="acc-label">
+      {{t "cruVolume.source.label"}}{{field-required}}
+    </label>
+    {{new-select
+      content=sourceChoices
+      prompt="cruVolume.source.prompt"
+      localizedPrompt=true
+      optionValuePath="name"
+      value=sourceName
+      readOnly=isView
+    }}
+  </div>
+</div>
+
+<hr class="mb-20" />
+
+{{#accordion-list showExpandAll=false as | al expandFn |}}
+  {{#accordion-list-item
+    title=(t "cruVolume.source.title")
+    detail=(t "cruVolume.source.detail")
+    expandAll=expandAll
+    expand=(action expandFn)
+    expandOnInit=true
+  }}
+    {{#if sourceComponent}}
+      {{component sourceComponent.component
+        volume=model
+        sourceStore=store
+        editing=true
+      }}
+    {{else}}
+      <p class="text-muted">{{t "cruVolume.sourcePrompt"}}</p>
+    {{/if}}
+  {{/accordion-list-item}}
+{{/accordion-list}}
+
+{{top-errors errors=errors}}
+{{save-cancel
+  createLabel="cruVolume.define.addActionLabel"
+  save=(action "save")
+  cancel=(action "viewEditCancel")
+}}
