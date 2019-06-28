@@ -395,7 +395,7 @@ const rootNav = [
         id:             'global-registry',
         localizedLabel: 'nav.admin.globalRegistry',
         route:          'global-admin.global-registry',
-        //There is no schema for global registry. But we can use global dns to check if it is a HA env.
+        // There is no schema for global registry. But we can use global dns to check if it is a HA env.
         resource:       ['globaldns'],
         resourceScope:  'global',
       },
