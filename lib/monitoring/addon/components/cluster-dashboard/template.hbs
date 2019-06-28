@@ -1,5 +1,4 @@
 {{#if showDashboard}}
-  {{cluster-basic-info cluster=cluster}}
 
   {{#unless scope.currentCluster.isMonitoringReady}}
     {{#if monitoringEnabled}}
@@ -27,7 +26,9 @@
     </div>
   {{/unless}}
 
-  {{nodes-live nodes=nodes}}
+  {{#if (and showClusterTabs scope.currentCluster.isMonitoringReady)}}
+    {{cluster-dashboard-tabs dashboards=dashboards}}
+  {{/if}}
 
   <div class="row mt-0">
     {{k8s-component-status
@@ -97,9 +98,6 @@
     </div>
   {{/unless}}
 
-  {{#if (and showClusterTabs scope.currentCluster.isMonitoringReady)}}
-    {{cluster-dashboard-tabs dashboards=dashboards}}
-  {{/if}}
 {{else}}
   {{empty-table
     resource="container"

@@ -34,6 +34,58 @@
       <tr><td colspan="{{sortable.fullColspan}}" class="text-center text-muted lacsso pt-20 pb-20">{{t 'clusterRow.noClusterData'}}</td></tr>
     {{/if}}
   {{/sortable-table}}
+
+  <section class="header clearfix">
+    <h1 class="pull-left">{{t "clusterDashboard.title"}}</h1>
+  </section>
+
+  {{#each model.clusters as |cluster|}}
+    <section class="header clearfix">
+      <h1 class="pull-left text-small">{{cluster.displayName}}: </h1>
+      <div class="row banner bg-info basics">
+        <div class="vertical-middle">
+          <label class="acc-label vertical-middle p-0">{{t 'clustersPage.provider.label'}}:</label>
+          <span>{{cluster.displayProvider}}</span>
+        </div>
+        <div class="vertical-middle">
+          <label class="acc-label vertical-middle p-0">{{t 'clustersPage.version.label'}}:</label>
+          <span>{{cluster.version.gitVersion}}</span>
+        </div>
+        <div class="vertical-middle">
+          <label class="acc-label vertical-middle p-0">{{t 'clustersPage.nodes.label'}}:</label>
+          <span>
+          {{#if (eq cluster.state "inactive")}}
+            {{t 'clusterRow.noHosts'}}
+          {{else}}
+            {{cluster.machines.length}}
+          {{/if}}
+          </span>
+        </div>
+      </div>
+
+      <div class="row banner bg-info basics">
+        <div class="vertical-middle">
+          <label class="acc-label vertical-middle p-0">{{t 'generic.cpu'}}:</label>
+          <span>{{cluster.cpuTotal}}</span>
+        </div>
+
+        <div class="vertical-middle">
+          <label class="acc-label vertical-middle p-0">{{t 'generic.memory'}}:</label>
+          <span>{{cluster.memoryTotal}}</span>
+        </div>
+
+        <div class="vertical-middle">
+          <label class="acc-label vertical-middle p-0">{{t 'generic.created'}}:</label>
+          <span>{{date-calendar cluster.created}}</span>
+        </div>
+      </div>
+
+      {{cluster-nodes-live
+          nodes=cluster.nodes
+          cluster=cluster}}
+
+    </section>
+  {{/each}}
 {{else}}
   {{empty-table
       resource="container"

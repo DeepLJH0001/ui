@@ -750,15 +750,15 @@ projectsListNamespacePage:
   current: 当前项目
 
 projectsPage:
-  header: 项目/命名空间列表
-  headerNS: 命名空间
+  header: 项目管理
+  headerNS: 命名空间列表
   addProject: 添加项目
   editProject: 编辑项目
   noMatch: 没有与当前搜索匹配的项目
   noData: 此集群没有定义任何项目
   groups:
     none: 命名空间列表
-    namespaces: 项目分组/命名空间分组
+    namespaces: 命名空间分组
   quota:
     label: 资源配额
   ns:
@@ -804,7 +804,7 @@ projectsPage:
       memberRoleReq: 成员角色是必须的
 
 clustersPage:
-  header: 集群列表
+  header: 集群管理
   newCluster: 添加集群
   newClusterName: "添加集群: {name}"
   editClusterName: "编辑集群: {name}"
@@ -1312,7 +1312,7 @@ hostsPage:
       ip: 'IP地址'
       cpu: 'CPU'
       memory: '内存'
-      storage: '数据卷'
+      storage: '存储'
       provider:
         labelText: '供应商:'
         noHost: 自定义
@@ -6576,7 +6576,7 @@ newConfigMap:
   addActionLabel: 添加配置映射
 
 projectGroup:
-  label: "项目: {name}"
+  label: '{name}'
   none: 命名空间
   project: 不在项目中
   noNS: 此项目下没有命名空间
@@ -7010,17 +7010,17 @@ nav:
   containers:
     tab: 容器应用
     systemTab: 系统
-    ingresses: 负载均衡
-    containers: 工作负载
-    dns: 服务发现
-    volumes: 数据卷
-    pipelines: 流水线
-    deploy: 部署服务
+    ingresses: 应用网关
+    containers: 应用列表
+    dns: 应用发现
+    volumes: 应用存储
+    pipelines: 应用流水线
+    deploy: 部署应用
     addContainer: 添加容器
     addBalancer: 添加负载均衡
-    addIngress: 添加Ingress
-    addDns: 添加DNS记录
-    addVolume: 添加卷
+    addIngress: 添加应用网关
+    addDns: 添加名字服务
+    addVolume: 添加应用存储
     importCompose: 导入YAML
   group:
     none: 列表视图
@@ -7054,7 +7054,7 @@ nav:
     clusters: 集群
     clusterlist: 返回全局
     machines: 主机
-    drivers: 公有云驱动
+    drivers: 公有云对接
     catalogs: 应用商店
     globalDns: 全局DNS服务
     globalDnsEntries: 全局DNS服务
@@ -7097,7 +7097,7 @@ nav:
     tab: 集群配置
     projecttab: 项目配置
   project:
-    none: 项目/命名空间
+    none: 项目
     namespaces: 命名空间
 
 

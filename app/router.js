@@ -72,6 +72,7 @@ Router.map(function() {
         this.route('index', { path: '/' });
         this.route('edit', { path: '/project/:project_id' });
         this.route('new', { path: '/project/add' });
+        this.route('index-ns', { path: '/ns' });
         this.route('edit-ns', { path: '/ns/:namespace_id' });
         this.route('new-ns', { path: '/ns/add' });
       });

@@ -1,0 +1,15 @@
+<section class="header clearfix">
+  <h1 class="pull-left">{{t 'projectsPage.headerNS'}}</h1>
+  <div class="vertical-middle"></div>
+
+  <div class="right-buttons">
+      {{#link-to "authenticated.cluster.projects.new-ns" (query-params addTo=null) class="btn bg-primary btn-sm ml-10" disabled=(rbac-prevents resource="namespace" scope="cluster" permission="create")}}
+        {{t 'namespacesPage.addNamespace'}}
+      {{/link-to}}
+
+  </div>
+</section>
+
+
+  {{namespace-list model=rows}}
+
