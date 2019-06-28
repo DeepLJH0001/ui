@@ -4,17 +4,17 @@ import { inject as service } from '@ember/service';
 
 const headers = [
   {
+    name:           'name',
+    sort:           ['displayName'],
+    searchField:    ['displayName', 'name'],
+    translationKey: 'projectsPage.name.label',
+  },
+  {
     name:           'state',
     sort:           ['sortState', 'displayName'],
     searchField:    'displayState',
     translationKey: 'generic.state',
     width:          120
-  },
-  {
-    name:           'name',
-    sort:           ['displayName'],
-    searchField:    ['displayName', 'name'],
-    translationKey: 'projectsPage.ns.label',
   },
   {
     classNames:     'text-right pr-20',

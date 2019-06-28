@@ -185,6 +185,15 @@ const rootNav = [
   },
   {
     scope:          'cluster',
+    id:             'cluster-namespaces',
+    localizedLabel: 'nav.cluster.namespaces',
+    route:          'authenticated.cluster.projects.index-ns',
+    ctx:            [getClusterId],
+    resource:       ['project'],
+    resourceScope:  'global',
+  },
+  {
+    scope:          'cluster',
     id:             'cluster-projects',
     localizedLabel: 'nav.cluster.projects',
     route:          'authenticated.cluster.projects.index',

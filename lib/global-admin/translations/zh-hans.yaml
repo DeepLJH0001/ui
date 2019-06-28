@@ -59,14 +59,14 @@ etcd:
     label: 失败提议次数
 
 clusterDashboard:
-  title: 集群信息
+  title: 集群概览
   sections:
     cluster: 集群监控
     etcd: Etcd监控
     k8s: Kubernetes组件监控
-    rancher: '事件日志'
+    rancher: '{appName}日志功能监控'
     node: 节点监控
-  noRancherComponents: '日志功能未启用或者没有足够的数据绘制图表。'
+  noRancherComponents: '{appName}日志功能未启用或者没有足够的数据绘制图表。'
   cpu: CPU
   memory: Memory
   pods: Pods
@@ -78,10 +78,10 @@ clusterDashboard:
   enableMonitoring: 启用监控并查看实时监控指标
   upgradeAvailable: "升级监控组件到{version}版本"
   monitoringNotReady: 监控API未就绪
-  node: 主机节点
-  etcd: 配置中心
-  scheduler: 调度中心
-  controllerManager: 控制中心
+  node: Nodes
+  etcd: Etcd
+  scheduler: Scheduler
+  controllerManager: Controller Manager
   alert:
     node: "警告: 节点{node}未激活"
     component: "警告: 组件{component}不健康"

@@ -292,7 +292,7 @@ TABLE {
             &:before {
                 content: "";
                 display: block;
-                height: $group-row-height;
+                height: 0;
             }
 
             &:first-of-type:before {
