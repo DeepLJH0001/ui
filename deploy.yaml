@@ -1,0 +1,64 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  labels:
+    component: ui
+    version: v0.0.1	
+    app: ruijie-paas-ui
+  name: ruijie-paas-ui
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ruijie-paas-ui
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        component: ui
+        version: v0.0.1	
+        app: ruijie-paas-ui
+    spec:
+      containers:
+      - command:
+        - /bin/bash
+        - -c
+        - echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && echo
+          999999 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && echo 999999
+          | sudo tee -a /proc/sys/fs/inotify/max_user_instances && watchman shutdown-server
+          && sudo sysctl -p && yarn start
+        env:
+        - name: RANCHER
+          value: "https://120.35.11.138:5443"
+        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        imagePullPolicy: IfNotPresent
+        securityContext:
+          privileged: true
+        name: paas-ui
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: pipeline-docker-registry
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ui-svc
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: default
+    port: 8000
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: ruijie-paas-ui
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 10800
+  type: NodePort

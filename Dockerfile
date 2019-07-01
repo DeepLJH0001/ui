@@ -1,11 +1,9 @@
-FROM rancher/ui:build
+FROM registry.cn-hangzhou.aliyuncs.com/lijunhua_ruijie/ui:build
 
 EXPOSE 8000
 
 WORKDIR /source
 COPY package.json ./
 COPY scripts ./scripts
-RUN yarn install && yarn cache clean
 COPY . /source
-ENTRYPOINT ["yarn"]
-CMD ["start","--ssl=false"]
+RUN  bash -x ./scripts/update-dependencies

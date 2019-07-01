@@ -1,0 +1,20 @@
+stages:
+- name: compile
+  steps:
+  - runScriptConfig:
+      image: registry.cn-hangzhou.aliyuncs.com/lijunhua_ruijie/ui:build
+      shellScript: echo "compiled"
+- name: publish
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: registry.cn-hangzhou.aliyuncs.com/lijunhua_ruijie/ui:${CICD_EXECUTION_SEQUENCE}
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deploy.yaml
+timeout: 60
+branch:
+  include:
+  - master
